@@ -87,6 +87,18 @@ collections:
                 name: "welcomeDescription"
                 widget: "text"
                 required: false
+              - label: "SEO Title (Judul Website di Google)"
+                name: "seoTitle"
+                widget: "string"
+                required: false
+              - label: "SEO Description (Deskripsi Website di Google)"
+                name: "seoDescription"
+                widget: "text"
+                required: false
+              - label: "SEO Keywords (Kata Kunci Pencarian)"
+                name: "seoKeywords"
+                widget: "string"
+                required: false
           - label: "Hero Section"
             name: "hero"
             widget: "object"

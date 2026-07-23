@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -42,6 +43,7 @@ function App() {
   const textAlignment = siteData?.siteSettings?.textAlignment || 'justify';
 
   return (
+    <HelmetProvider>
     <Router>
       <div className="app-container" style={{ 
         display: 'flex', 
@@ -56,6 +58,7 @@ function App() {
         <Footer data={siteData.contact} siteSettings={siteData.siteSettings} />
       </div>
     </Router>
+    </HelmetProvider>
   );
 }
 
