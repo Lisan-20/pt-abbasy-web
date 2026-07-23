@@ -23,7 +23,7 @@ const Navbar = ({ contact, siteSettings, customPages }) => {
   }, [location.pathname]);
 
   return (
-    <nav className="navbar scrolled">
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '15px', minWidth: 0 }}>
           {siteSettings?.logoImage && (
