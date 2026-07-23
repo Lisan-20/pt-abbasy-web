@@ -1,0 +1,129 @@
+/* Organization Tree Custom CSS */
+.org-tree {
+  width: 100%;
+  overflow-x: auto;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.tree ul {
+  padding-top: 20px; 
+  position: relative;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.tree li {
+  float: left; 
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+}
+
+/* Garis horizontal */
+.tree li::before, .tree li::after{
+  content: '';
+  position: absolute; top: 0; right: 50%;
+  border-top: 2px solid #334155;
+  width: 50%; height: 20px;
+}
+.tree li::after{
+  right: auto; left: 50%;
+  border-left: 2px solid #334155;
+}
+
+/* Hapus garis samping untuk anak tunggal */
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+.tree li:only-child{ padding-top: 0;}
+
+/* Hapus sisi luar dari garis anak pertama dan terakhir */
+.tree li:first-child::before, .tree li:last-child::after{
+  border: 0 none;
+}
+
+/* Lengkung ujung garis luar */
+.tree li:last-child::before{
+  border-right: 2px solid #334155;
+  border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+  border-radius: 5px 0 0 0;
+}
+
+/* Garis menurun dari induk */
+.tree ul ul::before{
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  border-left: 2px solid #334155;
+  width: 0; height: 20px;
+}
+
+/* Desain Kotak */
+.tree li .org-node {
+  border: 2px solid #334155;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background: white;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  min-width: 150px;
+  max-width: 200px;
+  position: relative;
+  z-index: 2;
+}
+
+.tree li .org-node:hover {
+  background: var(--color-bg-subtle); 
+  border-color: var(--color-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.org-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid var(--color-accent);
+  background-color: #f1f5f9;
+}
+
+.org-photo-placeholder {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid var(--color-accent);
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+.org-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.org-role {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+}

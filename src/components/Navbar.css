@@ -1,0 +1,127 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(10, 25, 47, 0.85); /* More transparent */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle edge highlight */
+  padding: 15px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo-text {
+  font-size: clamp(15px, 1.5vw + 8px, 22px);
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.navbar:not(.scrolled) .logo-text {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 2vw, 30px);
+}
+
+.nav-links a:not(.btn) {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  white-space: nowrap;
+}
+
+.navbar:not(.scrolled) .nav-links a:not(.btn) {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-links a:not(.btn)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:not(.btn):hover::after {
+  width: 100%;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 9999;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1400px) {
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--color-primary);
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 9998;
+  }
+  
+  .nav-links.open {
+    right: 0;
+  }
+  
+  .navbar-container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 20px;
+  }
+  
+  .logo-text {
+    font-size: 16px !important;
+    white-space: normal !important;
+  }
+  
+  .logo img {
+    height: 40px !important;
+  }
+}

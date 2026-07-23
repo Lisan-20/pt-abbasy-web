@@ -1,0 +1,87 @@
+.portfolio-card {
+  background: var(--color-primary-light);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.portfolio-content {
+  padding: 30px;
+}
+.portfolio-status {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(255,122,0,0.2);
+  color: var(--color-accent);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.portfolio-title {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+.portfolio-client, .portfolio-purpose {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.mt-12 { margin-top: 60px; }
+.clients-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.client-badge {
+  padding: 10px 20px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 30px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Hover Overlay Styles */
+.portfolio-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.7); /* Menggunakan warna dasar namun transparan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-image-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay-text {
+  color: white;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 2px solid var(--color-accent);
+  background: rgba(255, 122, 0, 0.1);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  transform: translateY(15px);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay-text {
+  transform: translateY(0);
+}

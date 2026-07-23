@@ -1,0 +1,25 @@
+.about-content {
+  align-items: center;
+}
+.mb-4 { margin-bottom: 20px; }
+.feature-card {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+.feature-card:hover {
+  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-5px);
+}
+.feature-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .about-content { grid-template-columns: 1fr; }
+}

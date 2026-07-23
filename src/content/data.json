@@ -1,0 +1,422 @@
+{
+  "contact": {
+    "address": "Jatimulya Lestari Blok B no 3 Jl. Kalimulya Raya no 24, Jatimulya Cilodong, Depok Jawa Barat",
+    "email": "abbasyanugerahperkasa523@gmail.com",
+    "phone": "021 - 38740464",
+    "whatsapp": "081905095349"
+  },
+  "clients": [
+    {
+      "name": "Makopasus Jakarta Timur"
+    },
+    {
+      "name": "PT. Arsed Indonesia"
+    },
+    {
+      "name": "PT. Dwi Mukti Graha Kencana"
+    },
+    {
+      "name": "PT. Cap Karoso Development"
+    },
+    {
+      "name": "PT. Capitol Group"
+    },
+    {
+      "name": "PT. PMA"
+    },
+    {
+      "name": "PT. Dasa Prima Lestari Unggul"
+    },
+    {
+      "name": "PT. Bangun Konstruksi Cemerlang"
+    },
+    {
+      "name": "PT. Lubuk Indah"
+    }
+  ],
+  "experts": [
+    {
+      "name": "Dedek Rahman",
+      "qualification": "Ahli Teknik Tenaga Listrik - Madya",
+      "images": [
+        {
+          "image": "/uploads/proyek_page27_img4.jpeg"
+        },
+        {
+          "image": "/uploads/proyek_page28_img5.jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Danang Sidik Pramono, S.T.",
+      "qualification": "Ahli Manajemen Konstruksi - Madya",
+      "images": [
+        {
+          "image": "/uploads/proyek_page29_img5.jpeg"
+        },
+        {
+          "image": "/uploads/proyek_page30_img5.jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Shalih",
+      "qualification": "Ahli Teknik Tenaga Listrik - Madya",
+      "images": [
+        {
+          "image": "/uploads/proyek_page31_img5.jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Lutfiana Nurwardhani",
+      "qualification": "Ahli Teknik Bangunan Gedung - Muda",
+      "images": [
+        {
+          "image": "/uploads/proyek_page33_img5.jpeg"
+        }
+      ]
+    }
+  ],
+  "siteSettings": {
+    "logoImage": "/uploads/logo_transparent.png",
+    "logoText": "PT. ABBASY ANUGERAH PERKASA",
+    "logoTextSize": "26px",
+    "textAlignment": "justify",
+    "favicon": "/uploads/logo_transparent.png",
+    "footerTitle": "PT. Abbasy Anugerah Perkasa",
+    "footerDescription": "Menjadi perusahaan terkemuka di bidang Konstruksi dan Jasa dengan layanan berkualitas.",
+    "welcomeDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi."
+  },
+  "about": {
+    "title": "Tentang PT. Abbasy Anugerah Perkasa",
+    "description": "PT ABBASY ANUGERAH PERKASA adalah perusahaan yang bergerak di bidang jasa kontraktor, dengan fokus pada pelaksanaan pekerjaan konstruksi yang berkualitas, tepat waktu, dan sesuai dengan standar keselamatan kerja. Kami hadir untuk memberikan solusi konstruksi yang andal bagi proyek skala kecil hingga besar, baik untuk sektor swasta maupun pemerintah. Didukung oleh tenaga profesional yang berpengalaman serta manajemen yang solid. \nPT ABBASY ANUGERAH PERKASA berkomitmen untuk menghasilkan pekerjaan konstruksi yang memenuhi spesifikasi teknis dan harapan klien. Kami mengutamakan perencanaan yang matang, pengawasan yang ketat, serta penggunaan material dan metode kerja yang berkualitas.\nDalam setiap proyek, kami menjunjung tinggi nilai profesionalisme, integritas, keselamatan kerja (K3), dan kepuasan pelanggan. Kami percaya bahwa kepercayaan klien adalah aset utama, sehingga setiap pekerjaan kami laksanakan dengan penuh tanggung jawab dan transparansi. \nPT ABBASY ANUGERAH PERKASA terus berupaya berkembang mengikuti kemajuan teknologi konstruksi dan regulasi yang berlaku, guna menjadi perusahaan kontraktor yang kompeten, terpercaya, dan berdaya saing tinggi.",
+    "vision": "Bercita-cita menjadi perusahaan konstruksi terkemuka di seluruh negeri dengan menawarkan desain, rekayasa struktur, dan jasa konstruksi berkualitas tinggi terbaik di Indonesia.",
+    "mission": "Menghasilkan yang terbaik dari para pemangku kepentingan kami. Bersama tim yang terlatih dengan baik, kami mencapai kepuasan kesuksesan yang menguntungkan."
+  },
+  "organization": [
+    {
+      "id": "1",
+      "parentId": "",
+      "name": "EVI SILVIA",
+      "role": "KOMISARIS",
+      "photo": ""
+    },
+    {
+      "id": "2",
+      "parentId": "1",
+      "name": "DEDEK RAHMAN",
+      "role": "DIREKTUR UTAMA",
+      "photo": ""
+    },
+    {
+      "id": "3",
+      "parentId": "2",
+      "name": "SITI AKHADIYAH",
+      "role": "HRD MANAGER",
+      "photo": ""
+    },
+    {
+      "id": "4",
+      "parentId": "3",
+      "name": "IRSYAD FIRAZ",
+      "role": "STAFF ADMIN",
+      "photo": ""
+    },
+    {
+      "id": "5",
+      "parentId": "2",
+      "name": "HERU",
+      "role": "ENGINERING",
+      "photo": ""
+    },
+    {
+      "id": "6",
+      "parentId": "3",
+      "name": "MIA RUWIZ",
+      "role": "STAFF PURCHASING",
+      "photo": ""
+    },
+    {
+      "id": "7",
+      "parentId": "2",
+      "name": "DEDEK RAHMAN",
+      "role": "PROJECT COORDINATOR",
+      "photo": ""
+    },
+    {
+      "id": "8",
+      "parentId": "7",
+      "name": "RISAN",
+      "role": "DRAFTER",
+      "photo": ""
+    },
+    {
+      "id": "9",
+      "parentId": "7",
+      "name": "HERI",
+      "role": "SPV MEP",
+      "photo": ""
+    },
+    {
+      "id": "10",
+      "parentId": "7",
+      "name": "FATTAH",
+      "role": "General Affair",
+      "photo": ""
+    },
+    {
+      "id": "11",
+      "parentId": "2",
+      "name": "HENDRI",
+      "role": "BUSDEV DIREKTUR",
+      "photo": ""
+    }
+  ],
+  "customPages": [],
+  "legal": {
+    "companyName": "PT ABBASY ANUGERAH PERKASA",
+    "deed": "Surjadi S.H., M.KN., M.M., M.H.,./ No.93 / 22 Mei 2023",
+    "nib": "3005230086671",
+    "npwp": "39.077.880.1-412.000",
+    "sk": "AHU-0038587.AH.01.01.TAHUN 2023",
+    "legalImages": [
+      {
+        "image": "/uploads/picture53.png"
+      },
+      {
+        "image": "/uploads/picture54.jpg"
+      },
+      {
+        "image": "/uploads/picture55.jpg"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "PT. Dwi Mukti Graha Kencana",
+      "client": "PT. Dwi Mukti Graha Kencana",
+      "status": "Finish",
+      "purpose": "Mechanical, electrical, plumbing Construction",
+      "images": [
+        {
+          "image": "/uploads/picture1.jpg"
+        },
+        {
+          "image": "/uploads/picture2.jpg"
+        },
+        {
+          "image": "/uploads/picture3.jpg"
+        },
+        {
+          "image": "/uploads/picture4.png"
+        },
+        {
+          "image": "/uploads/picture5.jpg"
+        },
+        {
+          "image": "/uploads/picture6.jpg"
+        }
+      ]
+    },
+    {
+      "title": "PT. PMA",
+      "client": "PT. PMA",
+      "status": "Finish (Oktober 2024)",
+      "purpose": "Plumbing, Construction",
+      "images": [
+        {
+          "image": "/uploads/picture7.jpg"
+        },
+        {
+          "image": "/uploads/picture8.jpg"
+        },
+        {
+          "image": "/uploads/picture9.jpg"
+        },
+        {
+          "image": "/uploads/picture10.jpg"
+        },
+        {
+          "image": "/uploads/picture11.jpg"
+        },
+        {
+          "image": "/uploads/picture12.jpg"
+        }
+      ]
+    },
+    {
+      "title": "PT. Capitol Grup",
+      "client": "PT. Capitol Grup",
+      "status": "Retensi (2025)",
+      "purpose": "Mechanical, electrical, plumbing Construction",
+      "images": [
+        {
+          "image": "/uploads/picture13.jpg"
+        },
+        {
+          "image": "/uploads/picture14.jpg"
+        },
+        {
+          "image": "/uploads/picture15.jpg"
+        },
+        {
+          "image": "/uploads/picture16.jpg"
+        },
+        {
+          "image": "/uploads/picture17.jpg"
+        },
+        {
+          "image": "/uploads/picture18.jpg"
+        },
+        {
+          "image": "/uploads/picture19.jpg"
+        },
+        {
+          "image": "/uploads/picture20.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Rumah 4 lantai Bpk HJ Haedar (Tebet)",
+      "client": "Bpk HJ Haedar",
+      "status": "ON Progres",
+      "purpose": "Elektrikal, Plambing",
+      "images": [
+        {
+          "image": "/uploads/picture21.jpg"
+        },
+        {
+          "image": "/uploads/picture22.jpg"
+        },
+        {
+          "image": "/uploads/picture23.jpg"
+        },
+        {
+          "image": "/uploads/picture24.jpg"
+        },
+        {
+          "image": "/uploads/picture25.jpg"
+        },
+        {
+          "image": "/uploads/picture26.jpg"
+        }
+      ]
+    },
+    {
+      "title": "PT. Bangun Konstruksi Cemerlang",
+      "client": "Ditlantas Balikpapan Kaltim",
+      "status": "Finish",
+      "purpose": "Mekanikal, Elektrikal, Plambing",
+      "images": [
+        {
+          "image": "/uploads/picture27.jpg"
+        },
+        {
+          "image": "/uploads/picture28.jpg"
+        },
+        {
+          "image": "/uploads/picture29.jpg"
+        },
+        {
+          "image": "/uploads/picture30.jpg"
+        },
+        {
+          "image": "/uploads/picture31.jpg"
+        },
+        {
+          "image": "/uploads/picture32.jpg"
+        }
+      ]
+    },
+    {
+      "title": "PT. Dasa Prima Lestari Unggul",
+      "client": "Pama AL Balikpapan Kaltim",
+      "status": "Finish",
+      "purpose": "Sumur Bor",
+      "images": [
+        {
+          "image": "/uploads/picture33.jpg"
+        },
+        {
+          "image": "/uploads/picture34.jpg"
+        },
+        {
+          "image": "/uploads/picture35.jpg"
+        },
+        {
+          "image": "/uploads/picture36.jpg"
+        },
+        {
+          "image": "/uploads/picture37.jpg"
+        },
+        {
+          "image": "/uploads/picture38.jpg"
+        }
+      ]
+    },
+    {
+      "title": "PT. Lubuk Indah",
+      "client": "PT. Lubuk Indah",
+      "status": "On Progress",
+      "purpose": "Elektrikal,Plambing",
+      "images": [
+        {
+          "image": "/uploads/picture39.jpg"
+        },
+        {
+          "image": "/uploads/picture40.jpg"
+        },
+        {
+          "image": "/uploads/picture41.jpg"
+        },
+        {
+          "image": "/uploads/picture42.jpg"
+        },
+        {
+          "image": "/uploads/picture43.jpg"
+        },
+        {
+          "image": "/uploads/picture44.jpg"
+        },
+        {
+          "image": "/uploads/picture45.jpg"
+        },
+        {
+          "image": "/uploads/picture46.jpg"
+        }
+      ]
+    }
+  ],
+  "hero": {
+    "headline": "General Contractor Andal & Terpercaya",
+    "subheadline": "Membangun masa depan dengan keunggulan struktural dan layanan berkualitas tinggi di seluruh Indonesia.",
+    "bgImage": "/uploads/proyek_page1_img2.jpeg"
+  },
+  "services": [
+    {
+      "title": "Pre-construction Design & Estimating",
+      "description": "Perencanaan desain awal dan estimasi biaya proyek secara akurat."
+    },
+    {
+      "title": "Construction Management",
+      "description": "Manajemen proyek konstruksi dari awal hingga penyelesaian dengan standar K3."
+    },
+    {
+      "title": "Renovation and Expansion",
+      "description": "Layanan renovasi dan perluasan bangunan yang efisien."
+    },
+    {
+      "title": "Building Sustainability & Upgrades",
+      "description": "Peningkatan dan perbaikan struktur bangunan agar lebih berkelanjutan."
+    },
+    {
+      "title": "Installations (MEP)",
+      "description": "Instalasi mekanikal, elektrikal, dan plumbing untuk segala skala proyek."
+    },
+    {
+      "title": "Trading Material",
+      "description": "Perdagangan material bangunan untuk skala kecil, menengah, dan besar."
+    }
+  ]
+}
