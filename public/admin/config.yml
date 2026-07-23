@@ -6,7 +6,7 @@ local_backend: true
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
-logo_url: "/uploads/logo.png"
+logo_url: "/uploads/logo_transparent.png"
 
 collections:
   - name: "content"
