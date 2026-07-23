@@ -8,7 +8,7 @@ const ExpertsPage = ({ data }) => {
 
   return (
     <PageWrapper title="Tenaga Ahli">
-      <div className="page-header" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '60px 0', textAlign: 'center' }}>
+      <div className="page-header" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '140px 0 60px', textAlign: 'center' }}>
         <h1 style={{ color: 'white' }}>Dukungan Tenaga Ahli</h1>
       </div>
       
