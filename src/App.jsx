@@ -52,9 +52,9 @@ function App() {
         '--global-text-alignment': textAlignment 
       }}>
         <Navbar contact={siteData.contact} siteSettings={siteData.siteSettings} customPages={siteData.customPages} />
-        <div className="page-content" style={{ flex: 1, paddingTop: '80px', display: 'flex', flexDirection: 'column' }}>
+        <main style={{ flex: 1 }}>
           <AnimatedRoutes />
-        </div>
+        </main>
         <Footer data={siteData.contact} siteSettings={siteData.siteSettings} />
       </div>
     </Router>
