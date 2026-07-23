@@ -79,17 +79,17 @@
     }
   ],
   "siteSettings": {
+    "footerDescription": "Menjadi perusahaan terkemuka di bidang Konstruksi dan Jasa dengan layanan berkualitas.",
+    "seoKeywords": "PT Abbasy Anugerah Perkasa, Kontraktor Umum, General Contractor, Konstruksi Indonesia, Perdagangan Umum, General Trade",
     "logoImage": "/uploads/logo_transparent.png",
+    "favicon": "/uploads/logo_transparent.png",
+    "textAlignment": "justify",
     "logoText": "PT. ABBASY ANUGERAH PERKASA",
     "logoTextSize": "26px",
-    "textAlignment": "justify",
-    "favicon": "/uploads/logo_transparent.png",
-    "footerTitle": "PT. Abbasy Anugerah Perkasa",
-    "footerDescription": "Menjadi perusahaan terkemuka di bidang Konstruksi dan Jasa dengan layanan berkualitas.",
     "welcomeDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi.",
     "seoTitle": "PT. Abbasy Anugerah Perkasa | Kontraktor Umum Terpercaya",
-    "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional.",
-    "seoKeywords": "PT Abbasy Anugerah Perkasa, Kontraktor Umum, General Contractor, Konstruksi Indonesia, Perdagangan Umum, General Trade"
+    "footerTitle": "PT. Abbasy Anugerah Perkasa",
+    "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional."
   },
   "about": {
     "title": "Tentang PT. Abbasy Anugerah Perkasa",

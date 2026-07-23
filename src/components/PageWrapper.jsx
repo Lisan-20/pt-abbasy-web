@@ -21,6 +21,7 @@ const PageWrapper = ({ children, title, description }) => {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
+        {siteSettings.favicon && <link rel="icon" href={siteSettings.favicon} />}
       </Helmet>
       <motion.div
         initial={{ opacity: 0, y: 15 }}
