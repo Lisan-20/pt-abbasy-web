@@ -8,8 +8,9 @@ const Portfolio = ({ data, clients }) => {
 
   // function to get first image or fallback
   const getCoverImage = (project) => {
-    if (project.images && project.images.length > 0 && project.images[0].image) {
-      return project.images[0].image;
+    if (project.images && project.images.length > 0) {
+      const validImg = project.images.find(img => img && img.image && img.image.trim() !== '');
+      if (validImg) return validImg.image;
     }
     return null;
   };

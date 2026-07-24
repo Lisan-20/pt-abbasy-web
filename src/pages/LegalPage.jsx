@@ -6,7 +6,8 @@ import '../components/Portfolio.css';
 
 const LegalPage = ({ data }) => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const coverImage = data.legalImages && data.legalImages.length > 0 ? data.legalImages[0].image : null;
+  const coverImgObj = data.legalImages && data.legalImages.length > 0 ? data.legalImages.find(img => img && img.image && img.image.trim() !== '') : null;
+  const coverImage = coverImgObj ? coverImgObj.image : null;
 
   return (
     <PageWrapper title="Legalitas">
