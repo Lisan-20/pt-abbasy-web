@@ -9,11 +9,12 @@ const HomePage = ({ data }) => {
     <PageWrapper title="Beranda">
       <Hero data={data.hero} />
       <motion.div 
+        className="geometric-bg bg-left"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        style={{ padding: '60px 0', textAlign: 'center', backgroundColor: 'var(--color-bg-subtle)' }}
+        style={{ padding: '80px 0', textAlign: 'center' }}
       >
         <h2 className="section-title">Selamat Datang di PT Abbasy Anugerah Perkasa</h2>
         <p className="container" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', whiteSpace: 'pre-line', textAlign: 'var(--global-text-alignment)' }}>

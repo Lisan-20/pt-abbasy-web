@@ -6,8 +6,9 @@ const iconMap = [Settings, HardHat, Building, Bolt, Wrench, Zap];
 
 const Services = ({ data }) => {
   return (
-    <section className="section container">
-      <div className="grid grid-cols-3">
+    <section className="section geometric-bg">
+      <div className="container">
+        <div className="grid grid-cols-3">
         {data.map((service, idx) => {
           const Icon = iconMap[idx % iconMap.length];
           return (
@@ -28,6 +29,7 @@ const Services = ({ data }) => {
             </motion.div>
           );
         })}
+        </div>
       </div>
     </section>
   );
