@@ -12,10 +12,23 @@ const buildTree = (members) => {
     memberMap[member.id] = { ...member, children: [] };
   });
 
-  // Susun relasi anak dan induk
+  // Susun relasi anak dan induk (Mendukung multi-atasan)
   members.forEach(member => {
-    if (member.parentId && memberMap[member.parentId]) {
-      memberMap[member.parentId].children.push(memberMap[member.id]);
+    if (member.parentId) {
+      // Pecah ID berdasarkan koma untuk mendukung banyak atasan
+      const parentIds = member.parentId.toString().split(',').map(id => id.trim()).filter(id => id);
+      let hasValidParent = false;
+
+      parentIds.forEach(pId => {
+        if (memberMap[pId]) {
+          memberMap[pId].children.push(memberMap[member.id]);
+          hasValidParent = true;
+        }
+      });
+
+      if (!hasValidParent) {
+        rootNodes.push(memberMap[member.id]);
+      }
     } else {
       rootNodes.push(memberMap[member.id]);
     }

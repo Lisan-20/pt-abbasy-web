@@ -38,7 +38,7 @@ collections:
                 name: "photo"
                 widget: "image"
                 required: false
-              - label: "Melapor Ke (Isi dengan ID Unik atasan, kosongkan jika posisi tertinggi/Komisaris)"
+              - label: "Melapor Ke (Isi ID Unik atasan. Jika lebih dari 1, pisahkan dengan koma misal: 1, 2)"
                 name: "parentId"
                 widget: "string"
                 required: false
