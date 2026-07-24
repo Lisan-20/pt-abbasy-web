@@ -269,13 +269,13 @@
       "id": "20",
       "role": "GUDANG",
       "name": "DD DJ",
-      "parentId": "19"
+      "parentId": "19,18"
     },
     {
       "id": "21",
       "role": "SECURITI",
       "name": "UDIN",
-      "parentId": "19"
+      "parentId": "19,18"
     }
   ],
   "customPages": [],
