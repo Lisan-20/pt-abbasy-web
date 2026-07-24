@@ -16,6 +16,22 @@
     </style>
   </head>
   <body>
+    <!-- Injeksi Identity Widget agar CMS bisa cross-domain ke Netlify -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      window.netlifyIdentity = window.netlifyIdentity || {};
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.reload();
+          });
+        }
+      });
+      window.netlifyIdentity.init({
+        APIUrl: 'https://abbasyanugerahperkasa.netlify.app/.netlify/identity'
+      });
+    </script>
+    
     <!-- Include the script that builds the page and powers Netlify CMS (stable version) -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </body>

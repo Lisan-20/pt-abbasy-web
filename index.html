@@ -18,6 +18,11 @@
             });
           }
         });
+        // Konfigurasi ini memaksa widget login untuk menelepon server Netlify,
+        // meskipun website ini di-hosting di GitHub Pages.
+        window.netlifyIdentity.init({
+          APIUrl: 'https://abbasyanugerahperkasa.netlify.app/.netlify/identity'
+        });
       }
     </script>
   </body>
