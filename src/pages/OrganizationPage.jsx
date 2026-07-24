@@ -2,15 +2,10 @@ import React from 'react';
 import { User } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 import '../components/OrganizationTree.css';
-import XarrowPkg from 'react-xarrows';
-
-const Xarrow = XarrowPkg.default || XarrowPkg;
-const Xwrapper = XarrowPkg.Xwrapper || React.Fragment;
 
 const buildTree = (members) => {
   const rootNodes = [];
   const memberMap = {};
-  const secondaryLinks = []; // Simpan garis cabang tambahan
 
   // Peta semua anggota berdasarkan ID
   members.forEach(member => {
@@ -24,15 +19,10 @@ const buildTree = (members) => {
       const parentIds = member.parentId.toString().split(',').map(id => id.trim()).filter(id => id);
       let hasValidParent = false;
 
-      parentIds.forEach((pId, index) => {
+      parentIds.forEach(pId => {
         if (memberMap[pId]) {
-          if (index === 0) {
-            // Induk utama: Render kotak fisiknya di sini
-            memberMap[pId].children.push(memberMap[member.id]);
-          } else {
-            // Induk kedua dst: Jangan render fisik, cukup gambar garis Xarrow
-            secondaryLinks.push({ start: pId, end: member.id });
-          }
+          // Duplikasi kotak fisik (paling stabil untuk CSS Tree)
+          memberMap[pId].children.push(memberMap[member.id]);
           hasValidParent = true;
         }
       });
@@ -88,29 +78,13 @@ const OrganizationPage = ({ data }) => {
       
       <div className="section container">
         <div className="org-tree">
-          <Xwrapper>
-            <div className="tree">
-              <ul>
-                {tree.rootNodes.map(rootNode => (
-                  <OrgNode key={rootNode.id} node={rootNode} />
-                ))}
-              </ul>
-              {/* Gambar garis silang untuk bos kedua dst */}
-              {tree.secondaryLinks.map((link, i) => (
-                <Xarrow
-                  key={i}
-                  start={`org-node-${link.start}`}
-                  end={`org-node-${link.end}`}
-                  path="grid"
-                  color="#334155"
-                  strokeWidth={2}
-                  showHead={false}
-                  startAnchor="bottom"
-                  endAnchor="top"
-                />
+          <div className="tree">
+            <ul>
+              {tree.map(rootNode => (
+                <OrgNode key={rootNode.id} node={rootNode} />
               ))}
-            </div>
-          </Xwrapper>
+            </ul>
+          </div>
         </div>
       </div>
     </PageWrapper>
