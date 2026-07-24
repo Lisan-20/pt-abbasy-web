@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Preloader.css';
 
 const Preloader = ({ logoUrl }) => {
   const [isVisible, setIsVisible] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
-    // Hide the preloader after 1.8 seconds
+    // Tampilkan loading setiap kali rute halaman berubah
+    setIsVisible(true);
+    
+    // Sembunyikan setelah 0.8 detik agar tidak mengganggu kecepatan navigasi
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 1800);
+    }, 800);
     return () => clearTimeout(timer);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <AnimatePresence>
