@@ -3,8 +3,14 @@
   width: 100%;
   overflow-x: auto;
   padding: 40px 0;
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
+}
+
+.tree {
+  display: inline-block;
+  width: max-content;
+  text-align: left;
 }
 
 .tree ul {
