@@ -82,6 +82,48 @@
     "footerDescription": "Menjadi perusahaan terkemuka di bidang Konstruksi dan Jasa dengan layanan berkualitas.",
     "seoKeywords": "PT Abbasy Anugerah Perkasa, Kontraktor Umum, General Contractor, Konstruksi Indonesia, Perdagangan Umum, General Trade",
     "logoImage": "/uploads/logo_transparent.png",
+    "navigation": [
+      {
+        "label": "Beranda",
+        "path": "/",
+        "isButton": false
+      },
+      {
+        "label": "Tentang Kami",
+        "path": "/about",
+        "isButton": false
+      },
+      {
+        "label": "Organisasi",
+        "path": "/organization",
+        "isButton": false
+      },
+      {
+        "label": "Layanan",
+        "path": "/services",
+        "isButton": false
+      },
+      {
+        "label": "Portofolio",
+        "path": "/portfolio",
+        "isButton": false
+      },
+      {
+        "label": "Tenaga Ahli",
+        "path": "/experts",
+        "isButton": false
+      },
+      {
+        "label": "Legalitas",
+        "path": "/legal",
+        "isButton": false
+      },
+      {
+        "label": "Hubungi Kami",
+        "path": "/contact",
+        "isButton": true
+      }
+    ],
     "favicon": "/uploads/logo_transparent.png",
     "textAlignment": "justify",
     "logoText": "PT. ABBASY ANUGERAH PERKASA",
@@ -89,17 +131,7 @@
     "welcomeDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi.",
     "seoTitle": "PT. Abbasy Anugerah Perkasa | Kontraktor Umum Terpercaya",
     "footerTitle": "PT. Abbasy Anugerah Perkasa",
-    "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional.",
-    "navigation": [
-      { "label": "Beranda", "path": "/", "isButton": false },
-      { "label": "Tentang Kami", "path": "/about", "isButton": false },
-      { "label": "Organisasi", "path": "/organization", "isButton": false },
-      { "label": "Layanan", "path": "/services", "isButton": false },
-      { "label": "Portofolio", "path": "/portfolio", "isButton": false },
-      { "label": "Tenaga Ahli", "path": "/experts", "isButton": false },
-      { "label": "Legalitas", "path": "/legal", "isButton": false },
-      { "label": "Hubungi Kami", "path": "/contact", "isButton": true }
-    ]
+    "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional."
   },
   "about": {
     "title": "Tentang PT. Abbasy Anugerah Perkasa",
@@ -207,7 +239,7 @@
   },
   "projects": [
     {
-      "title": "PT. Dwi Mukti Graha Kencana",
+      "title": "Project Bitch Club Desa Kitsune, Bali",
       "client": "PT. Dwi Mukti Graha Kencana",
       "status": "Finish",
       "purpose": "Mechanical, electrical, plumbing Construction",
@@ -233,7 +265,7 @@
       ]
     },
     {
-      "title": "PT. PMA",
+      "title": "Project Paving Jalan Singakarta",
       "client": "PT. PMA",
       "status": "Finish (Oktober 2024)",
       "purpose": "Plumbing, Construction",
@@ -259,7 +291,7 @@
       ]
     },
     {
-      "title": "PT. Capitol Grup",
+      "title": "Project Ruang Direksi Staco",
       "client": "PT. Capitol Grup",
       "status": "Retensi (2025)",
       "purpose": "Mechanical, electrical, plumbing Construction",
@@ -291,7 +323,7 @@
       ]
     },
     {
-      "title": "Rumah 4 lantai Bpk HJ Haedar (Tebet)",
+      "title": "Project Rumah 4 lantai (Tebet)",
       "client": "Bpk HJ Haedar",
       "status": "ON Progres",
       "purpose": "Elektrikal, Plambing",
@@ -317,8 +349,8 @@
       ]
     },
     {
-      "title": "PT. Bangun Konstruksi Cemerlang",
-      "client": "Ditlantas Balikpapan Kaltim",
+      "title": "Project Pembuatan Gedung Samsat Ditlantas Balikpapan Kaltim",
+      "client": "PT. Bangun Konstruksi Cemerlang",
       "status": "Finish",
       "purpose": "Mekanikal, Elektrikal, Plambing",
       "images": [
@@ -343,13 +375,13 @@
       ]
     },
     {
-      "title": "PT. Dasa Prima Lestari Unggul",
-      "client": "Pama AL Balikpapan Kaltim",
+      "title": "Project Pembuatan Mesh Pama AL Balikpapan Kaltim",
+      "client": "PT. Dasa Prima Lestari Unggul",
       "status": "Finish",
-      "purpose": "Sumur Bor",
+      "purpose": "Mekanikal,Elektrikal,Plambing",
       "images": [
         {
-          "image": "/uploads/picture33.jpg"
+          "image": ""
         },
         {
           "image": "/uploads/picture34.jpg"
@@ -365,6 +397,15 @@
         },
         {
           "image": "/uploads/picture38.jpg"
+        },
+        {
+          "image": "/uploads/picture2.jpg"
+        },
+        {
+          "image": "/uploads/picture3.jpg"
+        },
+        {
+          "image": "/uploads/picture4.jpg"
         }
       ]
     },
