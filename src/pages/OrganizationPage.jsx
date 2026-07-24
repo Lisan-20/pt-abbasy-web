@@ -35,7 +35,7 @@ const buildTree = (members) => {
     }
   });
 
-  return { rootNodes, secondaryLinks };
+  return rootNodes;
 };
 
 const OrgNode = ({ node }) => {
