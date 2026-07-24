@@ -183,40 +183,33 @@ img {
   }
 }
 
-/* Corporate Geometric Backgrounds */
-.geometric-bg {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--color-bg-light);
-}
-
-.geometric-bg::before {
+/* Corporate Geometric Backgrounds - Global */
+body::before {
   content: '';
-  position: absolute;
-  top: -10%;
-  right: -5%;
-  width: 60%;
-  height: 120%;
+  position: fixed;
+  top: -10vh;
+  right: -5vw;
+  width: 65vw;
+  height: 120vh;
   background: linear-gradient(135deg, rgba(224, 242, 254, 0.7) 0%, rgba(2, 132, 199, 0.25) 100%);
-  border-top-left-radius: 180px;
-  border-bottom-left-radius: 80px;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 100px;
   transform: rotate(-4deg);
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
 }
 
-.geometric-bg.bg-left::before {
-  right: auto;
-  left: -5%;
-  background: linear-gradient(225deg, rgba(224, 242, 254, 0.7) 0%, rgba(2, 132, 199, 0.25) 100%);
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -5vh;
+  left: -5vw;
+  width: 40vw;
+  height: 80vh;
+  background: linear-gradient(225deg, rgba(224, 242, 254, 0.6) 0%, rgba(2, 132, 199, 0.2) 100%);
   border-top-right-radius: 180px;
   border-bottom-right-radius: 80px;
-  transform: rotate(4deg);
-}
-
-.geometric-bg > * {
-  position: relative;
-  z-index: 1;
+  transform: rotate(5deg);
+  z-index: -1;
+  pointer-events: none;
 }

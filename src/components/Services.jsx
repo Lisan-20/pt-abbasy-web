@@ -6,7 +6,7 @@ const iconMap = [Settings, HardHat, Building, Bolt, Wrench, Zap];
 
 const Services = ({ data }) => {
   return (
-    <section className="section geometric-bg">
+    <section className="section">
       <div className="container">
         <div className="grid grid-cols-3">
         {data.map((service, idx) => {
