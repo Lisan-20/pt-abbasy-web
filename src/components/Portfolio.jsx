@@ -16,7 +16,7 @@ const Portfolio = ({ data, clients }) => {
   };
 
   return (
-    <section className="section bg-light">
+    <section className="section">
       <div className="container">
         
         {/* Projects Gallery */}
