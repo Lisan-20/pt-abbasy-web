@@ -258,9 +258,6 @@
         },
         {
           "image": "/uploads/picture11.jpg"
-        },
-        {
-          "image": "/uploads/picture6.jpg"
         }
       ]
     },
@@ -271,36 +268,10 @@
       "purpose": "Plumbing, Construction",
       "images": [
         {
-          "image": "/uploads/picture7.jpg"
-        },
-        {
-          "image": "/uploads/picture8.jpg"
-        },
-        {
-          "image": "/uploads/picture9.jpg"
-        },
-        {
-          "image": "/uploads/picture10.jpg"
-        },
-        {
-          "image": "/uploads/picture11.jpg"
+          "image": "/uploads/picture14.jpg"
         },
         {
           "image": "/uploads/picture12.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Project Ruang Direksi Staco",
-      "client": "PT. Capitol Grup",
-      "status": "Retensi (2025)",
-      "purpose": "Mechanical, electrical, plumbing Construction",
-      "images": [
-        {
-          "image": "/uploads/picture13.jpg"
-        },
-        {
-          "image": "/uploads/picture14.jpg"
         },
         {
           "image": "/uploads/picture15.jpg"
@@ -313,12 +284,32 @@
         },
         {
           "image": "/uploads/picture18.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Project Ruang Direksi Staco",
+      "client": "PT. Capitol Grup",
+      "status": "Retensi (2025)",
+      "purpose": "Mechanical, electrical, plumbing Construction",
+      "images": [
+        {
+          "image": ""
         },
         {
-          "image": "/uploads/picture19.jpg"
+          "image": ""
         },
         {
-          "image": "/uploads/picture20.jpg"
+          "image": ""
+        },
+        {
+          "image": ""
+        },
+        {
+          "image": ""
+        },
+        {
+          "image": ""
         }
       ]
     },
@@ -329,22 +320,22 @@
       "purpose": "Elektrikal, Plambing",
       "images": [
         {
-          "image": "/uploads/picture21.jpg"
+          "image": ""
         },
         {
-          "image": "/uploads/picture22.jpg"
+          "image": ""
         },
         {
-          "image": "/uploads/picture23.jpg"
+          "image": ""
         },
         {
-          "image": "/uploads/picture24.jpg"
+          "image": ""
         },
         {
-          "image": "/uploads/picture25.jpg"
+          "image": ""
         },
         {
-          "image": "/uploads/picture26.jpg"
+          "image": ""
         }
       ]
     },
@@ -392,6 +383,9 @@
       "status": "Finish",
       "purpose": "Mekanikal,Elektrikal,Plambing",
       "images": [
+        {
+          "image": ""
+        },
         {
           "image": "/uploads/picture34.jpg"
         },
