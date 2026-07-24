@@ -30,7 +30,7 @@ const Navbar = ({ contact, siteSettings, customPages }) => {
             <img 
               src={siteSettings.logoImage} 
               alt="Logo PT Abbasy" 
-              style={{ height: '50px', width: 'auto', objectFit: 'contain' }} 
+              style={{ height: '85px', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))' }} 
             />
           )}
           {siteSettings?.logoText && (
