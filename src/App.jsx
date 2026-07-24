@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Preloader from './components/Preloader';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -52,6 +53,7 @@ function App() {
         '--global-text-alignment': textAlignment 
       }}>
         <Navbar contact={siteData.contact} siteSettings={siteData.siteSettings} customPages={siteData.customPages} />
+        <Preloader logoUrl={siteData.siteSettings?.logoImage} />
         <main style={{ flex: 1 }}>
           <AnimatedRoutes />
         </main>
