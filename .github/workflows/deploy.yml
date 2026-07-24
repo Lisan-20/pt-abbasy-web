@@ -1,0 +1,31 @@
+name: Auto-Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Tarik Kode dari Repositori
+        uses: actions/checkout@v3
+        
+      - name: Siapkan Mesin Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Instalasi Modul
+        run: npm ci
+        
+      - name: Rakit Website (Build)
+        run: npm run build
+        
+      - name: Kirim Hasil ke Netlify (Tanpa Memotong Kuota Netlify)
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: npx netlify-cli deploy --prod --dir=dist
