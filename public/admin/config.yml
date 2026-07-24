@@ -99,6 +99,22 @@ collections:
                 name: "seoKeywords"
                 widget: "string"
                 required: false
+              - label: "Navigation Menu (Menu Atas)"
+                name: "navigation"
+                widget: "list"
+                summary: "{{label}}"
+                required: false
+                fields:
+                  - label: "Label Menu (Teks yang Tampil)"
+                    name: "label"
+                    widget: "string"
+                  - label: "URL/Tautan (Gunakan / di depan, misal: /about)"
+                    name: "path"
+                    widget: "string"
+                  - label: "Jadikan Tombol Utama (Warna Jingga)?"
+                    name: "isButton"
+                    widget: "boolean"
+                    default: false
           - label: "Hero Section"
             name: "hero"
             widget: "object"

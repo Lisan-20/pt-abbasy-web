@@ -41,17 +41,27 @@ const Navbar = ({ contact, siteSettings, customPages }) => {
         </Link>
         
         <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-          <Link to="/">Beranda</Link>
-          <Link to="/about">Tentang Kami</Link>
-          <Link to="/organization">Organisasi</Link>
-          <Link to="/services">Layanan</Link>
-          <Link to="/portfolio">Portofolio</Link>
-          <Link to="/experts">Tenaga Ahli</Link>
-          <Link to="/legal">Legalitas</Link>
+          {siteSettings?.navigation ? (
+            siteSettings.navigation.map((item, idx) => (
+              <Link 
+                key={idx} 
+                to={item.path} 
+                className={item.isButton ? "btn btn-primary" : ""}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))
+          ) : (
+            <>
+              <Link to="/" onClick={() => setMobileMenuOpen(false)}>Beranda</Link>
+              <Link to="/about" onClick={() => setMobileMenuOpen(false)}>Tentang Kami</Link>
+              <Link to="/contact" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>Hubungi Kami</Link>
+            </>
+          )}
           {customPages && customPages.filter(p => p.showInMenu !== false).map((page, idx) => (
-            <Link key={idx} to={`/${page.slug}`} onClick={() => setMobileMenuOpen(false)}>{page.title}</Link>
+            <Link key={`custom-${idx}`} to={`/${page.slug}`} onClick={() => setMobileMenuOpen(false)}>{page.title}</Link>
           ))}
-          <Link to="/contact" className="btn btn-primary">Hubungi Kami</Link>
         </div>
 
         <button className={`mobile-toggle ${mobileMenuOpen ? 'menu-open' : ''}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ padding: '10px' }}>
