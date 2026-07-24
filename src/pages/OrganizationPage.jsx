@@ -2,7 +2,10 @@ import React from 'react';
 import { User } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 import '../components/OrganizationTree.css';
-import Xarrow, { Xwrapper } from 'react-xarrows';
+import XarrowPkg from 'react-xarrows';
+
+const Xarrow = XarrowPkg.default || XarrowPkg;
+const Xwrapper = XarrowPkg.Xwrapper || React.Fragment;
 
 const buildTree = (members) => {
   const rootNodes = [];
