@@ -42,6 +42,32 @@
   letter-spacing: 1px;
 }
 
+.logo-img-wrapper {
+  background-color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.logo-img-wrapper img {
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar:not(.scrolled) .logo-img-wrapper {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.navbar.scrolled .logo-img-wrapper {
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
 .navbar:not(.scrolled) .logo-text {
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
@@ -137,7 +163,7 @@
     white-space: normal !important;
   }
   
-  .logo img {
-    height: 65px !important;
+  .logo-img-wrapper img {
+    height: 55px !important;
   }
 }

@@ -27,11 +27,12 @@ const Navbar = ({ contact, siteSettings, customPages }) => {
       <div className="navbar-container">
         <Link to="/" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '15px', minWidth: 0 }}>
           {siteSettings?.logoImage && (
-            <img 
-              src={siteSettings.logoImage} 
-              alt="Logo PT Abbasy" 
-              style={{ height: '85px', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))' }} 
-            />
+            <div className="logo-img-wrapper">
+              <img 
+                src={siteSettings.logoImage} 
+                alt="Logo PT Abbasy" 
+              />
+            </div>
           )}
           {siteSettings?.logoText && (
             <span className="logo-text" style={{ margin: 0 }}>
