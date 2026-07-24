@@ -67,7 +67,7 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(25px, 5vw, 40px);
+  padding: 0 clamp(35px, 8vw, 60px);
 }
 
 .section {
@@ -166,7 +166,7 @@ img {
 @media (max-width: 768px) {
   .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
   .section { padding: 60px 0; }
-  /* removed static .section-title font-size since fluid clamp handles it */
+  .section p, .hero-subheadline { padding: 0 5px; }
 }
 
 /* Micro Animations */
