@@ -258,6 +258,9 @@
         },
         {
           "image": "/uploads/picture11.jpg"
+        },
+        {
+          "image": "/uploads/picture6.jpg"
         }
       ]
     },
@@ -268,37 +271,48 @@
       "purpose": "Plumbing, Construction",
       "images": [
         {
-          "image": "/uploads/picture14.jpg"
+          "image": "/uploads/picture7.jpg"
+        },
+        {
+          "image": "/uploads/picture8.jpg"
+        },
+        {
+          "image": "/uploads/picture9.jpg"
+        },
+        {
+          "image": "/uploads/picture10.jpg"
+        },
+        {
+          "image": "/uploads/picture11.jpg"
         },
         {
           "image": "/uploads/picture12.jpg"
-        },
-        {
-          "image": "/uploads/picture15.jpg"
-        },
-        {
-          "image": "/uploads/picture16.jpg"
-        },
-        {
-          "image": "/uploads/picture17.jpg"
-        },
-        {
-          "image": "/uploads/picture18.jpg"
         }
       ]
     },
     {
       "title": "Project Ruang Direksi Staco",
       "client": "PT. Capitol Grup",
-      "status": "Finish At Agustus 2025",
+      "status": "Retensi (2025)",
       "purpose": "Mechanical, electrical, plumbing Construction",
       "images": [
+        {
+          "image": "/uploads/picture18.jpg"
+        },
         {
           "image": "/uploads/picture19.jpg"
         },
         {
           "image": "/uploads/picture20.jpg"
-        },
+        }
+      ]
+    },
+    {
+      "title": "Project Rumah 4 lantai (Tebet)",
+      "client": "Bpk HJ Haedar",
+      "status": "ON Progres",
+      "purpose": "Elektrikal, Plambing",
+      "images": [
         {
           "image": "/uploads/picture21.jpg"
         },
@@ -310,32 +324,12 @@
         },
         {
           "image": "/uploads/picture24.jpg"
-        }
-      ]
-    },
-    {
-      "title": "Project Rumah 4 lantai (Tebet)",
-      "client": "Bpk HJ Haedar",
-      "status": "ON Progres",
-      "purpose": "Elektrikal, Plambing",
-      "images": [
-        {
-          "image": ""
         },
         {
-          "image": ""
+          "image": "/uploads/picture25.jpg"
         },
         {
-          "image": ""
-        },
-        {
-          "image": ""
-        },
-        {
-          "image": ""
-        },
-        {
-          "image": ""
+          "image": "/uploads/picture26.jpg"
         }
       ]
     },
@@ -383,9 +377,6 @@
       "status": "Finish",
       "purpose": "Mekanikal,Elektrikal,Plambing",
       "images": [
-        {
-          "image": ""
-        },
         {
           "image": "/uploads/picture34.jpg"
         },
