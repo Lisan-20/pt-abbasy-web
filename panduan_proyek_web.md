@@ -1,122 +1,93 @@
-# Panduan Proyek Web PT. Abbasy Anugerah Perkasa
+# Panduan Proyek Web: PT Abbasy Anugerah Perkasa
 
-Dokumen ini berisi panduan teknis, tata cara instalasi, konfigurasi, serta standarisasi desain untuk proyek *website* perusahaan PT. Abbasy Anugerah Perkasa. Dokumen ini ditujukan bagi *developer* yang akan melanjutkan, merawat, atau menambahkan fitur baru di masa depan agar tetap seragam dan sesuai standar korporat.
+Dokumen ini adalah cetak biru (*blueprint*) dan panduan teknis untuk *website* PT Abbasy Anugerah Perkasa. Gunakan panduan ini sebagai referensi utama saat melakukan instalasi, konfigurasi, atau penambahan fitur baru agar standar desain tetap terjaga.
 
----
+## 1. Instalasi & Konfigurasi Lokal
 
-## 1. Spesifikasi Teknologi
-Proyek ini dibangun menggunakan arsitektur **Jamstack** (Static Site Generation / SPA) untuk performa maksimal dan keamanan tingkat tinggi.
-- **Framework Utama**: React (Vite)
-- **Styling**: Vanilla CSS (tanpa Tailwind) dengan implementasi *CSS Variables*.
-- **CMS (Content Management System)**: Netlify CMS / Decap CMS (Git-based).
-- **Backend / Database**: File `data.json` statis (Tidak memakai MySQL/PHP tradisional).
-- **Deploy & Hosting**: Netlify dengan GitHub Actions CI/CD (Bypass).
-
----
-
-## 2. Instalasi & Menjalankan Proyek Secara Lokal
-
-Jika Anda baru pertama kali memegang proyek ini, ikuti langkah berikut untuk menjalankannya di komputer (Localhost).
+Proyek ini dibangun menggunakan **React (Vite)** dan **Netlify CMS** (Git Gateway).
 
 ### Prasyarat
-- **Node.js** (Minimal Versi 20.x ke atas)
-- **Git**
+- Node.js (Versi 20 atau terbaru)
+- Git
 
 ### Langkah Instalasi
-1. Buka Terminal / Command Prompt.
-2. Lakukan *clone* repositori dari GitHub:
+1. Kloning repositori:
    ```bash
    git clone https://github.com/Lisan-20/pt-abbasy-web.git
-   ```
-3. Masuk ke dalam direktori proyek:
-   ```bash
    cd pt-abbasy-web
    ```
-4. Pasang semua dependensi modul:
+2. Instal pustaka (*dependencies*):
    ```bash
    npm install
    ```
-5. Jalankan *server* pengembangan lokal:
+3. Jalankan *server* pengembangan lokal:
    ```bash
    npm run dev
    ```
-6. Buka URL `http://localhost:5173` di *browser* Anda.
+4. Buka di *browser*: `http://localhost:5173`
+
+### Konfigurasi Netlify CMS (Admin)
+- Halaman admin dapat diakses di `https://abbasyanugerahperkasa.com/admin/`.
+- CMS terhubung langsung ke repositori GitHub melalui fitur **Git Gateway** di Netlify.
+- Jika terjadi *error* CORS atau penolakan API saat login, solusinya adalah masuk ke *Dashboard* Netlify > **Site Configuration** > **Identity** > **Services** > **Git Gateway** -> Nonaktifkan (*Disable*) lalu Aktifkan kembali (*Enable*) untuk menyegarkan token GitHub.
 
 ---
 
-## 3. Konfigurasi Sistem CI/CD & Bypass Kuota Netlify
+## 2. Standarisasi Tampilan (Design System)
 
-Proyek ini telah direkayasa untuk menggunakan **GitHub Actions** sebagai mesin perakit utama guna menghindari limit 300 menit gratis dari Netlify.
+Agar *website* tetap terlihat seragam, modern, dan profesional, patuhi aturan desain berikut saat membuat komponen atau halaman baru:
 
-### Cara Kerjanya:
-Setiap kali Klien melakukan pembaruan di Halaman Admin CMS, CMS akan membuat *commit* baru ke GitHub. GitHub Actions (`.github/workflows/deploy.yml`) akan aktif secara otomatis, merakit kode (Vite Build) menggunakan mesin GitHub, dan mengirim hasil akhirnya ke Netlify (melalui Netlify CLI) tanpa menyita satu menit pun kuota perakitan Netlify.
+### A. Palet Warna Utama
+- **Biru Korporat (Primary)**: `var(--color-primary)` atau `#1A2B4C` — Gunakan untuk warna *header*, teks tebal, dan latar belakang utama.
+- **Oranye Aksen (Accent)**: `var(--color-accent)` atau `#FF7F00` — Gunakan untuk tombol, sorotan teks, garis bawah, atau elemen panggilan bertindak (*Call to Action*).
+- **Putih Tulang (Background)**: `#F4F7F6` — Gunakan untuk latar belakang halaman di sela-sela area biru.
 
-### Kunci Rahasia GitHub Actions (Secrets)
-Agar mesin GitHub bisa menembak (*deploy*) hasil jadinya ke Netlify, diwajibkan untuk mendaftarkan 2 Kunci Rahasia di dalam menu **Settings -> Secrets and variables -> Actions** pada repositori GitHub:
-- `NETLIFY_SITE_ID`: Berisi Site ID dari *website* Netlify yang bersangkutan.
-- `NETLIFY_AUTH_TOKEN`: Berisi *Personal Access Token* milik akun pengguna Netlify.
+### B. Bantalan Logo Navbar
+Logo pada *Navbar* telah diatur sedemikian rupa agar tetap terlihat tajam (*tidak pecah*).
+Jika warna *Navbar* sedang gelap (berada di atas), logo otomatis dibungkus dengan latar belakang putih (`.logo-img-wrapper`). Jangan mengubah aturan `height: 75px` pada logo agar resolusinya tetap maksimal.
 
-> [!WARNING]  
-> Pastikan fitur **Auto Publishing / Continuous Deployment** di *dashboard* Netlify dalam keadaan **STOP / MATI**. Jika dibiarkan menyala, Netlify dan GitHub akan bekerja secara paralel dan menghabiskan kuota Netlify secara percuma.
+### C. Efek "Bentuk Geometri Melengkung" (Corporate Geometric)
+Untuk memberikan kesan modern pada bagian latar belakang (*background*):
+1. Setiap kali membuat bagian/seksi baru (`<section>`), tambahkan kelas `geometric-bg`.
+   Contoh: `<section className="section geometric-bg bg-right">`
+2. Gunakan `bg-left` atau `bg-right` untuk menentukan dari arah mana gradasi geometri biru tersebut muncul (bergantian kiri dan kanan antar *section* agar dinamis).
 
----
+### D. Tipografi
+- Jenis Huruf: **Montserrat** (Google Fonts).
+- Judul (`h1`, `h2`): Berat `700` atau `800`.
+- Teks Paragraf (`p`): Berat `400` atau `500` dengan `line-height: 1.8` agar mudah dibaca.
 
-## 4. Standarisasi Tampilan (Design Guidelines)
+### E. Struktur Komponen
+Selalu gunakan komponen `PageWrapper` untuk halaman baru agar mendapatkan manfaat berikut:
+1. Layar otomatis terguling ke atas (*scroll to top*) saat halaman dibuka.
+2. Animasi transisi yang halus saat berpindah halaman.
+3. Mendapatkan injeksi otomatis untuk SEO dan Meta Tags.
 
-Agar desain *website* tetap seragam saat Anda membuat komponen, seksi (*section*), atau halaman baru, **Wajib** mematuhi aturan berikut ini.
+Contoh kerangka halaman baru:
+```jsx
+import React from 'react';
+import PageWrapper from '../components/PageWrapper';
 
-### A. Palet Warna (CSS Variables)
-Warna utama perusahaan telah didefinisikan secara baku di dalam berkas `src/index.css`. Selalu gunakan variabel ini, JANGAN menulis kode *Hex Color* secara paksa agar mode tema selalu sinkron!
-
-```css
-:root {
-  --primary-blue: #0b1e36; /* Warna utama untuk Background & Header/Footer */
-  --secondary-orange: #ff7b00; /* Warna aksen/sorotan untuk Tombol & Ikon */
-  --text-dark: #333333; /* Warna teks pada latar belakang terang */
-  --text-light: #ffffff; /* Warna teks utama pada latar belakang gelap */
-  --bg-light: #f4f7f6; /* Latar belakang abu-abu terang (seksi selang-seling) */
-}
+const HalamanBaru = () => {
+  return (
+    <PageWrapper title="Halaman Baru">
+      <div className="container">
+        <h1>Konten Halaman</h1>
+      </div>
+    </PageWrapper>
+  );
+};
+export default HalamanBaru;
 ```
 
-### B. Aturan Tipografi & Jarak Pembacaan
-- **Font Utama**: `Inter`, `sans-serif`. Jangan gunakan *font* dekoratif.
-- *Heading* (H1, H2, H3) selalu dicetak tebal (*bold*, `700`) dengan *line-height* rapat (`1.2`) agar gagah.
-- Teks Paragraf deskriptif selalu di-*setting* menggunakan `text-align: justify` (Rata Kanan-Kiri) dan *line-height* lebar (`1.6`) agar nyaman dibaca.
-
-### C. Pembuatan Struktur Komponen Baru
-1. **Pembuatan File**: Komponen baru harus dipisahkan menjadi `.jsx` dan `.css` di dalam folder `src/components/`.
-2. **Ruang Napas (Padding & Spasi) - SANGAT PENTING**:
-   Seluruh tepi layar *website* sudah dilindungi dari "Teks Menempel di Layar" dengan teknik *Clamp Responsive*. 
-   Saat membuat pembungkus (Container) baru, wajib gunakan kode ini pada CSS-nya:
-   ```css
-   .nama-komponen-section {
-     padding: 4rem clamp(1.5rem, 5vw, 4rem);
-   }
-   ```
-   *Penjelasan: Margin atas bawah 4rem, Margin kiri kanan dinamis (Mengecil otomatis di layar HP, Melebar otomatis di layar Desktop).*
-3. **Tombol (Buttons)**:
-   Tombol baru harus menggunakan kelas standar bawaan yaitu `.btn`. Kelas ini sudah dilengkapi sudut melengkung sempurna (`border-radius: 30px`) dan efek transisi yang elegan.
-   Contoh: `<a href="#" className="btn">Baca Selengkapnya</a>`
-
-### D. Penanganan Gambar & Media (Image Fallback)
-Netlify CMS memiliki sifat di mana ketika pengguna menghapus gambar pertama dari urutan galeri, indeks `[0]` akan menghasilkan *null* ketimbang bergeser.
-- Jika membuat penarik Galeri/Portofolio, **selalu gunakan fungsi perulangan (looping fallback)** untuk mencari gambar pertama yang `true` dan abaikan yang `null`.
-- Gambar harus selalu dikawal dengan `object-fit: cover` untuk mencegah gepeng (*distorted*) di layar perangkat genggam.
-
 ---
 
-## 5. Tata Cara Modifikasi Halaman Admin (CMS)
+## 3. Panduan SEO (Search Engine Optimization)
 
-Halaman Admin (`/admin`) sepenuhnya dikendalikan oleh berkas YML statis, bukan kode React.
-
-- **Lokasi Pengaturan**: `public/admin/config.yml`
-- **Lokasi Penyimpanan Data Akhir**: `src/content/data.json`
-
-Jika Anda diminta membuat fitur baru, misalnya "Halaman Tim Kami", alur kerjanya adalah:
-1. Daftarkan struktur kolom input (*Name*, *Foto*, *Jabatan*) di dalam `config.yml`.
-2. Tunggu klien mengisi data tersebut melalui Halaman Admin.
-3. CMS akan menuliskan data tersebut ke dalam `data.json`.
-4. Tarik datanya di komponen React dari *file* `data.json` tersebut.
+*Website* ini telah dioptimasi penuh untuk Google:
+- **Peta Situs (Sitemap)**: Terletak di `public/sitemap.xml`. Jika Anda menambahkan rute halaman baru, pastikan untuk mendaftarkannya juga di dalam file ini.
+- **JSON-LD (Data Terstruktur)**: Identitas perusahaan (Alamat, Nomor Telepon) disuntikkan secara dinamis di `PageWrapper.jsx`. Jika ada perubahan alamat perusahaan, ubah langsung di file `src/content/data.json` atau melalui Panel Admin.
+- **Pencegatan 404 (React SPA)**: Di *GitHub Actions*, terdapat perintah untuk menyalin `index.html` menjadi `404.html`. Ini sangat krusial. **Jangan menghapus perintah ini**, atau fitur muat ulang (*Refresh*) halaman akan menghasilkan tulisan *File Not Found*.
 
 ---
-*Dokumen ini dibuat secara otomatis sebagai penutup fase perakitan utama proyek.*
+*Dokumen ini dibuat secara otomatis sebagai referensi teknis pemeliharaan.*
