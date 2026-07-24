@@ -143,79 +143,139 @@
     {
       "id": "1",
       "parentId": "",
-      "name": "EVI SILVIA",
-      "role": "KOMISARIS",
+      "name": "SUGENG",
+      "role": "PROJECT MANAGER",
       "photo": ""
     },
     {
       "id": "2",
       "parentId": "1",
       "name": "DEDEK RAHMAN",
-      "role": "DIREKTUR UTAMA",
+      "role": "PROJECT COORDINATOR",
       "photo": ""
     },
     {
       "id": "3",
       "parentId": "2",
-      "name": "SITI AKHADIYAH",
-      "role": "HRD MANAGER",
+      "name": "ARIF SOLEAIMAN",
+      "role": "SITE ENG MANAGER",
       "photo": ""
     },
     {
       "id": "4",
-      "parentId": "3",
+      "parentId": "2",
       "name": "IRSYAD FIRAZ",
-      "role": "STAFF ADMIN",
+      "role": "ADMIN PROYEK",
       "photo": ""
     },
     {
       "id": "5",
-      "parentId": "2",
-      "name": "HERU",
-      "role": "ENGINERING",
+      "parentId": "3",
+      "name": "RONALD",
+      "role": "MECH ENG",
       "photo": ""
     },
     {
       "id": "6",
-      "parentId": "3",
-      "name": "MIA RUWIZ",
-      "role": "STAFF PURCHASING",
+      "parentId": "5",
+      "name": "RIKI (EFRATA )",
+      "role": "WELDING INSPECTIONS",
       "photo": ""
     },
     {
       "id": "7",
-      "parentId": "2",
-      "name": "DEDEK RAHMAN",
-      "role": "PROJECT COORDINATOR",
+      "parentId": "6",
+      "name": "DIAS",
+      "role": "FORMAN",
       "photo": ""
     },
     {
       "id": "8",
-      "parentId": "7",
-      "name": "RISAN",
-      "role": "DRAFTER",
+      "parentId": "3",
+      "name": "WANDAYANA",
+      "role": "ELEKTRIK/INST ENG",
       "photo": ""
     },
     {
       "id": "9",
-      "parentId": "7",
-      "name": "HERI",
-      "role": "SPV MEP",
+      "parentId": "8",
+      "name": "FARHAN",
+      "role": "DRAFTER MEP",
       "photo": ""
     },
     {
       "id": "10",
-      "parentId": "7",
-      "name": "FATTAH",
-      "role": "General Affair",
+      "parentId": "9",
+      "name": "ACEP",
+      "role": "FORMAN",
       "photo": ""
     },
     {
       "id": "11",
-      "parentId": "2",
-      "name": "HENDRI",
-      "role": "BUSDEV DIREKTUR",
+      "parentId": "3",
+      "name": "SAMUEL",
+      "role": "CIVIL / SURVEYOR",
       "photo": ""
+    },
+    {
+      "id": "12",
+      "role": "DRAFTER",
+      "name": "FATRA",
+      "parentId": "11"
+    },
+    {
+      "id": "13",
+      "role": "FORMAN BAJA",
+      "name": "SUPARDI",
+      "parentId": "12"
+    },
+    {
+      "id": "14",
+      "role": "SPV CIVIL  / STRUKTUR",
+      "name": "OKI",
+      "parentId": "11"
+    },
+    {
+      "id": "15",
+      "role": "FORMAN CIVIL",
+      "name": "KASMIN",
+      "parentId": "14"
+    },
+    {
+      "role": "PROJECT  CONTROL",
+      "name": "FAZRI( EFRATA )",
+      "id": "16",
+      "parentId": "3"
+    },
+    {
+      "id": "17",
+      "role": "DOCUMENTCONTROL",
+      "name": "AGA",
+      "parentId": "16"
+    },
+    {
+      "id": "18",
+      "role": "HSE K3",
+      "name": "ANGGI",
+      "parentId": "3"
+    },
+    {
+      "id": "19",
+      "name": "FATAHULLAH",
+      "role": "GENERAL AFFAIR",
+      "parentId": "3"
+    },
+    {
+      "id": "20",
+      "role": "GUDANG",
+      "name": "DD DJ",
+      "parentId": "19"
+    },
+    {
+      "id": "21",
+      "role": "SECURITI",
+      "name": "UDIN",
+      "parentId": "19"
     }
   ],
   "customPages": [],
