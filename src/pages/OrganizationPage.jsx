@@ -2,10 +2,12 @@ import React from 'react';
 import { User } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 import '../components/OrganizationTree.css';
+import Xarrow, { Xwrapper } from 'react-xarrows';
 
 const buildTree = (members) => {
   const rootNodes = [];
   const memberMap = {};
+  const secondaryLinks = []; // Simpan garis cabang tambahan
 
   // Peta semua anggota berdasarkan ID
   members.forEach(member => {
@@ -19,9 +21,15 @@ const buildTree = (members) => {
       const parentIds = member.parentId.toString().split(',').map(id => id.trim()).filter(id => id);
       let hasValidParent = false;
 
-      parentIds.forEach(pId => {
+      parentIds.forEach((pId, index) => {
         if (memberMap[pId]) {
-          memberMap[pId].children.push(memberMap[member.id]);
+          if (index === 0) {
+            // Induk utama: Render kotak fisiknya di sini
+            memberMap[pId].children.push(memberMap[member.id]);
+          } else {
+            // Induk kedua dst: Jangan render fisik, cukup gambar garis Xarrow
+            secondaryLinks.push({ start: pId, end: member.id });
+          }
           hasValidParent = true;
         }
       });
@@ -34,13 +42,13 @@ const buildTree = (members) => {
     }
   });
 
-  return rootNodes;
+  return { rootNodes, secondaryLinks };
 };
 
 const OrgNode = ({ node }) => {
   return (
     <li>
-      <div className="org-node">
+      <div className="org-node" id={`org-node-${node.id}`}>
         {node.photo ? (
           <img src={node.photo} alt={node.name} className="org-photo" />
         ) : (
@@ -77,13 +85,29 @@ const OrganizationPage = ({ data }) => {
       
       <div className="section container">
         <div className="org-tree">
-          <div className="tree">
-            <ul>
-              {tree.map(rootNode => (
-                <OrgNode key={rootNode.id} node={rootNode} />
+          <Xwrapper>
+            <div className="tree">
+              <ul>
+                {tree.rootNodes.map(rootNode => (
+                  <OrgNode key={rootNode.id} node={rootNode} />
+                ))}
+              </ul>
+              {/* Gambar garis silang untuk bos kedua dst */}
+              {tree.secondaryLinks.map((link, i) => (
+                <Xarrow
+                  key={i}
+                  start={`org-node-${link.start}`}
+                  end={`org-node-${link.end}`}
+                  path="grid"
+                  color="#334155"
+                  strokeWidth={2}
+                  showHead={false}
+                  startAnchor="bottom"
+                  endAnchor="top"
+                />
               ))}
-            </ul>
-          </div>
+            </div>
+          </Xwrapper>
         </div>
       </div>
     </PageWrapper>
