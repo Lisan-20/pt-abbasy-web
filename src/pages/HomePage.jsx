@@ -10,6 +10,7 @@ const HomePage = ({ data }) => {
     <PageWrapper title="Beranda">
       <Hero data={data.hero} />
       <motion.div 
+        className="watermark-section"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
