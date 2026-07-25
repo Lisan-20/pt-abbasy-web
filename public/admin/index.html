@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
     <title>PT Abbasy Admin Panel</title>
-    <style>
-      /* Memaksa Logo Login Admin agar besar, ke tengah, dan agak ke atas */
-      img[src*="logo_transparent"] {
-        max-width: 350px !important;
-        max-height: 120px !important;
-        margin: -40px auto 30px auto !important;
-        display: block !important;
-        object-fit: contain;
-      }
-    </style>
   </head>
   <body>
     <!-- Gembok Keamanan: Blokir akses dari domain utama -->
@@ -23,23 +13,8 @@
         window.location.replace("https://abbasyanugerahperkasa.com/");
       }
     </script>
-    <!-- Injeksi Identity Widget agar CMS bisa cross-domain ke Netlify -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      window.netlifyIdentity = window.netlifyIdentity || {};
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.reload();
-          });
-        }
-      });
-      window.netlifyIdentity.init({
-        APIUrl: 'https://abbasyanugerahperkasa.netlify.app/.netlify/identity'
-      });
-    </script>
     
-    <!-- Include the script that builds the page and powers Netlify CMS (stable version) -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <!-- Sveltia CMS: The modern, serverless replacement for Decap CMS -->
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   </body>
 </html>

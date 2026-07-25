@@ -27,26 +27,9 @@
       "url": "https://abbasyanugerahperkasa.com/"
     }
     </script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-        // Konfigurasi ini memaksa widget login untuk menelepon server Netlify,
-        // meskipun website ini di-hosting di GitHub Pages.
-        window.netlifyIdentity.init({
-          APIUrl: 'https://abbasyanugerahperkasa.netlify.app/.netlify/identity'
-        });
-      }
-    </script>
   </body>
 </html>

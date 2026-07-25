@@ -1,8 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Lisan-20/pt-abbasy-web
   branch: main
-  site_domain: abbasyanugerahperkasa.netlify.app
-  base_url: https://abbasyanugerahperkasa.netlify.app
 
 local_backend: true
 
