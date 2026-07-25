@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer = ({ data, siteSettings }) => {
   return (
-    <footer style={{ backgroundColor: '#030a16', color: 'rgba(255,255,255,0.7)', paddingTop: '80px', paddingBottom: '30px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+    <footer style={{ position: 'relative', zIndex: 10, backgroundColor: '#030a16', color: 'rgba(255,255,255,0.7)', paddingTop: '80px', paddingBottom: '30px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
       <div className="container">
         <div className="grid grid-cols-4" style={{ marginBottom: '60px', gap: '40px' }}>
           

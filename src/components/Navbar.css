@@ -9,7 +9,7 @@
 }
 
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.9); /* Frosted white glass */
+  background-color: #FFFFFF; /* Solid white to hide watermark */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle edge highlight */
