@@ -1,17 +1,18 @@
 .marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  width: 100%;
-  padding: 20px 0;
   display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 30px;
+  padding: 20px 0;
 }
 
 .marquee-content {
+  flex-shrink: 0;
   display: flex;
+  align-items: center;
   gap: 30px;
-  animation: marquee 25s linear infinite;
-  min-width: 200%;
+  min-width: 100%;
+  animation: marquee 35s linear infinite;
 }
 
 .marquee-container:hover .marquee-content {
@@ -19,8 +20,12 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 30px));
+  }
 }
 
 .client-logo-card {
