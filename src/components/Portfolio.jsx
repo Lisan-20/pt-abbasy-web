@@ -64,22 +64,22 @@ const Portfolio = ({ data, clients }) => {
         {/* Clients List */}
         <div>
           <h2 className="section-title text-center" style={{ marginBottom: '40px' }}>Klien Kami</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
-            {clients.map((client, idx) => (
-              <motion.div 
-                key={idx} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
-                whileHover={{ scale: 1.05, backgroundColor: 'var(--color-primary)', color: 'white' }}
-                style={{ backgroundColor: 'white', padding: '15px 25px', borderRadius: '50px', boxShadow: 'var(--box-shadow)', display: 'flex', alignItems: 'center', gap: '10px', cursor: 'default', transition: 'all 0.3s ease' }}
-              >
-                <CheckCircle size={18} className="text-accent" />
-                <span style={{ fontWeight: '500' }}>{client.name}</span>
-              </motion.div>
-            ))}
+          
+          <div className="marquee-container">
+            <div className="marquee-content">
+              {/* Kita render dua kali (ganda) untuk efek scroll tanpa batas yang mulus */}
+              {[...clients, ...clients].map((client, idx) => (
+                <div key={idx} className="client-logo-card">
+                  {client.logo ? (
+                    <img src={client.logo} alt={client.name} className="client-logo-img" title={client.name} />
+                  ) : (
+                    <span className="client-logo-text">{client.name}</span>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
+          
         </div>
       </div>
 

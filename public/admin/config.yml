@@ -191,6 +191,10 @@ collections:
               - label: "Client Name"
                 name: "name"
                 widget: "string"
+              - label: "Client Logo (Opsional)"
+                name: "logo"
+                widget: "image"
+                required: false
           - label: "Experts (Tenaga Ahli)"
             name: "experts"
             widget: "list"
