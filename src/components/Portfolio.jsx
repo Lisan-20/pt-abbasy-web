@@ -71,7 +71,10 @@ const Portfolio = ({ data, clients }) => {
               {[...clients, ...clients].map((client, idx) => (
                 <div key={idx} className="client-logo-card">
                   {client.logo ? (
-                    <img src={client.logo} alt={client.name} className="client-logo-img" title={client.name} />
+                    <>
+                      <img src={client.logo} alt={client.name} className="client-logo-img" title={client.name} style={{ height: '60px', marginBottom: '8px' }} />
+                      <span className="client-logo-text" style={{ fontSize: '0.85rem', color: '#64748b' }}>{client.name}</span>
+                    </>
                   ) : (
                     <span className="client-logo-text">{client.name}</span>
                   )}
