@@ -7,7 +7,8 @@
   },
   "clients": [
     {
-      "name": "Makopasus Jakarta Timur"
+      "name": "Makopasus Jakarta Timur",
+      "logo": "/uploads/lambang_kopassus.svg"
     },
     {
       "name": "PT. Arsed Indonesia"
