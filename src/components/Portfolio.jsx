@@ -3,7 +3,7 @@ import { CheckCircle, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Portfolio.css';
 
-const Portfolio = ({ data, clients }) => {
+const Portfolio = ({ data }) => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   // function to get first image or fallback
@@ -61,29 +61,7 @@ const Portfolio = ({ data, clients }) => {
           })}
         </div>
 
-        {/* Clients List */}
-        <div>
-          <h2 className="section-title text-center" style={{ marginBottom: '40px' }}>Klien Kami</h2>
-          
-          <div className="marquee-container">
-            <div className="marquee-content">
-              {/* Kita render dua kali (ganda) untuk efek scroll tanpa batas yang mulus */}
-              {[...clients, ...clients].map((client, idx) => (
-                <div key={idx} className="client-logo-card">
-                  {client.logo ? (
-                    <>
-                      <img src={client.logo} alt={client.name} className="client-logo-img" title={client.name} style={{ height: '60px', marginBottom: '8px' }} />
-                      <span className="client-logo-text" style={{ fontSize: '0.85rem', color: '#64748b' }}>{client.name}</span>
-                    </>
-                  ) : (
-                    <span className="client-logo-text">{client.name}</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-          
-        </div>
+        {/* Clients section has been moved to HomePage via ClientsMarquee component */}
       </div>
 
       {/* Lightbox Modal */}

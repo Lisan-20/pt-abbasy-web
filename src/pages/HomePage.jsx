@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
+import ClientsMarquee from '../components/ClientsMarquee';
 import PageWrapper from '../components/PageWrapper';
 import { motion } from 'framer-motion';
 
@@ -21,6 +22,7 @@ const HomePage = ({ data }) => {
         </p>
       </motion.div>
       <Services data={data.services.slice(0, 3)} />
+      <ClientsMarquee clients={data.clients} />
     </PageWrapper>
   );
 };
