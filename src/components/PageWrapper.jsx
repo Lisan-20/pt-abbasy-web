@@ -32,6 +32,13 @@ const PageWrapper = ({ children, title, description }) => {
     "priceRange": "$$$"
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Abbasy Anugerah Perkasa",
+    "url": "https://abbasyanugerahperkasa.com/"
+  };
+
   return (
     <>
       <Helmet>
@@ -40,6 +47,7 @@ const PageWrapper = ({ children, title, description }) => {
         {siteSettings.seoKeywords && <meta name="keywords" content={siteSettings.seoKeywords} />}
         <link rel="canonical" href={currentUrl} />
         <meta property="og:url" content={currentUrl} />
+        <meta property="og:site_name" content="Abbasy Anugerah Perkasa" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
@@ -50,7 +58,7 @@ const PageWrapper = ({ children, title, description }) => {
         <meta name="twitter:image" content="https://abbasyanugerahperkasa.com/uploads/logo_transparent.png" />
         {siteSettings.favicon && <link rel="icon" href={siteSettings.favicon} />}
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify([websiteSchema, structuredData])}
         </script>
       </Helmet>
       <motion.div
