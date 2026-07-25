@@ -216,12 +216,12 @@ body::after {
 
 /* Logo Watermark / Backdrop */
 .watermark-section {
-  position: relative;
+  /* Class to trigger global watermark */
 }
 
 .watermark-section::before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

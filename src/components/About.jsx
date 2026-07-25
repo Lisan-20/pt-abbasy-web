@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const About = ({ data }) => {
   return (
-    <section className="section container watermark-section">
+    <section className="section container">
       <div className="grid grid-cols-2">
         <motion.div 
           initial={{ opacity: 0, x: -30 }}

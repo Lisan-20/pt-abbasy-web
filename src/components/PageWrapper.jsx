@@ -62,6 +62,7 @@ const PageWrapper = ({ children, title, description }) => {
         </script>
       </Helmet>
       <motion.div
+        className="watermark-section"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -15 }}
