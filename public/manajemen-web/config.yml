@@ -2,7 +2,6 @@ backend:
   name: github
   repo: Lisan-20/pt-abbasy-web
   branch: main
-  base_url: https://decap-cms.codecentric.de
 
 local_backend: true
 
