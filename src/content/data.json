@@ -1,88 +1,155 @@
 {
-  "contact": {
-    "address": "Jatimulya Lestari Blok B no 3 Jl. Kalimulya Raya no 24, Jatimulya Cilodong, Depok Jawa Barat",
-    "email": "abbasyanugerahperkasa523@gmail.com",
-    "phone": "021 - 38740464",
-    "whatsapp": "081905095349"
-  },
-  "clients": [
+  "organization": [
     {
-      "name": "Makopasus Jakarta Timur",
-      "logo": "/uploads/lambang_kopassus.svg"
+      "id": "1",
+      "name": "SUGENG",
+      "role": "PROJECT MANAGER",
+      "photo": "",
+      "parentId": ""
     },
     {
-      "name": "PT. Arsed Indonesia"
+      "id": "2",
+      "name": "DEDEK RAHMAN",
+      "role": "PROJECT COORDINATOR",
+      "photo": "",
+      "parentId": "1"
     },
     {
-      "name": "PT. Dwi Mukti Graha Kencana"
+      "id": "3",
+      "name": "ARIF SOLEAIMAN",
+      "role": "SITE ENG MANAGER",
+      "photo": "",
+      "parentId": "2"
     },
     {
-      "name": "PT. Cap Karoso Development"
+      "id": "4",
+      "name": "FIRAZ",
+      "role": "ADMIN PROYEK",
+      "photo": "",
+      "parentId": "2"
     },
     {
-      "name": "PT. Capitol Group"
+      "id": "5",
+      "name": "RONALD",
+      "role": "MECH ENG",
+      "photo": "",
+      "parentId": "3"
     },
     {
-      "name": "PT. PMA"
+      "id": "6",
+      "name": "RIKI (EFRATA )",
+      "role": "WELDING INSPECTIONS",
+      "photo": "",
+      "parentId": "5"
     },
     {
-      "name": "PT. Dasa Prima Lestari Unggul"
+      "id": "7",
+      "name": "DIAS",
+      "role": "FORMAN",
+      "photo": "",
+      "parentId": "6"
     },
     {
-      "name": "PT. Bangun Konstruksi Cemerlang"
+      "id": "8",
+      "name": "WANDAYANA",
+      "role": "ELEKTRIK/INST ENG",
+      "photo": "",
+      "parentId": "3"
     },
     {
-      "name": "PT. Lubuk Indah"
-    }
-  ],
-  "experts": [
-    {
-      "name": "Dedek Rahman",
-      "qualification": "Ahli Teknik Tenaga Listrik - Madya",
-      "images": [
-        {
-          "image": "/uploads/proyek_page27_img4.jpeg"
-        },
-        {
-          "image": "/uploads/proyek_page28_img5.jpeg"
-        }
-      ]
+      "id": "9",
+      "name": "FARHAN",
+      "role": "DRAFTER MEP",
+      "photo": "",
+      "parentId": "8"
     },
     {
-      "name": "Danang Sidik Pramono, S.T.",
-      "qualification": "Ahli Manajemen Konstruksi - Madya",
-      "images": [
-        {
-          "image": "/uploads/proyek_page29_img5.jpeg"
-        },
-        {
-          "image": "/uploads/proyek_page30_img5.jpeg"
-        }
-      ]
+      "id": "10",
+      "name": "ACEP",
+      "role": "FORMAN",
+      "photo": "",
+      "parentId": "9"
     },
     {
-      "name": "Shalih",
-      "qualification": "Ahli Teknik Tenaga Listrik - Madya",
-      "images": [
-        {
-          "image": "/uploads/proyek_page31_img5.jpeg"
-        }
-      ]
+      "id": "11",
+      "name": "SAMUEL",
+      "role": "CIVIL / SURVEYOR",
+      "photo": "",
+      "parentId": "3"
     },
     {
-      "name": "Lutfiana Nurwardhani",
-      "qualification": "Ahli Teknik Bangunan Gedung - Muda",
-      "images": [
-        {
-          "image": "/uploads/proyek_page33_img5.jpeg"
-        }
-      ]
+      "id": "12",
+      "name": "FATRA",
+      "role": "DRAFTER",
+      "parentId": "11"
+    },
+    {
+      "id": "13",
+      "name": "SUPARDI",
+      "role": "FORMAN BAJA",
+      "parentId": "12"
+    },
+    {
+      "id": "14",
+      "name": "OKI",
+      "role": "SPV CIVIL  / STRUKTUR",
+      "parentId": "11"
+    },
+    {
+      "id": "15",
+      "name": "KASMIN",
+      "role": "FORMAN CIVIL",
+      "parentId": "14"
+    },
+    {
+      "id": "16",
+      "name": "FAZRI( EFRATA )",
+      "role": "PROJECT  CONTROL",
+      "parentId": "3"
+    },
+    {
+      "id": "17",
+      "name": "AGA",
+      "role": "DOCUMENTCONTROL",
+      "parentId": "16"
+    },
+    {
+      "id": "18",
+      "name": "ANGGI",
+      "role": "HSE K3",
+      "parentId": "3"
+    },
+    {
+      "id": "19",
+      "name": "FATAHULLAH",
+      "role": "GENERAL AFFAIR",
+      "parentId": "3"
+    },
+    {
+      "id": "20",
+      "name": "DD DJ",
+      "role": "GUDANG",
+      "parentId": "19,18"
+    },
+    {
+      "id": "21",
+      "name": "UDIN",
+      "role": "SECURITI",
+      "parentId": "19,18"
     }
   ],
   "siteSettings": {
-    "footerDescription": "Menjadi perusahaan terkemuka di bidang Konstruksi dan Jasa dengan layanan berkualitas.",
-    "seoKeywords": "PT Abbasy Anugerah Perkasa, Kontraktor Umum, General Contractor, Jasa Konstruksi Depok, Kontraktor Jakarta, Perdagangan Umum, General Trade, Konstruksi Sipil, Instalasi MEP, Pembangunan Gedung, Ahli Bangunan, Kontraktor Terbaik Indonesia",
     "logoImage": "/uploads/logo_transparent.png",
+    "logoText": "PT. ABBASY ANUGERAH PERKASA",
+    "logoTextSize": "26px",
+    "textAlignment": "justify",
+    "favicon": "/uploads/logo_transparent.png",
+    "footerTitle": "PT. Abbasy Anugerah Perkasa",
+    "footerDescription": "Menjadi perusahaan terkemuka di bidang Konstruksi dan Jasa dengan layanan berkualitas.",
+    "welcomeDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi.",
+    "seoTitle": "PT. Abbasy Anugerah Perkasa | Kontraktor Umum Terpercaya",
+    "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional.",
+    "seoKeywords": "PT Abbasy Anugerah Perkasa, Kontraktor Umum, General Contractor, Jasa Konstruksi Depok, Kontraktor Jakarta, Perdagangan Umum, General Trade, Konstruksi Sipil, Instalasi MEP, Pembangunan Gedung, Ahli Bangunan, Kontraktor Terbaik Indonesia",
     "navigation": [
       {
         "label": "Beranda",
@@ -124,15 +191,12 @@
         "path": "/contact",
         "isButton": true
       }
-    ],
-    "favicon": "/uploads/logo_transparent.png",
-    "textAlignment": "justify",
-    "logoText": "PT. ABBASY ANUGERAH PERKASA",
-    "logoTextSize": "26px",
-    "welcomeDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi.",
-    "seoTitle": "PT. Abbasy Anugerah Perkasa | Kontraktor Umum Terpercaya",
-    "footerTitle": "PT. Abbasy Anugerah Perkasa",
-    "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional."
+    ]
+  },
+  "hero": {
+    "headline": "General Contractor Andal & Terpercaya",
+    "subheadline": "Membangun masa depan dengan keunggulan struktural dan layanan berkualitas tinggi di seluruh Indonesia.",
+    "bgImage": "/uploads/proyek_page1_img2.jpeg"
   },
   "about": {
     "title": "Tentang PT. Abbasy Anugerah Perkasa",
@@ -140,164 +204,32 @@
     "vision": "Bercita-cita menjadi perusahaan konstruksi terkemuka di seluruh negeri dengan menawarkan desain, rekayasa struktur, dan jasa konstruksi berkualitas tinggi terbaik di Indonesia.",
     "mission": "Menghasilkan yang terbaik dari para pemangku kepentingan kami. Bersama tim yang terlatih dengan baik, kami mencapai kepuasan kesuksesan yang menguntungkan."
   },
-  "organization": [
+  "services": [
     {
-      "id": "1",
-      "parentId": "",
-      "name": "SUGENG",
-      "role": "PROJECT MANAGER",
-      "photo": ""
+      "title": "Pre-construction Design & Estimating",
+      "description": "Perencanaan desain awal dan estimasi biaya proyek secara akurat."
     },
     {
-      "id": "2",
-      "parentId": "1",
-      "name": "DEDEK RAHMAN",
-      "role": "PROJECT COORDINATOR",
-      "photo": ""
+      "title": "Construction Management",
+      "description": "Manajemen proyek konstruksi dari awal hingga penyelesaian dengan standar K3."
     },
     {
-      "id": "3",
-      "parentId": "2",
-      "name": "ARIF SOLEAIMAN",
-      "role": "SITE ENG MANAGER",
-      "photo": ""
+      "title": "Renovation and Expansion",
+      "description": "Layanan renovasi dan perluasan bangunan yang efisien."
     },
     {
-      "id": "4",
-      "parentId": "2",
-      "name": "IRSYAD FIRAZ",
-      "role": "ADMIN PROYEK",
-      "photo": ""
+      "title": "Building Sustainability & Upgrades",
+      "description": "Peningkatan dan perbaikan struktur bangunan agar lebih berkelanjutan."
     },
     {
-      "id": "5",
-      "parentId": "3",
-      "name": "RONALD",
-      "role": "MECH ENG",
-      "photo": ""
+      "title": "Installations (MEP)",
+      "description": "Instalasi mekanikal, elektrikal, dan plumbing untuk segala skala proyek."
     },
     {
-      "id": "6",
-      "parentId": "5",
-      "name": "RIKI (EFRATA )",
-      "role": "WELDING INSPECTIONS",
-      "photo": ""
-    },
-    {
-      "id": "7",
-      "parentId": "6",
-      "name": "DIAS",
-      "role": "FORMAN",
-      "photo": ""
-    },
-    {
-      "id": "8",
-      "parentId": "3",
-      "name": "WANDAYANA",
-      "role": "ELEKTRIK/INST ENG",
-      "photo": ""
-    },
-    {
-      "id": "9",
-      "parentId": "8",
-      "name": "FARHAN",
-      "role": "DRAFTER MEP",
-      "photo": ""
-    },
-    {
-      "id": "10",
-      "parentId": "9",
-      "name": "ACEP",
-      "role": "FORMAN",
-      "photo": ""
-    },
-    {
-      "id": "11",
-      "parentId": "3",
-      "name": "SAMUEL",
-      "role": "CIVIL / SURVEYOR",
-      "photo": ""
-    },
-    {
-      "id": "12",
-      "role": "DRAFTER",
-      "name": "FATRA",
-      "parentId": "11"
-    },
-    {
-      "id": "13",
-      "role": "FORMAN BAJA",
-      "name": "SUPARDI",
-      "parentId": "12"
-    },
-    {
-      "id": "14",
-      "role": "SPV CIVIL  / STRUKTUR",
-      "name": "OKI",
-      "parentId": "11"
-    },
-    {
-      "id": "15",
-      "role": "FORMAN CIVIL",
-      "name": "KASMIN",
-      "parentId": "14"
-    },
-    {
-      "role": "PROJECT  CONTROL",
-      "name": "FAZRI( EFRATA )",
-      "id": "16",
-      "parentId": "3"
-    },
-    {
-      "id": "17",
-      "role": "DOCUMENTCONTROL",
-      "name": "AGA",
-      "parentId": "16"
-    },
-    {
-      "id": "18",
-      "role": "HSE K3",
-      "name": "ANGGI",
-      "parentId": "3"
-    },
-    {
-      "id": "19",
-      "name": "FATAHULLAH",
-      "role": "GENERAL AFFAIR",
-      "parentId": "3"
-    },
-    {
-      "id": "20",
-      "role": "GUDANG",
-      "name": "DD DJ",
-      "parentId": "19,18"
-    },
-    {
-      "id": "21",
-      "role": "SECURITI",
-      "name": "UDIN",
-      "parentId": "19,18"
+      "title": "Trading Material",
+      "description": "Perdagangan material bangunan untuk skala kecil, menengah, dan besar."
     }
   ],
-  "customPages": [],
-  "legal": {
-    "companyName": "PT ABBASY ANUGERAH PERKASA",
-    "deed": "Surjadi S.H., M.KN., M.M., M.H.,./ No.93 / 22 Mei 2023",
-    "nib": "3005230086671",
-    "npwp": "39.077.880.1-412.000",
-    "sk": "AHU-0038587.AH.01.01.TAHUN 2023",
-    "legalImages": [
-      {
-        "image": "/uploads/picture53.png"
-      },
-      {
-        "image": "/uploads/picture54.jpg"
-      },
-      {
-        "image": "/uploads/picture55.jpg"
-      }
-    ]
-  },
   "projects": [
     {
       "title": "Project Beach Club Desa Kitsune, Bali",
@@ -494,35 +426,106 @@
       ]
     }
   ],
-  "hero": {
-    "headline": "General Contractor Andal & Terpercaya",
-    "subheadline": "Membangun masa depan dengan keunggulan struktural dan layanan berkualitas tinggi di seluruh Indonesia.",
-    "bgImage": "/uploads/proyek_page1_img2.jpeg"
-  },
-  "services": [
+  "clients": [
     {
-      "title": "Pre-construction Design & Estimating",
-      "description": "Perencanaan desain awal dan estimasi biaya proyek secara akurat."
+      "name": "Makopasus Jakarta Timur",
+      "logo": "/uploads/lambang_kopassus.svg"
     },
     {
-      "title": "Construction Management",
-      "description": "Manajemen proyek konstruksi dari awal hingga penyelesaian dengan standar K3."
+      "name": "PT. Arsed Indonesia"
     },
     {
-      "title": "Renovation and Expansion",
-      "description": "Layanan renovasi dan perluasan bangunan yang efisien."
+      "name": "PT. Dwi Mukti Graha Kencana"
     },
     {
-      "title": "Building Sustainability & Upgrades",
-      "description": "Peningkatan dan perbaikan struktur bangunan agar lebih berkelanjutan."
+      "name": "PT. Cap Karoso Development"
     },
     {
-      "title": "Installations (MEP)",
-      "description": "Instalasi mekanikal, elektrikal, dan plumbing untuk segala skala proyek."
+      "name": "PT. Capitol Group"
     },
     {
-      "title": "Trading Material",
-      "description": "Perdagangan material bangunan untuk skala kecil, menengah, dan besar."
+      "name": "PT. PMA"
+    },
+    {
+      "name": "PT. Dasa Prima Lestari Unggul"
+    },
+    {
+      "name": "PT. Bangun Konstruksi Cemerlang"
+    },
+    {
+      "name": "PT. Lubuk Indah"
     }
-  ]
+  ],
+  "experts": [
+    {
+      "name": "Dedek Rahman",
+      "qualification": "Ahli Teknik Tenaga Listrik - Madya",
+      "images": [
+        {
+          "image": "/uploads/proyek_page27_img4.jpeg"
+        },
+        {
+          "image": "/uploads/proyek_page28_img5.jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Danang Sidik Pramono, S.T.",
+      "qualification": "Ahli Manajemen Konstruksi - Madya",
+      "images": [
+        {
+          "image": "/uploads/proyek_page29_img5.jpeg"
+        },
+        {
+          "image": "/uploads/proyek_page30_img5.jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Shalih",
+      "qualification": "Ahli Teknik Tenaga Listrik - Madya",
+      "images": [
+        {
+          "image": "/uploads/proyek_page31_img5.jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Lutfiana Nurwardhani",
+      "qualification": "Ahli Teknik Bangunan Gedung - Muda",
+      "images": [
+        {
+          "image": "/uploads/proyek_page33_img5.jpeg"
+        }
+      ]
+    }
+  ],
+  "legal": {
+    "companyName": "PT ABBASY ANUGERAH PERKASA",
+    "deed": "Surjadi S.H., M.KN., M.M., M.H.,./ No.93 / 22 Mei 2023",
+    "nib": "3005230086671",
+    "npwp": "39.077.880.1-412.000",
+    "sk": "AHU-0038587.AH.01.01.TAHUN 2023",
+    "legalImages": [
+      {
+        "image": "/uploads/picture53.png"
+      },
+      {
+        "image": "/uploads/picture54.jpg"
+      },
+      {
+        "image": "/uploads/picture55.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "address": "Jatimulya Lestari Blok B no 3 Jl. Kalimulya Raya no 24, Jatimulya Cilodong, Depok Jawa Barat",
+    "email": "abbasyanugerahperkasa523@gmail.com",
+    "phone": "021 - 38740464",
+    "whatsapp": "081905095349",
+    "facebook": "",
+    "instagram": "",
+    "linkedin": ""
+  },
+  "customPages": []
 }
