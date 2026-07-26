@@ -2,6 +2,8 @@ backend:
   name: github
   repo: Lisan-20/pt-abbasy-web
   branch: main
+  auth_type: pkce
+  app_id: Ov23limFrpJLMOMMqvfI
 
 local_backend: true
 
