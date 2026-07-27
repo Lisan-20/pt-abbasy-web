@@ -71,7 +71,7 @@ const Portfolio = ({ data }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.85)', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px 20px', overflowY: 'auto' }}
+            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.85)', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '120px 20px 40px 20px', overflowY: 'auto' }}
             onClick={() => setSelectedProject(null)}
           >
             <div style={{ width: '100%', maxWidth: '900px', backgroundColor: 'white', borderRadius: '12px', padding: '30px', marginTop: '20px', position: 'relative' }} onClick={e => e.stopPropagation()}>

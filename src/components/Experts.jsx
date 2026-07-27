@@ -67,7 +67,7 @@ const Experts = ({ data, title }) => {
             style={{
               position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
               backgroundColor: 'rgba(0, 0, 0, 0.8)', zIndex: 9999,
-              display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px'
+              display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '120px 20px 40px 20px'
             }}
           >
             <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
