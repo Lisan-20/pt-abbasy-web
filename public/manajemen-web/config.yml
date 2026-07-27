@@ -145,36 +145,6 @@ collections:
                     name: "isButton"
                     widget: "boolean"
                     default: false
-          - label: "Hero Section"
-            name: "hero"
-            widget: "object"
-            fields:
-              - label: "Headline"
-                name: "headline"
-                widget: "string"
-              - label: "Subheadline"
-                name: "subheadline"
-                widget: "string"
-              - label: "Background Image"
-                name: "bgImage"
-                widget: "image"
-                required: false
-          - label: "About Us"
-            name: "about"
-            widget: "object"
-            fields:
-              - label: "Title"
-                name: "title"
-                widget: "string"
-              - label: "Description"
-                name: "description"
-                widget: "text"
-              - label: "Vision"
-                name: "vision"
-                widget: "text"
-              - label: "Mission"
-                name: "mission"
-                widget: "text"
           - label: "Services"
             name: "services"
             widget: "list"
@@ -300,8 +270,8 @@ collections:
                 name: "linkedin"
                 widget: "string"
                 required: false
-          - label: "Halaman Tambahan (Custom Pages)"
-            name: "customPages"
+          - label: "Pages (Perakit Halaman)"
+            name: "pages"
             widget: "list"
             summary: "{{title}} (/{{slug}})"
             required: false
@@ -309,13 +279,13 @@ collections:
               - label: "Judul Halaman (Muncul di Menu)"
                 name: "title"
                 widget: "string"
-              - label: "URL Halaman (Slug, misal: promo-merdeka - dilarang pakai spasi)"
+              - label: "URL Halaman (Slug, misal: promo - dilarang pakai spasi, gunakan / untuk Beranda)"
                 name: "slug"
                 widget: "string"
               - label: "Tampilkan di Menu Atas?"
                 name: "showInMenu"
                 widget: "boolean"
-                default: true
+                default: false
               - label: "Perakitan Blok Halaman"
                 name: "blocks"
                 widget: "list"
@@ -334,8 +304,8 @@ collections:
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                       - {label: "Deskripsi Panjang", name: "description", widget: "text"}
-                      - {label: "Teks Visi", name: "vision", widget: "text"}
-                      - {label: "Teks Misi", name: "mission", widget: "text"}
+                      - {label: "Teks Visi", name: "vision", widget: "text", required: false}
+                      - {label: "Teks Misi", name: "mission", widget: "text", required: false}
                   - label: "Blok: Teks Bebas (Markdown)"
                     name: "markdownBlock"
                     widget: "object"
@@ -345,12 +315,8 @@ collections:
                     name: "servicesBlock"
                     widget: "object"
                     fields:
-                      - label: "Daftar Layanan"
-                        name: "items"
-                        widget: "list"
-                        fields:
-                          - {label: "Judul", name: "title", widget: "string"}
-                          - {label: "Deskripsi", name: "description", widget: "text"}
+                      - {label: "Judul Blok", name: "title", widget: "string"}
+                      - {label: "Batas Jumlah (0 = Tampilkan Semua)", name: "limit", widget: "number", default: 0}
                   - label: "Blok: Galeri Foto (Album)"
                     name: "galleryBlock"
                     widget: "object"
@@ -362,3 +328,33 @@ collections:
                         fields:
                           - {label: "Pilih Foto", name: "image", widget: "image"}
                           - {label: "Keterangan Foto (Opsional)", name: "caption", widget: "string", required: false}
+                  - label: "Blok: Portofolio (Proyek Kami)"
+                    name: "portfolioBlock"
+                    widget: "object"
+                    fields:
+                      - {label: "Judul Blok", name: "title", widget: "string"}
+                  - label: "Blok: Struktur Organisasi"
+                    name: "organizationBlock"
+                    widget: "object"
+                    fields:
+                      - {label: "Judul Blok", name: "title", widget: "string"}
+                  - label: "Blok: Tenaga Ahli (Sertifikasi)"
+                    name: "expertsBlock"
+                    widget: "object"
+                    fields:
+                      - {label: "Judul Blok", name: "title", widget: "string"}
+                  - label: "Blok: Legalitas Perusahaan"
+                    name: "legalBlock"
+                    widget: "object"
+                    fields:
+                      - {label: "Judul Blok", name: "title", widget: "string"}
+                  - label: "Blok: Hubungi Kami (Kontak)"
+                    name: "contactBlock"
+                    widget: "object"
+                    fields:
+                      - {label: "Judul Blok", name: "title", widget: "string"}
+                  - label: "Blok: Logo Klien (Marquee Berjalan)"
+                    name: "clientsMarqueeBlock"
+                    widget: "object"
+                    fields:
+                      - {label: "Aktifkan Logo Klien", name: "active", widget: "boolean", default: true}

@@ -201,17 +201,6 @@
       }
     ]
   },
-  "hero": {
-    "headline": "General Contractor Andal & Terpercaya",
-    "subheadline": "Membangun masa depan dengan keunggulan struktural dan layanan berkualitas tinggi di seluruh Indonesia.",
-    "bgImage": "/uploads/proyek_page1_img2.jpeg"
-  },
-  "about": {
-    "title": "Tentang PT. Abbasy Anugerah Perkasa",
-    "description": "PT ABBASY ANUGERAH PERKASA adalah perusahaan yang bergerak di bidang jasa kontraktor, dengan fokus pada pelaksanaan pekerjaan konstruksi yang berkualitas, tepat waktu, dan sesuai dengan standar keselamatan kerja. Kami hadir untuk memberikan solusi konstruksi yang andal bagi proyek skala kecil hingga besar, baik untuk sektor swasta maupun pemerintah. Didukung oleh tenaga profesional yang berpengalaman serta manajemen yang solid. \nPT ABBASY ANUGERAH PERKASA berkomitmen untuk menghasilkan pekerjaan konstruksi yang memenuhi spesifikasi teknis dan harapan klien. Kami mengutamakan perencanaan yang matang, pengawasan yang ketat, serta penggunaan material dan metode kerja yang berkualitas.\nDalam setiap proyek, kami menjunjung tinggi nilai profesionalisme, integritas, keselamatan kerja (K3), dan kepuasan pelanggan. Kami percaya bahwa kepercayaan klien adalah aset utama, sehingga setiap pekerjaan kami laksanakan dengan penuh tanggung jawab dan transparansi. \nPT ABBASY ANUGERAH PERKASA terus berupaya berkembang mengikuti kemajuan teknologi konstruksi dan regulasi yang berlaku, guna menjadi perusahaan kontraktor yang kompeten, terpercaya, dan berdaya saing tinggi.",
-    "vision": "Bercita-cita menjadi perusahaan konstruksi terkemuka di seluruh negeri dengan menawarkan desain, rekayasa struktur, dan jasa konstruksi berkualitas tinggi terbaik di Indonesia.",
-    "mission": "Menghasilkan yang terbaik dari para pemangku kepentingan kami. Bersama tim yang terlatih dengan baik, kami mencapai kepuasan kesuksesan yang menguntungkan."
-  },
   "services": [
     {
       "title": "Pre-construction Design & Estimating",
@@ -535,5 +524,118 @@
     "instagram": "",
     "linkedin": ""
   },
-  "customPages": []
+  "pages": [
+    {
+      "title": "Beranda",
+      "slug": "/",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "heroBlock",
+          "headline": "General Contractor Andal & Terpercaya",
+          "subheadline": "Membangun masa depan dengan keunggulan struktural dan layanan berkualitas tinggi di seluruh Indonesia.",
+          "bgImage": "/uploads/proyek_page1_img2.jpeg"
+        },
+        {
+          "type": "aboutBlock",
+          "title": "Selamat Datang di PT Abbasy Anugerah Perkasa",
+          "description": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi.",
+          "vision": "",
+          "mission": ""
+        },
+        {
+          "type": "servicesBlock",
+          "title": "Layanan & Fitur",
+          "limit": 3
+        },
+        {
+          "type": "clientsMarqueeBlock"
+        }
+      ]
+    },
+    {
+      "title": "Tentang Kami",
+      "slug": "about",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "aboutBlock",
+          "title": "Tentang PT. Abbasy Anugerah Perkasa",
+          "description": "PT ABBASY ANUGERAH PERKASA adalah perusahaan yang bergerak di bidang jasa kontraktor, dengan fokus pada pelaksanaan pekerjaan konstruksi yang berkualitas, tepat waktu, dan sesuai dengan standar keselamatan kerja. Kami hadir untuk memberikan solusi konstruksi yang andal bagi proyek skala kecil hingga besar, baik untuk sektor swasta maupun pemerintah. Didukung oleh tenaga profesional yang berpengalaman serta manajemen yang solid. \nPT ABBASY ANUGERAH PERKASA berkomitmen untuk menghasilkan pekerjaan konstruksi yang memenuhi spesifikasi teknis dan harapan klien. Kami mengutamakan perencanaan yang matang, pengawasan yang ketat, serta penggunaan material dan metode kerja yang berkualitas.\nDalam setiap proyek, kami menjunjung tinggi nilai profesionalisme, integritas, keselamatan kerja (K3), dan kepuasan pelanggan. Kami percaya bahwa kepercayaan klien adalah aset utama, sehingga setiap pekerjaan kami laksanakan dengan penuh tanggung jawab dan transparansi. \nPT ABBASY ANUGERAH PERKASA terus berupaya berkembang mengikuti kemajuan teknologi konstruksi dan regulasi yang berlaku, guna menjadi perusahaan kontraktor yang kompeten, terpercaya, dan berdaya saing tinggi.",
+          "vision": "Bercita-cita menjadi perusahaan konstruksi terkemuka di seluruh negeri dengan menawarkan desain, rekayasa struktur, dan jasa konstruksi berkualitas tinggi terbaik di Indonesia.",
+          "mission": "Menghasilkan yang terbaik dari para pemangku kepentingan kami. Bersama tim yang terlatih dengan baik, kami mencapai kepuasan kesuksesan yang menguntungkan."
+        }
+      ]
+    },
+    {
+      "title": "Struktur Organisasi",
+      "slug": "organization",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "organizationBlock",
+          "title": "Struktur Organisasi Perusahaan"
+        }
+      ]
+    },
+    {
+      "title": "Layanan",
+      "slug": "services",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "servicesBlock",
+          "title": "Layanan Kami",
+          "limit": 0
+        }
+      ]
+    },
+    {
+      "title": "Portofolio",
+      "slug": "portfolio",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "portfolioBlock",
+          "title": "Proyek Kami"
+        },
+        {
+          "type": "clientsMarqueeBlock"
+        }
+      ]
+    },
+    {
+      "title": "Tenaga Ahli",
+      "slug": "experts",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "expertsBlock",
+          "title": "Sertifikasi Tenaga Ahli"
+        }
+      ]
+    },
+    {
+      "title": "Legalitas",
+      "slug": "legal",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "legalBlock",
+          "title": "Legalitas Perusahaan"
+        }
+      ]
+    },
+    {
+      "title": "Hubungi Kami",
+      "slug": "contact",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "contactBlock",
+          "title": "Hubungi Kami"
+        }
+      ]
+    }
+  ]
 }
