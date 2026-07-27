@@ -42,6 +42,7 @@ function AnimatedRoutes() {
 
 function App() {
   const textAlignment = siteData?.siteSettings?.textAlignment || 'justify';
+  const theme = siteData?.siteSettings?.theme || {};
 
   return (
     <HelmetProvider>
@@ -50,7 +51,9 @@ function App() {
         display: 'flex', 
         flexDirection: 'column', 
         minHeight: '100vh',
-        '--global-text-alignment': textAlignment 
+        '--global-text-alignment': textAlignment,
+        ...(theme.colorPrimary && { '--color-primary': theme.colorPrimary }),
+        ...(theme.colorAccent && { '--color-accent': theme.colorAccent })
       }}>
         <Navbar contact={siteData.contact} siteSettings={siteData.siteSettings} customPages={siteData.customPages} />
         <Preloader logoUrl={siteData.siteSettings?.logoImage} />

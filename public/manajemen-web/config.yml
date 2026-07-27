@@ -100,6 +100,35 @@ collections:
                 name: "seoKeywords"
                 widget: "string"
                 required: false
+              - label: "Theme Customizer (Pengaturan Tampilan)"
+                name: "theme"
+                widget: "object"
+                required: false
+                fields:
+                  - label: "Warna Utama (Teks Heading & Navbar)"
+                    name: "colorPrimary"
+                    widget: "color"
+                    default: "#0A192F"
+                  - label: "Warna Aksen (Tombol & Garis Bawah)"
+                    name: "colorAccent"
+                    widget: "color"
+                    default: "#FF7A00"
+                  - label: "Tampilkan Banner Utama (Hero)?"
+                    name: "showHero"
+                    widget: "boolean"
+                    default: true
+                  - label: "Tampilkan Teks Sambutan (Welcome)?"
+                    name: "showWelcome"
+                    widget: "boolean"
+                    default: true
+                  - label: "Tampilkan Daftar Layanan di Beranda?"
+                    name: "showServices"
+                    widget: "boolean"
+                    default: true
+                  - label: "Tampilkan Logo Klien (Berjalan)?"
+                    name: "showClients"
+                    widget: "boolean"
+                    default: true
               - label: "Navigation Menu (Menu Atas)"
                 name: "navigation"
                 widget: "list"

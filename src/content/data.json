@@ -150,6 +150,14 @@
     "seoTitle": "PT. Abbasy Anugerah Perkasa | Kontraktor Umum Terpercaya",
     "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional.",
     "seoKeywords": "PT Abbasy Anugerah Perkasa, Kontraktor Umum, General Contractor, Jasa Konstruksi Depok, Kontraktor Jakarta, Perdagangan Umum, General Trade, Konstruksi Sipil, Instalasi MEP, Pembangunan Gedung, Ahli Bangunan, Kontraktor Terbaik Indonesia",
+    "theme": {
+      "colorPrimary": "#0A192F",
+      "colorAccent": "#FF7A00",
+      "showHero": true,
+      "showWelcome": true,
+      "showServices": true,
+      "showClients": true
+    },
     "navigation": [
       {
         "label": "Beranda",
