@@ -24,6 +24,7 @@ collections:
           - label: "Struktur Organisasi (Office)"
             name: "organization"
             widget: "list"
+            collapsed: true
             summary: "{{name}} - {{role}}"
             fields:
               - label: "ID Unik (misal: 1, 2, 3 - jangan pakai spasi)"
@@ -46,6 +47,7 @@ collections:
           - label: "Site Settings (Pengaturan Umum)"
             name: "siteSettings"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Logo Image (Gambar Logo)"
                 name: "logoImage"
@@ -103,6 +105,7 @@ collections:
               - label: "Theme Customizer (Pengaturan Tampilan)"
                 name: "theme"
                 widget: "object"
+                collapsed: true
                 required: false
                 fields:
                   - label: "Warna Utama (Teks Heading & Navbar)"
@@ -132,6 +135,7 @@ collections:
               - label: "Navigation Menu (Menu Atas)"
                 name: "navigation"
                 widget: "list"
+                collapsed: true
                 summary: "{{label}}"
                 required: false
                 fields:
@@ -148,6 +152,7 @@ collections:
           - label: "Services"
             name: "services"
             widget: "list"
+            collapsed: true
             summary: "{{title}}"
             fields:
               - label: "Service Name"
@@ -159,6 +164,7 @@ collections:
           - label: "Projects"
             name: "projects"
             widget: "list"
+            collapsed: true
             summary: "{{title}} - {{status}}"
             fields:
               - label: "Project Name"
@@ -176,6 +182,7 @@ collections:
               - label: "Project Images (Foto-foto Proyek)"
                 name: "images"
                 widget: "list"
+                collapsed: true
                 summary: "Foto Proyek"
                 fields:
                   - label: "Image"
@@ -185,6 +192,7 @@ collections:
           - label: "Clients"
             name: "clients"
             widget: "list"
+            collapsed: true
             summary: "{{name}}"
             fields:
               - label: "Client Name"
@@ -197,6 +205,7 @@ collections:
           - label: "Experts (Tenaga Ahli)"
             name: "experts"
             widget: "list"
+            collapsed: true
             summary: "{{name}}"
             fields:
               - label: "Name"
@@ -208,6 +217,7 @@ collections:
               - label: "Certificate Images"
                 name: "images"
                 widget: "list"
+                collapsed: true
                 summary: "Foto Sertifikat"
                 fields:
                   - label: "Image"
@@ -217,6 +227,7 @@ collections:
           - label: "Legalitas Perusahaan"
             name: "legal"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Company Name"
                 name: "companyName"
@@ -236,6 +247,7 @@ collections:
               - label: "Legal Scans"
                 name: "legalImages"
                 widget: "list"
+                collapsed: true
                 summary: "Scan Dokumen Legal"
                 fields:
                   - label: "Image"
@@ -245,6 +257,7 @@ collections:
           - label: "Contact Info"
             name: "contact"
             widget: "object"
+            collapsed: true
             fields:
               - label: "Address"
                 name: "address"
@@ -273,6 +286,7 @@ collections:
           - label: "Pages (Perakit Halaman)"
             name: "pages"
             widget: "list"
+            collapsed: true
             summary: "{{title}} (/{{slug}})"
             required: false
             fields:
@@ -289,11 +303,13 @@ collections:
               - label: "Perakitan Blok Halaman"
                 name: "blocks"
                 widget: "list"
+                collapsed: true
                 required: false
                 types:
                   - label: "Blok: Hero (Banner Atas)"
                     name: "heroBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Headline", name: "headline", widget: "string"}
                       - {label: "Subheadline", name: "subheadline", widget: "string"}
@@ -301,12 +317,14 @@ collections:
                   - label: "Blok: Tentang/Info (Dengan Kartu Teks)"
                     name: "aboutBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                       - {label: "Deskripsi Panjang", name: "description", widget: "text"}
                       - label: "Daftar Kartu Teks (Visi, Misi, Sejarah, dll)"
                         name: "items"
                         widget: "list"
+                        collapsed: true
                         required: false
                         fields:
                           - {label: "Judul Kartu", name: "title", widget: "string"}
@@ -314,52 +332,62 @@ collections:
                   - label: "Blok: Teks Bebas (Markdown)"
                     name: "markdownBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Isi Konten", name: "content", widget: "markdown"}
                   - label: "Blok: Daftar Layanan/Fitur"
                     name: "servicesBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                       - {label: "Batas Jumlah (0 = Tampilkan Semua)", name: "limit", widget: "number", default: 0}
                   - label: "Blok: Galeri Foto (Album)"
                     name: "galleryBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Judul Galeri (Opsional)", name: "title", widget: "string", required: false}
                       - label: "Daftar Foto"
                         name: "photos"
                         widget: "list"
+                        collapsed: true
                         fields:
                           - {label: "Pilih Foto", name: "image", widget: "image"}
                           - {label: "Keterangan Foto (Opsional)", name: "caption", widget: "string", required: false}
                   - label: "Blok: Portofolio (Proyek Kami)"
                     name: "portfolioBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                   - label: "Blok: Struktur Organisasi"
                     name: "organizationBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                   - label: "Blok: Tenaga Ahli (Sertifikasi)"
                     name: "expertsBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                   - label: "Blok: Legalitas Perusahaan"
                     name: "legalBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                   - label: "Blok: Hubungi Kami (Kontak)"
                     name: "contactBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                   - label: "Blok: Logo Klien (Marquee Berjalan)"
                     name: "clientsMarqueeBlock"
                     widget: "object"
+                    collapsed: true
                     fields:
                       - {label: "Aktifkan Logo Klien", name: "active", widget: "boolean", default: true}
