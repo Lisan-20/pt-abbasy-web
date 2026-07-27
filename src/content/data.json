@@ -605,9 +605,6 @@
         {
           "type": "portfolioBlock",
           "title": "Proyek Kami"
-        },
-        {
-          "type": "clientsMarqueeBlock"
         }
       ]
     },
