@@ -540,8 +540,7 @@
           "type": "aboutBlock",
           "title": "Selamat Datang di PT Abbasy Anugerah Perkasa",
           "description": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi.",
-          "vision": "",
-          "mission": ""
+          "items": []
         },
         {
           "type": "servicesBlock",
@@ -562,8 +561,16 @@
           "type": "aboutBlock",
           "title": "Tentang PT. Abbasy Anugerah Perkasa",
           "description": "PT ABBASY ANUGERAH PERKASA adalah perusahaan yang bergerak di bidang jasa kontraktor, dengan fokus pada pelaksanaan pekerjaan konstruksi yang berkualitas, tepat waktu, dan sesuai dengan standar keselamatan kerja. Kami hadir untuk memberikan solusi konstruksi yang andal bagi proyek skala kecil hingga besar, baik untuk sektor swasta maupun pemerintah. Didukung oleh tenaga profesional yang berpengalaman serta manajemen yang solid. \nPT ABBASY ANUGERAH PERKASA berkomitmen untuk menghasilkan pekerjaan konstruksi yang memenuhi spesifikasi teknis dan harapan klien. Kami mengutamakan perencanaan yang matang, pengawasan yang ketat, serta penggunaan material dan metode kerja yang berkualitas.\nDalam setiap proyek, kami menjunjung tinggi nilai profesionalisme, integritas, keselamatan kerja (K3), dan kepuasan pelanggan. Kami percaya bahwa kepercayaan klien adalah aset utama, sehingga setiap pekerjaan kami laksanakan dengan penuh tanggung jawab dan transparansi. \nPT ABBASY ANUGERAH PERKASA terus berupaya berkembang mengikuti kemajuan teknologi konstruksi dan regulasi yang berlaku, guna menjadi perusahaan kontraktor yang kompeten, terpercaya, dan berdaya saing tinggi.",
-          "vision": "Bercita-cita menjadi perusahaan konstruksi terkemuka di seluruh negeri dengan menawarkan desain, rekayasa struktur, dan jasa konstruksi berkualitas tinggi terbaik di Indonesia.",
-          "mission": "Menghasilkan yang terbaik dari para pemangku kepentingan kami. Bersama tim yang terlatih dengan baik, kami mencapai kepuasan kesuksesan yang menguntungkan."
+          "items": [
+            {
+              "title": "Visi Kami",
+              "content": "Bercita-cita menjadi perusahaan konstruksi terkemuka di seluruh negeri dengan menawarkan desain, rekayasa struktur, dan jasa konstruksi berkualitas tinggi terbaik di Indonesia."
+            },
+            {
+              "title": "Misi Kami",
+              "content": "Menghasilkan yang terbaik dari para pemangku kepentingan kami. Bersama tim yang terlatih dengan baik, kami mencapai kepuasan kesuksesan yang menguntungkan."
+            }
+          ]
         }
       ]
     },

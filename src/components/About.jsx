@@ -23,15 +23,12 @@ const About = ({ data }) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}
         >
-          <motion.div whileHover={{ scale: 1.02 }} className="feature-card">
-            <h3 style={{ marginBottom: '10px', color: 'var(--color-primary)' }}>Visi Kami</h3>
-            <p style={{ whiteSpace: 'pre-line', textAlign: 'var(--global-text-alignment)' }}>{data.vision}</p>
-          </motion.div>
-          
-          <motion.div whileHover={{ scale: 1.02 }} className="feature-card">
-            <h3 style={{ marginBottom: '10px', color: 'var(--color-primary)' }}>Misi Kami</h3>
-            <p style={{ whiteSpace: 'pre-line', textAlign: 'var(--global-text-alignment)' }}>{data.mission}</p>
-          </motion.div>
+          {data.items && data.items.map((item, idx) => (
+            <motion.div key={idx} whileHover={{ scale: 1.02 }} className="feature-card">
+              <h3 style={{ marginBottom: '10px', color: 'var(--color-primary)' }}>{item.title}</h3>
+              <p style={{ whiteSpace: 'pre-line', textAlign: 'var(--global-text-alignment)' }}>{item.content}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

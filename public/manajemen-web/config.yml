@@ -298,14 +298,19 @@ collections:
                       - {label: "Headline", name: "headline", widget: "string"}
                       - {label: "Subheadline", name: "subheadline", widget: "string"}
                       - {label: "Background Image", name: "bgImage", widget: "image", required: false}
-                  - label: "Blok: Tentang Kami (Visi & Misi)"
+                  - label: "Blok: Tentang/Info (Dengan Kartu Teks)"
                     name: "aboutBlock"
                     widget: "object"
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
                       - {label: "Deskripsi Panjang", name: "description", widget: "text"}
-                      - {label: "Teks Visi", name: "vision", widget: "text", required: false}
-                      - {label: "Teks Misi", name: "mission", widget: "text", required: false}
+                      - label: "Daftar Kartu Teks (Visi, Misi, Sejarah, dll)"
+                        name: "items"
+                        widget: "list"
+                        required: false
+                        fields:
+                          - {label: "Judul Kartu", name: "title", widget: "string"}
+                          - {label: "Isi Teks", name: "content", widget: "text"}
                   - label: "Blok: Teks Bebas (Markdown)"
                     name: "markdownBlock"
                     widget: "object"
