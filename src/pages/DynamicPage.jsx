@@ -22,8 +22,15 @@ const DynamicPage = ({ pageData, siteData }) => {
     );
   }
 
+  const hasHeroFirst = pageData.blocks && pageData.blocks.length > 0 && pageData.blocks[0].type === 'heroBlock';
+
   return (
     <PageWrapper title={pageData.title}>
+      {!hasHeroFirst && (
+        <div className="page-header" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '140px 0 60px', textAlign: 'center' }}>
+          <h1 style={{ color: 'white', margin: 0 }}>{pageData.title}</h1>
+        </div>
+      )}
       {/* Fallback jika tidak ada block */}
       {(!pageData.blocks || pageData.blocks.length === 0) && (
         <div className="container" style={{ padding: '100px 0', textAlign: 'center' }}>
