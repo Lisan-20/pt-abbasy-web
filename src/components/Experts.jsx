@@ -70,20 +70,22 @@ const Experts = ({ data, title }) => {
               display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px'
             }}
           >
-            <button 
-              onClick={() => setSelectedImage(null)}
-              style={{
-                position: 'absolute', top: '20px', right: '30px', background: 'none', border: 'none', color: 'white', cursor: 'pointer', zIndex: 10000
-              }}
-            >
-              <X size={40} />
-            </button>
-            <motion.img 
-              initial={{ scale: 0.8 }} animate={{ scale: 1 }} exit={{ scale: 0.8 }}
-              src={selectedImage} alt="Enlarged Certificate"
-              style={{ maxWidth: '90%', maxHeight: '90%', objectFit: 'contain', borderRadius: '8px', boxShadow: '0 10px 25px rgba(0,0,0,0.5)' }}
-              onClick={(e) => e.stopPropagation()} 
-            />
+            <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <div 
+                onClick={() => setSelectedImage(null)}
+                style={{
+                  position: 'absolute', top: '-15px', right: '-15px', color: '#64748b', cursor: 'pointer', backgroundColor: 'white', padding: '8px', borderRadius: '50%', zIndex: 10000, boxShadow: '0 4px 6px rgba(0,0,0,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center'
+                }}
+              >
+                <X size={24} />
+              </div>
+              <motion.img 
+                initial={{ scale: 0.8 }} animate={{ scale: 1 }} exit={{ scale: 0.8 }}
+                src={selectedImage} alt="Enlarged Certificate"
+                style={{ maxWidth: '90vw', maxHeight: '90vh', objectFit: 'contain', borderRadius: '8px', boxShadow: '0 10px 25px rgba(0,0,0,0.5)' }}
+                onClick={(e) => e.stopPropagation()} 
+              />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

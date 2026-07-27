@@ -74,11 +74,13 @@ const Portfolio = ({ data }) => {
             style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.85)', zIndex: 9999, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px 20px', overflowY: 'auto' }}
             onClick={() => setSelectedProject(null)}
           >
-            <div style={{ position: 'absolute', top: '20px', right: '30px', color: 'white', cursor: 'pointer', backgroundColor: 'rgba(0,0,0,0.5)', padding: '10px', borderRadius: '50%' }}>
-              <X size={32} />
-            </div>
-            
-            <div style={{ width: '100%', maxWidth: '900px', backgroundColor: 'white', borderRadius: '12px', padding: '30px', marginTop: '20px' }} onClick={e => e.stopPropagation()}>
+            <div style={{ width: '100%', maxWidth: '900px', backgroundColor: 'white', borderRadius: '12px', padding: '30px', marginTop: '20px', position: 'relative' }} onClick={e => e.stopPropagation()}>
+              <div 
+                onClick={() => setSelectedProject(null)}
+                style={{ position: 'absolute', top: '15px', right: '15px', color: '#64748b', cursor: 'pointer', backgroundColor: '#f1f5f9', padding: '8px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+              >
+                <X size={24} />
+              </div>
               <h2 style={{ marginBottom: '10px', color: 'var(--color-primary)' }}>{selectedProject.title}</h2>
               <h4 style={{ marginBottom: '20px', color: 'var(--color-accent)' }}>Klien: {selectedProject.client}</h4>
               
