@@ -121,7 +121,9 @@
     display: block;
   }
   
-  .navbar.scrolled .nav-links a:not(.btn) {
+  .navbar.scrolled .nav-links a:not(.btn),
+  .navbar.scrolled .dropdown-toggle,
+  .navbar.scrolled .nav-links span {
     color: white !important;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
