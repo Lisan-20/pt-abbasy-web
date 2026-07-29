@@ -61,6 +61,10 @@ collections:
                   - {label: "Tampilkan Teks Sambutan", name: "showWelcome", widget: "boolean", default: true}
                   - {label: "Tampilkan Layanan", name: "showServices", widget: "boolean", default: true}
                   - {label: "Tampilkan Klien", name: "showClients", widget: "boolean", default: true}
+              - {label: "Judul Kolom Tautan Cepat", name: "footerQuickLinksTitle", widget: "string", default: "Tautan Cepat"}
+              - {label: "Judul Kolom Kontak", name: "footerContactTitle", widget: "string", default: "Hubungi Kami"}
+              - {label: "Judul Kolom Peta", name: "footerMapTitle", widget: "string", default: "Lokasi Kantor"}
+              - {label: "URL Embed Peta (Google Maps Iframe src)", name: "footerMapIframeUrl", widget: "string", required: false}
               - label: "Tautan Cepat Footer"
                 name: "footerQuickLinks"
                 widget: "list"

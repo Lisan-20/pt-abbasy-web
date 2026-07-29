@@ -35,7 +35,7 @@ const Footer = ({ data, siteSettings }) => {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem' }}>Tautan Cepat</h4>
+            <h4 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem' }}>{siteSettings?.footerQuickLinksTitle || 'Tautan Cepat'}</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {siteSettings?.footerQuickLinks ? (
                 siteSettings.footerQuickLinks.map((link, idx) => (
@@ -59,7 +59,7 @@ const Footer = ({ data, siteSettings }) => {
 
           {/* Column 3: Contact */}
           <div>
-            <h4 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem' }}>Hubungi Kami</h4>
+            <h4 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem' }}>{siteSettings?.footerContactTitle || 'Hubungi Kami'}</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
               <li style={{ display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
                 <MapPin className="text-accent" size={20} style={{ flexShrink: 0, marginTop: '5px' }} />
@@ -86,10 +86,10 @@ const Footer = ({ data, siteSettings }) => {
 
           {/* Column 4: Maps/Business */}
           <div>
-            <h4 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem' }}>Lokasi Kantor</h4>
+            <h4 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem' }}>{siteSettings?.footerMapTitle || 'Lokasi Kantor'}</h4>
             <div style={{ width: '100%', height: '150px', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
               <iframe 
-                src="https://maps.google.com/maps?q=Jatimulya%20Lestari%20Blok%20B%20no%203%20Jl.%20Kalimulya%20Raya%20no%2024%2C%20Jatimulya%20Cilodong%2C%20Depok%20Jawa%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                src={siteSettings?.footerMapIframeUrl || "https://maps.google.com/maps?q=Jatimulya%20Lestari%20Blok%20B%20no%203%20Jl.%20Kalimulya%20Raya%20no%2024%2C%20Jatimulya%20Cilodong%2C%20Depok%20Jawa%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed"} 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
