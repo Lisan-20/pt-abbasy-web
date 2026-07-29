@@ -636,17 +636,6 @@
       ]
     },
     {
-      "title": "Hubungi Kami",
-      "slug": "contact",
-      "showInMenu": false,
-      "blocks": [
-        {
-          "type": "contactBlock",
-          "title": "Hubungi Kami"
-        }
-      ]
-    },
-    {
       "title": "Keberlanjutan & Zero Harm",
       "slug": "sustainability",
       "showInMenu": true,
@@ -694,6 +683,17 @@
               "label": "Kepatuhan K3"
             }
           ]
+        }
+      ]
+    },
+    {
+      "title": "Hubungi Kami",
+      "slug": "contact",
+      "showInMenu": false,
+      "blocks": [
+        {
+          "type": "contactBlock",
+          "title": "Hubungi Kami"
         }
       ]
     }
