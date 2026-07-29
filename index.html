@@ -29,6 +29,30 @@
       "url": "https://abbasyanugerahperkasa.com/"
     }
     </script>
+    <script>
+      // Auto-reload on chunk load error (MIME error / 404 due to stale index.html cache)
+      window.addEventListener('error', function(e) {
+        if (e.target && e.target.tagName === 'SCRIPT') {
+          var now = Date.now();
+          var lastReload = sessionStorage.getItem('last_chunk_error_reload');
+          if (!lastReload || now - parseInt(lastReload) > 5000) {
+            sessionStorage.setItem('last_chunk_error_reload', now.toString());
+            console.warn('Script failed to load. Forcing hard reload to clear cache...');
+            window.location.reload(true);
+          }
+        }
+      }, true);
+      // Catch Vite dynamic import chunk errors
+      window.addEventListener('vite:preloadError', function(event) {
+        var now = Date.now();
+        var lastReload = sessionStorage.getItem('last_chunk_error_reload');
+        if (!lastReload || now - parseInt(lastReload) > 5000) {
+          sessionStorage.setItem('last_chunk_error_reload', now.toString());
+          console.warn('Vite preload error. Forcing hard reload to clear cache...');
+          window.location.reload(true);
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
