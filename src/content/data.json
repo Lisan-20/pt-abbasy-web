@@ -198,6 +198,11 @@
         "label": "Hubungi Kami",
         "path": "/contact",
         "isButton": true
+      },
+      {
+        "label": "Blog",
+        "path": "/blog",
+        "isButton": false
       }
     ]
   },

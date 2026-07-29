@@ -8,6 +8,8 @@ import Preloader from './components/Preloader';
 
 import DynamicPage from './pages/DynamicPage';
 import NotFound from './pages/NotFound';
+import BlogIndex from './pages/BlogIndex';
+import BlogPost from './pages/BlogPost';
 
 import siteData from './content/data.json';
 import './index.css';
@@ -101,6 +103,8 @@ function AnimatedRoutes() {
             />
           );
         })}
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>

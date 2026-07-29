@@ -425,3 +425,19 @@ collections:
                           - {label: "Rating Bintang (1-5)", name: "rating", widget: "number", default: 5, value_type: "int", min: 1, max: 5}
                           - {label: "Foto (Opsional)", name: "photo", widget: "image", required: false}
 
+
+  - name: "articles"
+    label: "Blog & Artikel"
+    folder: "src/content/articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Judul", name: "title", widget: "string"}
+      - {label: "URL Slug (Kosongkan agar otomatis)", name: "slug", widget: "string", required: false}
+      - {label: "Tanggal Terbit", name: "date", widget: "datetime"}
+      - {label: "Penulis", name: "author", widget: "string", default: "Admin"}
+      - {label: "Thumbnail / Cover Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Ringkasan Singkat (Muncul di Daftar Artikel)", name: "summary", widget: "text"}
+      - {label: "Isi Konten Utama", name: "content", widget: "markdown"}
