@@ -8,3 +8,6 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+// Dummy comment to force a new JS bundle hash to bypass Cloudflare broken edge cache
+console.log("App version: " + Date.now());
