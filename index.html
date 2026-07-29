@@ -37,8 +37,8 @@
           var lastReload = sessionStorage.getItem('last_chunk_error_reload');
           if (!lastReload || now - parseInt(lastReload) > 5000) {
             sessionStorage.setItem('last_chunk_error_reload', now.toString());
-            console.warn('Script failed to load. Forcing hard reload to clear cache...');
-            window.location.reload(true);
+            console.warn('Script failed to load. Forcing hard reload with cache-buster...');
+            window.location.href = window.location.pathname + '?v=' + now;
           }
         }
       }, true);
@@ -48,8 +48,8 @@
         var lastReload = sessionStorage.getItem('last_chunk_error_reload');
         if (!lastReload || now - parseInt(lastReload) > 5000) {
           sessionStorage.setItem('last_chunk_error_reload', now.toString());
-          console.warn('Vite preload error. Forcing hard reload to clear cache...');
-          window.location.reload(true);
+          console.warn('Vite preload error. Forcing hard reload with cache-buster...');
+          window.location.href = window.location.pathname + '?v=' + now;
         }
       });
     </script>
