@@ -200,6 +200,11 @@
         "isButton": false
       },
       {
+        "label": "Keberlanjutan & Zero Harm",
+        "path": "/sustainability",
+        "isButton": false
+      },
+      {
         "label": "Hubungi Kami",
         "path": "/contact",
         "isButton": true
@@ -638,7 +643,7 @@
     {
       "title": "Keberlanjutan & Zero Harm",
       "slug": "sustainability",
-      "showInMenu": true,
+      "showInMenu": false,
       "blocks": [
         {
           "type": "heroBlock",
