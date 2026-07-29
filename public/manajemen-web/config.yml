@@ -69,8 +69,16 @@ collections:
                 required: false
                 fields:
                   - {label: "Label Menu", name: "label", widget: "string"}
-                  - {label: "URL/Tautan", name: "path", widget: "string"}
+                  - {label: "URL/Tautan (Kosongkan jika dropdown)", name: "path", widget: "string", required: false}
                   - {label: "Jadikan Tombol Utama", name: "isButton", widget: "boolean", default: false}
+                  - label: "Sub-Menu (Dropdown)"
+                    name: "children"
+                    widget: "list"
+                    collapsed: true
+                    required: false
+                    fields:
+                      - {label: "Label Sub-Menu", name: "label", widget: "string"}
+                      - {label: "URL/Tautan", name: "path", widget: "string"}
           - label: "Services"
             name: "services"
             widget: "list"

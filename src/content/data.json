@@ -165,44 +165,59 @@
         "isButton": false
       },
       {
-        "label": "Tentang Kami",
-        "path": "/about",
-        "isButton": false
+        "label": "Perusahaan",
+        "isButton": false,
+        "children": [
+          {
+            "label": "Tentang Kami",
+            "path": "/about"
+          },
+          {
+            "label": "Organisasi",
+            "path": "/organization"
+          },
+          {
+            "label": "Legalitas",
+            "path": "/legal"
+          }
+        ]
       },
       {
-        "label": "Organisasi",
-        "path": "/organization",
-        "isButton": false
+        "label": "Layanan & Proyek",
+        "isButton": false,
+        "children": [
+          {
+            "label": "Solusi & Layanan",
+            "path": "/services"
+          },
+          {
+            "label": "Portofolio Proyek",
+            "path": "/portfolio"
+          },
+          {
+            "label": "Tenaga Ahli",
+            "path": "/experts"
+          }
+        ]
       },
       {
-        "label": "Layanan",
-        "path": "/services",
-        "isButton": false
-      },
-      {
-        "label": "Portofolio",
-        "path": "/portfolio",
-        "isButton": false
-      },
-      {
-        "label": "Tenaga Ahli",
-        "path": "/experts",
-        "isButton": false
-      },
-      {
-        "label": "Legalitas",
-        "path": "/legal",
-        "isButton": false
-      },
-      {
-        "label": "Blog",
-        "path": "/blog",
-        "isButton": false
-      },
-      {
-        "label": "Keberlanjutan & Zero Harm",
+        "label": "Keberlanjutan",
         "path": "/sustainability",
         "isButton": false
+      },
+      {
+        "label": "Informasi",
+        "isButton": false,
+        "children": [
+          {
+            "label": "Blog & Berita",
+            "path": "/blog"
+          },
+          {
+            "label": "Lowongan Karir",
+            "path": "/careers"
+          }
+        ]
       },
       {
         "label": "Hubungi Kami",
