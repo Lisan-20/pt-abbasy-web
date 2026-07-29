@@ -44,7 +44,7 @@ const BlogPost = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', marginBottom: '24px', lineHeight: 1.2 }}
+            style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', marginBottom: '24px', lineHeight: 1.2, color: '#ffffff' }}
           >
             {article.title}
           </motion.h1>
