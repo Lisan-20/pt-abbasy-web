@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import dataId from '../content/data.id.json';
+import dataId from '../content/data.json';
 import dataEn from '../content/data.en.json';
 import { useTranslation } from 'react-i18next';
 
