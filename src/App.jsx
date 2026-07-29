@@ -5,8 +5,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
+import WhatsAppButton from './components/WhatsAppButton';
+import BackToTop from './components/BackToTop';
 
 import DynamicPage from './pages/DynamicPage';
+import NotFound from './pages/NotFound';
 
 import siteData from './content/data.json';
 import './index.css';
@@ -26,6 +29,7 @@ function AnimatedRoutes() {
             />
           );
         })}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   );
@@ -52,6 +56,8 @@ function App() {
           <AnimatedRoutes />
         </main>
         <Footer data={siteData.contact} siteSettings={siteData.siteSettings} />
+        <WhatsAppButton whatsapp={siteData?.contact?.whatsapp} />
+        <BackToTop />
       </div>
     </Router>
     </HelmetProvider>

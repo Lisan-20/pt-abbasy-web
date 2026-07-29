@@ -10,6 +10,8 @@ import Experts from '../components/Experts';
 import Legal from '../components/Legal';
 import Contact from '../components/Contact';
 import ClientsMarquee from '../components/ClientsMarquee';
+import StatsCounter from '../components/StatsCounter';
+import Testimonials from '../components/Testimonials';
 
 const DynamicPage = ({ pageData, siteData }) => {
   if (!pageData) {
@@ -131,6 +133,12 @@ const DynamicPage = ({ pageData, siteData }) => {
                 </div>
               </div>
             );
+
+          case 'statsBlock':
+            return <StatsCounter key={index} data={block} />;
+
+          case 'testimonialsBlock':
+            return <Testimonials key={index} data={block} />;
 
           default:
             return null;

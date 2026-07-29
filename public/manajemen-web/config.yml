@@ -391,3 +391,37 @@ collections:
                     collapsed: true
                     fields:
                       - {label: "Aktifkan Logo Klien", name: "active", widget: "boolean", default: true}
+                  - label: "Blok: Statistik / Angka (Counter Animasi)"
+                    name: "statsBlock"
+                    widget: "object"
+                    collapsed: true
+                    fields:
+                      - {label: "Judul Blok (Opsional)", name: "title", widget: "string", required: false}
+                      - {label: "Sub-judul (Opsional)", name: "subtitle", widget: "string", required: false}
+                      - label: "Daftar Statistik"
+                        name: "stats"
+                        widget: "list"
+                        collapsed: true
+                        fields:
+                          - {label: "Angka (contoh: 100)", name: "value", widget: "number"}
+                          - {label: "Suffix (contoh: +, %, Tahun)", name: "suffix", widget: "string", required: false}
+                          - {label: "Label / Keterangan", name: "label", widget: "string"}
+                          - {label: "Ikon Emoji (Opsional, contoh: angka)", name: "icon", widget: "string", required: false}
+                  - label: "Blok: Testimoni Klien"
+                    name: "testimonialsBlock"
+                    widget: "object"
+                    collapsed: true
+                    fields:
+                      - {label: "Judul Blok", name: "title", widget: "string", default: "Apa Kata Klien Kami"}
+                      - label: "Daftar Testimoni"
+                        name: "testimonials"
+                        widget: "list"
+                        collapsed: true
+                        fields:
+                          - {label: "Kutipan / Testimoni", name: "quote", widget: "text"}
+                          - {label: "Nama Pemberi Testimoni", name: "name", widget: "string"}
+                          - {label: "Jabatan / Posisi", name: "position", widget: "string", required: false}
+                          - {label: "Nama Perusahaan", name: "company", widget: "string", required: false}
+                          - {label: "Rating Bintang (1-5)", name: "rating", widget: "number", default: 5, value_type: "int", min: 1, max: 5}
+                          - {label: "Foto (Opsional)", name: "photo", widget: "image", required: false}
+
