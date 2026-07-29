@@ -9,15 +9,10 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 logo_url: "/uploads/logo_transparent.png"
 
-i18n:
-  structure: multiple_files
-  locales: [id, en]
-  default_locale: id
 
 collections:
   - name: "content"
     label: "Site Content"
-    i18n: true
     editor:
       preview: false
     files:
@@ -26,14 +21,12 @@ collections:
         file: "src/content/data.json"
         format: "json"
         extension: "json"
-        i18n: true
         fields:
           - label: "Struktur Organisasi (Office)"
             name: "organization"
             widget: "list"
             collapsed: true
             summary: "{{name}} - {{role}}"
-            i18n: true
             fields:
               - {label: "ID Unik (misal: 1, 2, 3 - jangan pakai spasi)", name: "id", widget: "string"}
               - {label: "Nama", name: "name", widget: "string"}
@@ -44,7 +37,6 @@ collections:
             name: "siteSettings"
             widget: "object"
             collapsed: true
-            i18n: true
             fields:
               - {label: "Logo Image (Gambar Logo)", name: "logoImage", widget: "image", required: false}
               - {label: "Logo Text (Teks Sebelah Logo)", name: "logoText", widget: "string", required: false}
@@ -84,7 +76,6 @@ collections:
             widget: "list"
             collapsed: true
             summary: "{{title}}"
-            i18n: true
             fields:
               - {label: "Service Name", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
@@ -93,7 +84,6 @@ collections:
             widget: "list"
             collapsed: true
             summary: "{{title}} - {{status}}"
-            i18n: true
             fields:
               - {label: "Project Name", name: "title", widget: "string"}
               - {label: "Kategori (Infrastruktur, Residensial, dll)", name: "category", widget: "string", required: false}
@@ -113,7 +103,6 @@ collections:
             widget: "list"
             collapsed: true
             summary: "{{name}}"
-            i18n: true
             fields:
               - {label: "Client Name", name: "name", widget: "string"}
               - {label: "Client Logo", name: "logo", widget: "image", required: false}
@@ -122,7 +111,6 @@ collections:
             widget: "list"
             collapsed: true
             summary: "{{name}}"
-            i18n: true
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Qualification", name: "qualification", widget: "string"}
@@ -136,7 +124,6 @@ collections:
             name: "legal"
             widget: "object"
             collapsed: true
-            i18n: true
             fields:
               - {label: "Company Name", name: "companyName", widget: "string"}
               - {label: "Akta Pendirian", name: "deed", widget: "string"}
@@ -153,7 +140,6 @@ collections:
             name: "contact"
             widget: "object"
             collapsed: true
-            i18n: true
             fields:
               - {label: "Address", name: "address", widget: "string"}
               - {label: "Email", name: "email", widget: "string"}
@@ -168,7 +154,6 @@ collections:
             collapsed: true
             summary: "{{title}} (/{{slug}})"
             required: false
-            i18n: true
             fields:
               - {label: "Judul Halaman", name: "title", widget: "string"}
               - {label: "URL Halaman (Slug)", name: "slug", widget: "string"}
@@ -310,33 +295,31 @@ collections:
     label: "Newsroom (Berita & PR)"
     folder: "src/content/articles"
     create: true
-    i18n: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "json"
     format: "json"
     fields:
-      - {label: "Judul", name: "title", widget: "string", i18n: true}
-      - {label: "URL Slug", name: "slug", widget: "string", required: false, i18n: true}
-      - {label: "Kategori Berita", name: "category", widget: "select", options: ["Blog", "Press Release", "Pengumuman"], default: "Blog", i18n: true}
-      - {label: "Tanggal Terbit", name: "date", widget: "datetime", i18n: duplicate}
-      - {label: "Penulis", name: "author", widget: "string", default: "Admin", i18n: true}
-      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false, i18n: duplicate}
-      - {label: "Ringkasan", name: "summary", widget: "text", i18n: true}
-      - {label: "Isi Konten", name: "content", widget: "markdown", i18n: true}
+      - {label: "Judul", name: "title", widget: "string"}
+      - {label: "URL Slug", name: "slug", widget: "string", required: false}
+      - {label: "Kategori Berita", name: "category", widget: "select", options: ["Blog", "Press Release", "Pengumuman"], default: "Blog"}
+      - {label: "Tanggal Terbit", name: "date", widget: "datetime"}
+      - {label: "Penulis", name: "author", widget: "string", default: "Admin"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
+      - {label: "Ringkasan", name: "summary", widget: "text"}
+      - {label: "Isi Konten", name: "content", widget: "markdown"}
 
   - name: "careers"
     label: "Lowongan Kerja (Karir)"
     folder: "src/content/careers"
     create: true
-    i18n: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "json"
     format: "json"
     fields:
-      - {label: "Judul Posisi", name: "title", widget: "string", i18n: true}
-      - {label: "Departemen", name: "department", widget: "string", i18n: true}
-      - {label: "Lokasi", name: "location", widget: "string", i18n: true}
-      - {label: "Tipe Pekerjaan", name: "type", widget: "select", options: ["Full-time", "Part-time", "Contract", "Internship"], default: "Full-time", i18n: true}
-      - {label: "Aktif Dibuka?", name: "active", widget: "boolean", default: true, i18n: duplicate}
-      - {label: "Deskripsi", name: "description", widget: "markdown", i18n: true}
-      - {label: "Persyaratan", name: "requirements", widget: "markdown", i18n: true}
+      - {label: "Judul Posisi", name: "title", widget: "string"}
+      - {label: "Departemen", name: "department", widget: "string"}
+      - {label: "Lokasi", name: "location", widget: "string"}
+      - {label: "Tipe Pekerjaan", name: "type", widget: "select", options: ["Full-time", "Part-time", "Contract", "Internship"], default: "Full-time"}
+      - {label: "Aktif Dibuka?", name: "active", widget: "boolean", default: true}
+      - {label: "Deskripsi", name: "description", widget: "markdown"}
+      - {label: "Persyaratan", name: "requirements", widget: "markdown"}

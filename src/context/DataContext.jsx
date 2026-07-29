@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import dataId from '../content/data.id.json';
-import dataEn from '../content/data.en.json';
-import { useTranslation } from 'react-i18next';
+import dataId from '../content/data.json';
 
 const DataContext = createContext();
 
@@ -12,10 +10,9 @@ export const useData = () => {
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(dataId);
   const [loading, setLoading] = useState(true);
-  const { i18n } = useTranslation();
 
   useEffect(() => {
-    const currentData = i18n.language === 'en' ? dataEn : dataId;
+    const currentData = { ...dataId };
     
     // Process images dynamically for Vite
     try {
@@ -42,7 +39,7 @@ export const DataProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  }, [i18n.language]);
+  }, []);
 
   if (loading) {
     return <div>Loading data...</div>;

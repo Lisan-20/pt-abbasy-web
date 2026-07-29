@@ -3,11 +3,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, User, Tag } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 
 const BlogIndex = () => {
-  const { t, i18n } = useTranslation();
-  const [activeCategory, setActiveCategory] = React.useState('All');
+    const [activeCategory, setActiveCategory] = React.useState('All');
 
   // Load all articles using Vite's glob import
   const articleModules = import.meta.glob('../content/articles/*.json', { eager: true });
@@ -16,13 +14,13 @@ const BlogIndex = () => {
       const data = mod.default || mod;
       // Handle slug fallback
       let fallbackSlug = path.split('/').pop().replace('.json', '');
-      fallbackSlug = fallbackSlug.replace(`.${i18n.language}`, '');
+      fallbackSlug = fallbackSlug.replace(`.${'id'}`, '');
       return { ...data, slug: data.slug || fallbackSlug, _path: path };
     })
     .filter(a => a.title)
     .filter(a => {
       // Filter by language if using multiple files
-      if (a._path.includes(`.${i18n.language}.json`)) return true;
+      if (a._path.includes(`.${'id'}.json`)) return true;
       if (!a._path.includes('.en.json') && !a._path.includes('.id.json')) return true;
       return false;
     })
@@ -52,7 +50,7 @@ const BlogIndex = () => {
           animate={{ opacity: 1, y: 0 }}
           style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '20px', color: '#ffffff' }}
         >
-          {t('Newsroom & Blog') || 'Blog & Berita'}
+          {'Newsroom & Blog' || 'Blog & Berita'}
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -78,7 +76,7 @@ const BlogIndex = () => {
                     : 'bg-[rgba(0,0,0,0.05)] text-gray-600 hover:bg-[rgba(0,0,0,0.1)]'
                 }`}
               >
-                {cat === 'All' ? t('All Categories') || 'Semua Kategori' : cat}
+                {cat === 'All' ? 'All Categories' || 'Semua Kategori' : cat}
               </button>
             ))}
           </div>
@@ -135,7 +133,7 @@ const BlogIndex = () => {
                   <div style={{ display: 'flex', gap: '16px', marginBottom: '12px', fontSize: '0.85rem', color: '#666', flexWrap: 'wrap' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <Calendar size={14} />
-                      {new Date(article.date).toLocaleDateString(i18n.language === 'en' ? 'en-US' : 'id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
+                      {new Date(article.date).toLocaleDateString(false ? 'en-US' : 'id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
                     </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <User size={14} />
@@ -167,7 +165,7 @@ const BlogIndex = () => {
                       alignSelf: 'flex-start'
                     }}
                   >
-                    {t('Read More') || 'Baca Selengkapnya'} &rarr;
+                    {'Read More' || 'Baca Selengkapnya'} &rarr;
                   </Link>
                 </div>
               </motion.article>

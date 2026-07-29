@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PageWrapper from '../components/PageWrapper';
 import ReactMarkdown from 'react-markdown';
-import { useTranslation } from 'react-i18next';
 import { ArrowLeft, Briefcase, MapPin, Clock, Send } from 'lucide-react';
 import { useData } from '../context/DataContext';
 
@@ -10,8 +9,7 @@ const JobPost = () => {
   const { id } = useParams();
   const [job, setJob] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { t, i18n } = useTranslation();
-  const siteData = useData();
+    const siteData = useData();
 
   useEffect(() => {
     const loadJob = async () => {
@@ -20,7 +18,7 @@ const JobPost = () => {
         
         let foundJob = null;
         for (const path in modules) {
-          if (path.includes(id) && (path.includes(`.${i18n.language}.json`) || (!path.includes('.en.json') && !path.includes('.id.json')))) {
+          if (path.includes(id) && (path.includes(`.${'id'}.json`) || (!path.includes('.en.json') && !path.includes('.id.json')))) {
             const mod = await modules[path]();
             foundJob = mod.default;
             break;
@@ -48,7 +46,7 @@ const JobPost = () => {
     };
     
     loadJob();
-  }, [id, i18n.language]);
+  }, [id, 'id']);
 
   if (loading) {
     return <PageWrapper title="Loading..."><div style={{ padding: '100px 0', textAlign: 'center' }}>Memuat...</div></PageWrapper>;
@@ -91,7 +89,7 @@ const JobPost = () => {
       
       <div className="container" style={{ padding: '60px 0', maxWidth: '800px', margin: '0 auto' }}>
         <Link to="/careers" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: 'var(--color-text-light)', marginBottom: '30px', textDecoration: 'none' }}>
-          <ArrowLeft size={16} /> {t('Back to Careers') || 'Kembali ke Daftar Karir'}
+          <ArrowLeft size={16} /> {'Back to Careers' || 'Kembali ke Daftar Karir'}
         </Link>
         
         <div style={{ backgroundColor: 'var(--color-bg-subtle)', padding: '40px', borderRadius: '12px', marginBottom: '40px' }}>

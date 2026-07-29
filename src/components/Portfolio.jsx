@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { CheckCircle, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import './Portfolio.css';
 
 const Portfolio = ({ data = [] }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeCategory, setActiveCategory] = useState('All');
-  const { t } = useTranslation();
-
+  
   // Extract unique categories
   const categories = ['All', ...new Set(data.map(p => p.category).filter(Boolean))];
 
@@ -41,7 +39,7 @@ const Portfolio = ({ data = [] }) => {
                     : 'bg-[rgba(255,255,255,0.1)] text-gray-300 hover:bg-[rgba(255,255,255,0.2)]'
                 }`}
               >
-                {cat === 'All' ? t('All Categories') || 'Semua Kategori' : cat}
+                {cat === 'All' ? 'All Categories' || 'Semua Kategori' : cat}
               </button>
             ))}
           </div>

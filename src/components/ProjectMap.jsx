@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 
 // Fix Leaflet marker icons issue in React
 delete L.Icon.Default.prototype._getIconUrl;
@@ -23,8 +22,7 @@ const MapView = ({ center, zoom }) => {
 };
 
 const ProjectMap = ({ projects = [], data }) => {
-  const { t } = useTranslation();
-  const title = data?.title || "Peta Proyek";
+    const title = data?.title || "Peta Proyek";
   const focus = data?.focus || "Indonesia";
   
   // Default to Indonesia center
@@ -55,7 +53,7 @@ const ProjectMap = ({ projects = [], data }) => {
       >
         <h2 className="section-title">{title}</h2>
         <p style={{ color: 'var(--color-text-light)', marginTop: '10px' }}>
-          {t('Our projects across')} {focus === 'Dunia' ? 'the globe' : 'Indonesia'}
+          {'Our projects across'} {focus === 'Dunia' ? 'the globe' : 'Indonesia'}
         </p>
       </motion.div>
 
