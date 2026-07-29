@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import { CheckCircle, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import './Portfolio.css';
 
-const Portfolio = ({ data }) => {
+const Portfolio = ({ data = [] }) => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('All');
+  const { t } = useTranslation();
 
-  // function to get first image or fallback
+  // Extract unique categories
+  const categories = ['All', ...new Set(data.map(p => p.category).filter(Boolean))];
+
+  // Filter projects
+  const filteredData = activeCategory === 'All' 
+    ? data 
+    : data.filter(p => p.category === activeCategory);
   const getCoverImage = (project) => {
     if (project.images && project.images.length > 0) {
       const validImg = project.images.find(img => img && img.image && img.image.trim() !== '');
@@ -19,9 +28,29 @@ const Portfolio = ({ data }) => {
     <section className="section">
       <div className="container">
         
+        {/* Filter Tabs */}
+        {categories.length > 1 && (
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {categories.map((cat, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 rounded-full font-medium transition-all ${
+                  activeCategory === cat
+                    ? 'bg-accent text-white shadow-lg'
+                    : 'bg-[rgba(255,255,255,0.1)] text-gray-300 hover:bg-[rgba(255,255,255,0.2)]'
+                }`}
+              >
+                {cat === 'All' ? t('All Categories') || 'Semua Kategori' : cat}
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* Projects Gallery */}
-        <div className="grid grid-cols-3" style={{ marginBottom: '60px' }}>
-          {data.map((project, idx) => {
+        <motion.div layout className="grid grid-cols-3" style={{ marginBottom: '60px' }}>
+          <AnimatePresence>
+            {filteredData.map((project, idx) => {
             const coverImage = getCoverImage(project);
             return (
               <motion.div 
@@ -59,7 +88,8 @@ const Portfolio = ({ data }) => {
               </motion.div>
             );
           })}
-        </div>
+          </AnimatePresence>
+        </motion.div>
 
         {/* Clients section has been moved to HomePage via ClientsMarquee component */}
       </div>

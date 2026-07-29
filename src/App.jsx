@@ -10,8 +10,10 @@ import DynamicPage from './pages/DynamicPage';
 import NotFound from './pages/NotFound';
 import BlogIndex from './pages/BlogIndex';
 import BlogPost from './pages/BlogPost';
+import CareersIndex from './pages/CareersIndex';
+import JobPost from './pages/JobPost';
+import { useData } from './context/DataContext';
 
-import siteData from './content/data.json';
 import './index.css';
 
 // ── Error Boundary ──────────────────────────────────────
@@ -88,7 +90,7 @@ const BackToTop = () => {
 };
 
 // ── Routes ───────────────────────────────────────────────
-function AnimatedRoutes() {
+function AnimatedRoutes({ siteData }) {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
@@ -105,6 +107,8 @@ function AnimatedRoutes() {
         })}
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/careers" element={<CareersIndex />} />
+        <Route path="/careers/:id" element={<JobPost />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
@@ -112,33 +116,30 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  const siteData = useData();
   const textAlignment = siteData?.siteSettings?.textAlignment || 'justify';
   const theme = siteData?.siteSettings?.theme || {};
 
   return (
-    <HelmetProvider>
-    <Router>
-      <ErrorBoundary>
-        <div className="app-container" style={{
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh',
-          '--global-text-alignment': textAlignment,
-          ...(theme.colorPrimary && { '--color-primary': theme.colorPrimary }),
-          ...(theme.colorAccent && { '--color-accent': theme.colorAccent })
-        }}>
-          <Navbar contact={siteData.contact} siteSettings={siteData.siteSettings} customPages={siteData.customPages} />
-          <Preloader logoUrl={siteData.siteSettings?.logoImage} />
-          <main style={{ flex: 1 }}>
-            <AnimatedRoutes />
-          </main>
-          <Footer data={siteData.contact} siteSettings={siteData.siteSettings} />
-          <WhatsAppButton whatsapp={siteData?.contact?.whatsapp} />
-          <BackToTop />
-        </div>
-      </ErrorBoundary>
-    </Router>
-    </HelmetProvider>
+    <ErrorBoundary>
+      <div className="app-container" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+        '--global-text-alignment': textAlignment,
+        ...(theme.colorPrimary && { '--color-primary': theme.colorPrimary }),
+        ...(theme.colorAccent && { '--color-accent': theme.colorAccent })
+      }}>
+        <Navbar contact={siteData?.contact} siteSettings={siteData?.siteSettings} customPages={siteData?.pages} />
+        <Preloader logoUrl={siteData?.siteSettings?.logoImage} />
+        <main style={{ flex: 1 }}>
+          <AnimatedRoutes siteData={siteData} />
+        </main>
+        <Footer data={siteData?.contact} siteSettings={siteData?.siteSettings} />
+        <WhatsAppButton whatsapp={siteData?.contact?.whatsapp} />
+        <BackToTop />
+      </div>
+    </ErrorBoundary>
   );
 }
 

@@ -5,9 +5,21 @@ import './Hero.css';
 
 const Hero = ({ data }) => {
   const bgImageUrl = data.bgImage || 'https://images.unsplash.com/photo-1541888086925-0c13d4cc5dfc?q=80&w=2000&auto=format&fit=crop';
-  
+  const hasVideo = Boolean(data.videoFile);
+
   return (
-    <section className="hero-section" style={{ backgroundImage: `url(${bgImageUrl})` }}>
+    <section className="hero-section" style={hasVideo ? {} : { backgroundImage: `url(${bgImageUrl})` }}>
+      {hasVideo && (
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="hero-video-bg"
+        >
+          <source src={data.videoFile} type="video/mp4" />
+        </video>
+      )}
       <div className="hero-overlay"></div>
       <div className="container hero-content">
         <h1 className="hero-headline fade-in-up">{data.headline}</h1>

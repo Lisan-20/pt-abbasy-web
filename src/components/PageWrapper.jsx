@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import siteData from '../content/data.json';
+import { useData } from '../context/DataContext';
 
 const PageWrapper = ({ children, title, description }) => {
+  const siteData = useData() || {};
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const { siteSettings } = siteData;
+  const siteSettings = siteData.siteSettings || {};
   const pageTitle = title ? `${title} | ${siteSettings.seoTitle || 'PT. Abbasy Anugerah Perkasa'}` : (siteSettings.seoTitle || 'PT. Abbasy Anugerah Perkasa');
   const pageDescription = description || siteSettings.seoDescription || 'General Contractor & General Trade';
   const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://abbasyanugerahperkasa.com';

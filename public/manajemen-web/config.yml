@@ -9,9 +9,15 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 logo_url: "/uploads/logo_transparent.png"
 
+i18n:
+  structure: multiple_files
+  locales: [id, en]
+  default_locale: id
+
 collections:
   - name: "content"
     label: "Site Content"
+    i18n: true
     editor:
       preview: false
     files:
@@ -20,286 +26,153 @@ collections:
         file: "src/content/data.json"
         format: "json"
         extension: "json"
+        i18n: true
         fields:
           - label: "Struktur Organisasi (Office)"
             name: "organization"
             widget: "list"
             collapsed: true
             summary: "{{name}} - {{role}}"
+            i18n: true
             fields:
-              - label: "ID Unik (misal: 1, 2, 3 - jangan pakai spasi)"
-                name: "id"
-                widget: "string"
-              - label: "Nama"
-                name: "name"
-                widget: "string"
-              - label: "Jabatan"
-                name: "role"
-                widget: "string"
-              - label: "Foto Profil"
-                name: "photo"
-                widget: "image"
-                required: false
-              - label: "Melapor Ke (Isi ID Unik atasan. Jika lebih dari 1, pisahkan dengan koma misal: 1, 2)"
-                name: "parentId"
-                widget: "string"
-                required: false
+              - {label: "ID Unik (misal: 1, 2, 3 - jangan pakai spasi)", name: "id", widget: "string"}
+              - {label: "Nama", name: "name", widget: "string"}
+              - {label: "Jabatan", name: "role", widget: "string"}
+              - {label: "Foto Profil", name: "photo", widget: "image", required: false}
+              - {label: "Melapor Ke (ID Unik)", name: "parentId", widget: "string", required: false}
           - label: "Site Settings (Pengaturan Umum)"
             name: "siteSettings"
             widget: "object"
             collapsed: true
+            i18n: true
             fields:
-              - label: "Logo Image (Gambar Logo)"
-                name: "logoImage"
-                widget: "image"
-                required: false
-              - label: "Logo Text (Teks Sebelah Logo)"
-                name: "logoText"
-                widget: "string"
-                required: false
-              - label: "Logo Text Size (Ukuran, misal: 24px)"
-                name: "logoTextSize"
-                widget: "string"
-                default: "24px"
-              - label: "Perataan Teks Paragraf (Kiri, Tengah, Kanan-Kiri)"
-                name: "textAlignment"
-                widget: "select"
-                options:
-                  - label: "Rata Kiri (Left)"
-                    value: "left"
-                  - label: "Rata Tengah (Center)"
-                    value: "center"
-                  - label: "Rata Kanan (Right)"
-                    value: "right"
-                  - label: "Rata Kanan-Kiri (Justify)"
-                    value: "justify"
-                default: "justify"
-              - label: "Favicon Image (Ikon Tab Browser)"
-                name: "favicon"
-                widget: "image"
-                required: false
-              - label: "Footer Title (Judul di bagian bawah)"
-                name: "footerTitle"
-                widget: "string"
-                required: false
-              - label: "Footer Description (Deskripsi di bagian bawah)"
-                name: "footerDescription"
-                widget: "text"
-                required: false
-              - label: "Welcome Description (Teks Sambutan Beranda)"
-                name: "welcomeDescription"
-                widget: "text"
-                required: false
-              - label: "SEO Title (Judul Website di Google)"
-                name: "seoTitle"
-                widget: "string"
-                required: false
-              - label: "SEO Description (Deskripsi Website di Google)"
-                name: "seoDescription"
-                widget: "text"
-                required: false
-              - label: "SEO Keywords (Kata Kunci Pencarian)"
-                name: "seoKeywords"
-                widget: "string"
-                required: false
-              - label: "Theme Customizer (Pengaturan Tampilan)"
+              - {label: "Logo Image (Gambar Logo)", name: "logoImage", widget: "image", required: false}
+              - {label: "Logo Text (Teks Sebelah Logo)", name: "logoText", widget: "string", required: false}
+              - {label: "Logo Text Size", name: "logoTextSize", widget: "string", default: "24px"}
+              - {label: "Perataan Teks Paragraf", name: "textAlignment", widget: "select", options: [{label: "Rata Kiri", value: "left"}, {label: "Rata Tengah", value: "center"}, {label: "Rata Kanan", value: "right"}, {label: "Rata Kanan-Kiri", value: "justify"}], default: "justify"}
+              - {label: "Favicon Image", name: "favicon", widget: "image", required: false}
+              - {label: "Footer Title", name: "footerTitle", widget: "string", required: false}
+              - {label: "Footer Description", name: "footerDescription", widget: "text", required: false}
+              - {label: "Welcome Description", name: "welcomeDescription", widget: "text", required: false}
+              - {label: "SEO Title", name: "seoTitle", widget: "string", required: false}
+              - {label: "SEO Description", name: "seoDescription", widget: "text", required: false}
+              - {label: "SEO Keywords", name: "seoKeywords", widget: "string", required: false}
+              - label: "Theme Customizer"
                 name: "theme"
                 widget: "object"
                 collapsed: true
                 required: false
                 fields:
-                  - label: "Warna Utama (Teks Heading & Navbar)"
-                    name: "colorPrimary"
-                    widget: "color"
-                    default: "#0A192F"
-                  - label: "Warna Aksen (Tombol & Garis Bawah)"
-                    name: "colorAccent"
-                    widget: "color"
-                    default: "#FF7A00"
-                  - label: "Tampilkan Banner Utama (Hero)?"
-                    name: "showHero"
-                    widget: "boolean"
-                    default: true
-                  - label: "Tampilkan Teks Sambutan (Welcome)?"
-                    name: "showWelcome"
-                    widget: "boolean"
-                    default: true
-                  - label: "Tampilkan Daftar Layanan di Beranda?"
-                    name: "showServices"
-                    widget: "boolean"
-                    default: true
-                  - label: "Tampilkan Logo Klien (Berjalan)?"
-                    name: "showClients"
-                    widget: "boolean"
-                    default: true
-              - label: "Navigation Menu (Menu Atas)"
+                  - {label: "Warna Utama", name: "colorPrimary", widget: "color", default: "#0A192F"}
+                  - {label: "Warna Aksen", name: "colorAccent", widget: "color", default: "#FF7A00"}
+                  - {label: "Tampilkan Hero", name: "showHero", widget: "boolean", default: true}
+                  - {label: "Tampilkan Teks Sambutan", name: "showWelcome", widget: "boolean", default: true}
+                  - {label: "Tampilkan Layanan", name: "showServices", widget: "boolean", default: true}
+                  - {label: "Tampilkan Klien", name: "showClients", widget: "boolean", default: true}
+              - label: "Navigation Menu"
                 name: "navigation"
                 widget: "list"
                 collapsed: true
                 summary: "{{label}}"
                 required: false
                 fields:
-                  - label: "Label Menu (Teks yang Tampil)"
-                    name: "label"
-                    widget: "string"
-                  - label: "URL/Tautan (Gunakan / di depan, misal: /about)"
-                    name: "path"
-                    widget: "string"
-                  - label: "Jadikan Tombol Utama (Warna Jingga)?"
-                    name: "isButton"
-                    widget: "boolean"
-                    default: false
+                  - {label: "Label Menu", name: "label", widget: "string"}
+                  - {label: "URL/Tautan", name: "path", widget: "string"}
+                  - {label: "Jadikan Tombol Utama", name: "isButton", widget: "boolean", default: false}
           - label: "Services"
             name: "services"
             widget: "list"
             collapsed: true
             summary: "{{title}}"
+            i18n: true
             fields:
-              - label: "Service Name"
-                name: "title"
-                widget: "string"
-              - label: "Description"
-                name: "description"
-                widget: "text"
+              - {label: "Service Name", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
           - label: "Projects"
             name: "projects"
             widget: "list"
             collapsed: true
             summary: "{{title}} - {{status}}"
+            i18n: true
             fields:
-              - label: "Project Name"
-                name: "title"
-                widget: "string"
-              - label: "Client"
-                name: "client"
-                widget: "string"
-              - label: "Status"
-                name: "status"
-                widget: "string"
-              - label: "Purpose"
-                name: "purpose"
-                widget: "string"
-              - label: "Project Images (Foto-foto Proyek)"
+              - {label: "Project Name", name: "title", widget: "string"}
+              - {label: "Kategori (Infrastruktur, Residensial, dll)", name: "category", widget: "string", required: false}
+              - {label: "Client", name: "client", widget: "string"}
+              - {label: "Status", name: "status", widget: "string"}
+              - {label: "Purpose", name: "purpose", widget: "string"}
+              - {label: "Latitude (Peta)", name: "lat", widget: "number", value_type: "float", required: false}
+              - {label: "Longitude (Peta)", name: "lng", widget: "number", value_type: "float", required: false}
+              - label: "Project Images"
                 name: "images"
                 widget: "list"
                 collapsed: true
-                summary: "Foto Proyek"
                 fields:
-                  - label: "Image"
-                    name: "image"
-                    widget: "image"
-                    required: false
+                  - {label: "Image", name: "image", widget: "image", required: false}
           - label: "Clients"
             name: "clients"
             widget: "list"
             collapsed: true
             summary: "{{name}}"
+            i18n: true
             fields:
-              - label: "Client Name"
-                name: "name"
-                widget: "string"
-              - label: "Client Logo (Opsional)"
-                name: "logo"
-                widget: "image"
-                required: false
-          - label: "Experts (Tenaga Ahli)"
+              - {label: "Client Name", name: "name", widget: "string"}
+              - {label: "Client Logo", name: "logo", widget: "image", required: false}
+          - label: "Experts"
             name: "experts"
             widget: "list"
             collapsed: true
             summary: "{{name}}"
+            i18n: true
             fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-              - label: "Qualification"
-                name: "qualification"
-                widget: "string"
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Qualification", name: "qualification", widget: "string"}
               - label: "Certificate Images"
                 name: "images"
                 widget: "list"
                 collapsed: true
-                summary: "Foto Sertifikat"
                 fields:
-                  - label: "Image"
-                    name: "image"
-                    widget: "image"
-                    required: false
+                  - {label: "Image", name: "image", widget: "image", required: false}
           - label: "Legalitas Perusahaan"
             name: "legal"
             widget: "object"
             collapsed: true
+            i18n: true
             fields:
-              - label: "Company Name"
-                name: "companyName"
-                widget: "string"
-              - label: "Akta Pendirian"
-                name: "deed"
-                widget: "string"
-              - label: "NIB"
-                name: "nib"
-                widget: "string"
-              - label: "NPWP"
-                name: "npwp"
-                widget: "string"
-              - label: "SK Kemenkumham"
-                name: "sk"
-                widget: "string"
+              - {label: "Company Name", name: "companyName", widget: "string"}
+              - {label: "Akta Pendirian", name: "deed", widget: "string"}
+              - {label: "NIB", name: "nib", widget: "string"}
+              - {label: "NPWP", name: "npwp", widget: "string"}
+              - {label: "SK Kemenkumham", name: "sk", widget: "string"}
               - label: "Legal Scans"
                 name: "legalImages"
                 widget: "list"
                 collapsed: true
-                summary: "Scan Dokumen Legal"
                 fields:
-                  - label: "Image"
-                    name: "image"
-                    widget: "image"
-                    required: false
+                  - {label: "Image", name: "image", widget: "image", required: false}
           - label: "Contact Info"
             name: "contact"
             widget: "object"
             collapsed: true
+            i18n: true
             fields:
-              - label: "Address"
-                name: "address"
-                widget: "string"
-              - label: "Email"
-                name: "email"
-                widget: "string"
-              - label: "Phone"
-                name: "phone"
-                widget: "string"
-              - label: "WhatsApp"
-                name: "whatsapp"
-                widget: "string"
-              - label: "Facebook URL"
-                name: "facebook"
-                widget: "string"
-                required: false
-              - label: "Instagram URL"
-                name: "instagram"
-                widget: "string"
-                required: false
-              - label: "LinkedIn URL"
-                name: "linkedin"
-                widget: "string"
-                required: false
+              - {label: "Address", name: "address", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "WhatsApp", name: "whatsapp", widget: "string"}
+              - {label: "Facebook URL", name: "facebook", widget: "string", required: false}
+              - {label: "Instagram URL", name: "instagram", widget: "string", required: false}
+              - {label: "LinkedIn URL", name: "linkedin", widget: "string", required: false}
           - label: "Pages (Perakit Halaman)"
             name: "pages"
             widget: "list"
             collapsed: true
             summary: "{{title}} (/{{slug}})"
             required: false
+            i18n: true
             fields:
-              - label: "Judul Halaman (Muncul di Menu)"
-                name: "title"
-                widget: "string"
-              - label: "URL Halaman (Slug, misal: promo - dilarang pakai spasi, gunakan / untuk Beranda)"
-                name: "slug"
-                widget: "string"
-              - label: "Tampilkan di Menu Atas?"
-                name: "showInMenu"
-                widget: "boolean"
-                default: false
+              - {label: "Judul Halaman", name: "title", widget: "string"}
+              - {label: "URL Halaman (Slug)", name: "slug", widget: "string"}
+              - {label: "Tampilkan di Menu Atas?", name: "showInMenu", widget: "boolean", default: false}
               - label: "Perakitan Blok Halaman"
                 name: "blocks"
                 widget: "list"
@@ -314,130 +187,156 @@ collections:
                       - {label: "Headline", name: "headline", widget: "string"}
                       - {label: "Subheadline", name: "subheadline", widget: "string"}
                       - {label: "Background Image", name: "bgImage", widget: "image", required: false}
-                  - label: "Blok: Tentang/Info (Dengan Kartu Teks)"
-                    name: "aboutBlock"
+                      - {label: "Background Video (.mp4)", name: "videoFile", widget: "file", required: false}
+                  - label: "Blok: Peta Proyek"
+                    name: "mapBlock"
                     widget: "object"
                     collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
-                      - {label: "Deskripsi Panjang", name: "description", widget: "text"}
-                      - label: "Daftar Kartu Teks (Visi, Misi, Sejarah, dll)"
+                      - {label: "Fokus Peta (Indonesia/Dunia)", name: "focus", widget: "select", options: ["Indonesia", "Dunia"], default: "Indonesia"}
+                  - label: "Blok: Tentang/Info"
+                    name: "aboutBlock"
+                    widget: "object"
+                    collapsed: true
+                    fields:
+                      - {label: "Judul", name: "title", widget: "string"}
+                      - {label: "Deskripsi", name: "description", widget: "text"}
+                      - label: "Kartu Teks"
                         name: "items"
                         widget: "list"
                         collapsed: true
                         required: false
                         fields:
-                          - {label: "Judul Kartu", name: "title", widget: "string"}
-                          - {label: "Isi Teks", name: "content", widget: "text"}
-                  - label: "Blok: Teks Bebas (Markdown)"
+                          - {label: "Judul", name: "title", widget: "string"}
+                          - {label: "Isi", name: "content", widget: "text"}
+                  - label: "Blok: Markdown"
                     name: "markdownBlock"
                     widget: "object"
                     collapsed: true
                     fields:
                       - {label: "Isi Konten", name: "content", widget: "markdown"}
-                  - label: "Blok: Daftar Layanan/Fitur"
+                  - label: "Blok: Layanan"
                     name: "servicesBlock"
                     widget: "object"
                     collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
-                      - {label: "Batas Jumlah (0 = Tampilkan Semua)", name: "limit", widget: "number", default: 0}
-                  - label: "Blok: Galeri Foto (Album)"
+                      - {label: "Batas Jumlah", name: "limit", widget: "number", default: 0}
+                  - label: "Blok: Galeri"
                     name: "galleryBlock"
                     widget: "object"
                     collapsed: true
                     fields:
-                      - {label: "Judul Galeri (Opsional)", name: "title", widget: "string", required: false}
+                      - {label: "Judul", name: "title", widget: "string", required: false}
                       - label: "Daftar Foto"
                         name: "photos"
                         widget: "list"
                         collapsed: true
                         fields:
-                          - {label: "Pilih Foto", name: "image", widget: "image"}
-                          - {label: "Keterangan Foto (Opsional)", name: "caption", widget: "string", required: false}
-                  - label: "Blok: Portofolio (Proyek Kami)"
+                          - {label: "Foto", name: "image", widget: "image"}
+                          - {label: "Keterangan", name: "caption", widget: "string", required: false}
+                  - label: "Blok: Portofolio"
                     name: "portfolioBlock"
                     widget: "object"
                     collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
-                  - label: "Blok: Struktur Organisasi"
+                  - label: "Blok: Organisasi"
                     name: "organizationBlock"
                     widget: "object"
                     collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
-                  - label: "Blok: Tenaga Ahli (Sertifikasi)"
+                  - label: "Blok: Tenaga Ahli"
                     name: "expertsBlock"
                     widget: "object"
                     collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
-                  - label: "Blok: Legalitas Perusahaan"
+                  - label: "Blok: Legalitas"
                     name: "legalBlock"
                     widget: "object"
                     collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
-                  - label: "Blok: Hubungi Kami (Kontak)"
+                  - label: "Blok: Kontak"
                     name: "contactBlock"
                     widget: "object"
                     collapsed: true
                     fields:
                       - {label: "Judul Blok", name: "title", widget: "string"}
-                  - label: "Blok: Logo Klien (Marquee Berjalan)"
+                  - label: "Blok: Logo Klien"
                     name: "clientsMarqueeBlock"
                     widget: "object"
                     collapsed: true
                     fields:
-                      - {label: "Aktifkan Logo Klien", name: "active", widget: "boolean", default: true}
-                  - label: "Blok: Statistik / Angka (Counter Animasi)"
+                      - {label: "Aktifkan", name: "active", widget: "boolean", default: true}
+                  - label: "Blok: Statistik"
                     name: "statsBlock"
                     widget: "object"
                     collapsed: true
                     fields:
-                      - {label: "Judul Blok (Opsional)", name: "title", widget: "string", required: false}
-                      - {label: "Sub-judul (Opsional)", name: "subtitle", widget: "string", required: false}
-                      - label: "Daftar Statistik"
+                      - {label: "Judul", name: "title", widget: "string", required: false}
+                      - {label: "Sub-judul", name: "subtitle", widget: "string", required: false}
+                      - label: "Statistik"
                         name: "stats"
                         widget: "list"
                         collapsed: true
                         fields:
-                          - {label: "Angka (contoh: 100)", name: "value", widget: "number"}
-                          - {label: "Suffix (contoh: +, %, Tahun)", name: "suffix", widget: "string", required: false}
-                          - {label: "Label / Keterangan", name: "label", widget: "string"}
-                          - {label: "Ikon Emoji (Opsional, contoh: angka)", name: "icon", widget: "string", required: false}
-                  - label: "Blok: Testimoni Klien"
+                          - {label: "Angka", name: "value", widget: "number"}
+                          - {label: "Suffix", name: "suffix", widget: "string", required: false}
+                          - {label: "Label", name: "label", widget: "string"}
+                          - {label: "Ikon", name: "icon", widget: "string", required: false}
+                  - label: "Blok: Testimoni"
                     name: "testimonialsBlock"
                     widget: "object"
                     collapsed: true
                     fields:
-                      - {label: "Judul Blok", name: "title", widget: "string", default: "Apa Kata Klien Kami"}
-                      - label: "Daftar Testimoni"
+                      - {label: "Judul", name: "title", widget: "string", default: "Apa Kata Klien Kami"}
+                      - label: "Testimoni"
                         name: "testimonials"
                         widget: "list"
                         collapsed: true
                         fields:
-                          - {label: "Kutipan / Testimoni", name: "quote", widget: "text"}
-                          - {label: "Nama Pemberi Testimoni", name: "name", widget: "string"}
-                          - {label: "Jabatan / Posisi", name: "position", widget: "string", required: false}
-                          - {label: "Nama Perusahaan", name: "company", widget: "string", required: false}
-                          - {label: "Rating Bintang (1-5)", name: "rating", widget: "number", default: 5, value_type: "int", min: 1, max: 5}
-                          - {label: "Foto (Opsional)", name: "photo", widget: "image", required: false}
-
+                          - {label: "Kutipan", name: "quote", widget: "text"}
+                          - {label: "Nama", name: "name", widget: "string"}
+                          - {label: "Jabatan", name: "position", widget: "string", required: false}
+                          - {label: "Perusahaan", name: "company", widget: "string", required: false}
+                          - {label: "Rating", name: "rating", widget: "number", default: 5, value_type: "int", min: 1, max: 5}
+                          - {label: "Foto", name: "photo", widget: "image", required: false}
 
   - name: "articles"
-    label: "Blog & Artikel"
+    label: "Newsroom (Berita & PR)"
     folder: "src/content/articles"
     create: true
+    i18n: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: "json"
     format: "json"
     fields:
-      - {label: "Judul", name: "title", widget: "string"}
-      - {label: "URL Slug (Kosongkan agar otomatis)", name: "slug", widget: "string", required: false}
-      - {label: "Tanggal Terbit", name: "date", widget: "datetime"}
-      - {label: "Penulis", name: "author", widget: "string", default: "Admin"}
-      - {label: "Thumbnail / Cover Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Ringkasan Singkat (Muncul di Daftar Artikel)", name: "summary", widget: "text"}
-      - {label: "Isi Konten Utama", name: "content", widget: "markdown"}
+      - {label: "Judul", name: "title", widget: "string", i18n: true}
+      - {label: "URL Slug", name: "slug", widget: "string", required: false, i18n: true}
+      - {label: "Kategori Berita", name: "category", widget: "select", options: ["Blog", "Press Release", "Pengumuman"], default: "Blog", i18n: true}
+      - {label: "Tanggal Terbit", name: "date", widget: "datetime", i18n: duplicate}
+      - {label: "Penulis", name: "author", widget: "string", default: "Admin", i18n: true}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false, i18n: duplicate}
+      - {label: "Ringkasan", name: "summary", widget: "text", i18n: true}
+      - {label: "Isi Konten", name: "content", widget: "markdown", i18n: true}
+
+  - name: "careers"
+    label: "Lowongan Kerja (Karir)"
+    folder: "src/content/careers"
+    create: true
+    i18n: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Judul Posisi", name: "title", widget: "string", i18n: true}
+      - {label: "Departemen", name: "department", widget: "string", i18n: true}
+      - {label: "Lokasi", name: "location", widget: "string", i18n: true}
+      - {label: "Tipe Pekerjaan", name: "type", widget: "select", options: ["Full-time", "Part-time", "Contract", "Internship"], default: "Full-time", i18n: true}
+      - {label: "Aktif Dibuka?", name: "active", widget: "boolean", default: true, i18n: duplicate}
+      - {label: "Deskripsi", name: "description", widget: "markdown", i18n: true}
+      - {label: "Persyaratan", name: "requirements", widget: "markdown", i18n: true}

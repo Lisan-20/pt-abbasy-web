@@ -12,6 +12,7 @@ import Contact from '../components/Contact';
 import ClientsMarquee from '../components/ClientsMarquee';
 import StatsCounter from '../components/StatsCounter';
 import Testimonials from '../components/Testimonials';
+import ProjectMap from '../components/ProjectMap';
 
 const DynamicPage = ({ pageData, siteData }) => {
   if (!pageData) {
@@ -48,6 +49,13 @@ const DynamicPage = ({ pageData, siteData }) => {
         switch (block.type) {
           case 'heroBlock':
             return <Hero key={index} data={block} />;
+          
+          case 'mapBlock':
+            return (
+              <div key={index} style={{ padding: '60px 0', ...bgStyle }}>
+                <ProjectMap data={block} projects={siteData.projects} />
+              </div>
+            );
           
           case 'aboutBlock':
             return (

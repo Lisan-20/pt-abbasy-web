@@ -645,6 +645,57 @@
           "title": "Hubungi Kami"
         }
       ]
+    },
+    {
+      "title": "Sustainability & Zero Harm",
+      "slug": "sustainability",
+      "showInMenu": true,
+      "blocks": [
+        {
+          "type": "heroBlock",
+          "headline": "Our Commitment to Environment & HSE",
+          "subheadline": "Striving for Zero Harm in every operation."
+        },
+        {
+          "type": "aboutBlock",
+          "title": "Zero Harm Policy",
+          "description": "Safety is our top priority. We are committed to ensuring all our workforce goes home safely. Zero Harm is our primary guiding principle.",
+          "items": [
+            {
+              "title": "Health",
+              "content": "Proactively improving employee health."
+            },
+            {
+              "title": "Safety",
+              "content": "Zero fatal accidents and drastic reduction of minor incidents."
+            },
+            {
+              "title": "Environment",
+              "content": "Minimizing environmental impact and carbon emissions."
+            }
+          ]
+        },
+        {
+          "type": "statsBlock",
+          "title": "Our Safety Record",
+          "stats": [
+            {
+              "value": 0,
+              "label": "Fatal Accidents"
+            },
+            {
+              "value": 1000000,
+              "suffix": "+",
+              "label": "Safe Working Hours"
+            },
+            {
+              "value": 100,
+              "suffix": "%",
+              "label": "HSE Compliance"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
