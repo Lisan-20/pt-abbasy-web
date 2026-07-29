@@ -37,11 +37,23 @@ const Footer = ({ data, siteSettings }) => {
           <div>
             <h4 style={{ color: 'white', marginBottom: '25px', fontSize: '1.2rem' }}>Tautan Cepat</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <li><Link to="/about" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Tentang Kami</Link></li>
-              <li><Link to="/services" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Layanan Kami</Link></li>
-              <li><Link to="/portfolio" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Portofolio Proyek</Link></li>
-              <li><Link to="/experts" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Tenaga Ahli</Link></li>
-              <li><Link to="/legal" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Legalitas</Link></li>
+              {siteSettings?.footerQuickLinks ? (
+                siteSettings.footerQuickLinks.map((link, idx) => (
+                  <li key={idx}>
+                    <Link to={link.path} style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>
+                      {link.label}
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <>
+                  <li><Link to="/about" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Tentang Kami</Link></li>
+                  <li><Link to="/services" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Layanan Kami</Link></li>
+                  <li><Link to="/portfolio" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Portofolio Proyek</Link></li>
+                  <li><Link to="/experts" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Tenaga Ahli</Link></li>
+                  <li><Link to="/legal" style={{ transition: 'color 0.3s' }} onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Legalitas</Link></li>
+                </>
+              )}
             </ul>
           </div>
 

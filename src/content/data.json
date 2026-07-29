@@ -224,6 +224,28 @@
         "path": "/contact",
         "isButton": true
       }
+    ],
+    "footerQuickLinks": [
+      {
+        "label": "Tentang Kami",
+        "path": "/about"
+      },
+      {
+        "label": "Layanan Kami",
+        "path": "/services"
+      },
+      {
+        "label": "Portofolio Proyek",
+        "path": "/portfolio"
+      },
+      {
+        "label": "Tenaga Ahli",
+        "path": "/experts"
+      },
+      {
+        "label": "Legalitas",
+        "path": "/legal"
+      }
     ]
   },
   "services": [

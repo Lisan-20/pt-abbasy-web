@@ -61,6 +61,15 @@ collections:
                   - {label: "Tampilkan Teks Sambutan", name: "showWelcome", widget: "boolean", default: true}
                   - {label: "Tampilkan Layanan", name: "showServices", widget: "boolean", default: true}
                   - {label: "Tampilkan Klien", name: "showClients", widget: "boolean", default: true}
+              - label: "Tautan Cepat Footer"
+                name: "footerQuickLinks"
+                widget: "list"
+                collapsed: true
+                summary: "{{label}}"
+                required: false
+                fields:
+                  - {label: "Label", name: "label", widget: "string"}
+                  - {label: "URL Path", name: "path", widget: "string"}
               - label: "Navigation Menu"
                 name: "navigation"
                 widget: "list"
