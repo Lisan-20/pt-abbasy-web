@@ -53,7 +53,7 @@
 }
 
 .logo-img-wrapper img {
-  height: 75px;
+  height: 90px;
   width: auto;
   object-fit: contain;
 }
@@ -166,7 +166,7 @@
   }
   
   .logo-img-wrapper img {
-    height: 55px !important;
+    height: 70px !important;
   }
 }
 
