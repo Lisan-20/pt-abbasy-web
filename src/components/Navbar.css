@@ -44,12 +44,13 @@
 
 .logo-img-wrapper {
   background-color: white;
-  padding: 5px 12px;
+  padding: 0;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .logo-img-wrapper img {
