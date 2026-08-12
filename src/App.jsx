@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
+import WelcomeScreen from './components/WelcomeScreen';
 
 import DynamicPage from './pages/DynamicPage';
 import NotFound from './pages/NotFound';
@@ -120,8 +121,23 @@ function App() {
   const textAlignment = siteData?.siteSettings?.textAlignment || 'justify';
   const theme = siteData?.siteSettings?.theme || {};
 
+  const [showWelcome, setShowWelcome] = React.useState(() => {
+    return sessionStorage.getItem('welcomeShown') !== 'true';
+  });
+
+  const handleWelcomeEnter = () => {
+    sessionStorage.setItem('welcomeShown', 'true');
+    setShowWelcome(false);
+  };
+
   return (
     <ErrorBoundary>
+      {showWelcome && (
+        <WelcomeScreen 
+          logoUrl={siteData?.siteSettings?.logoImage} 
+          onEnter={handleWelcomeEnter} 
+        />
+      )}
       <div className="app-container" style={{
         display: 'flex',
         flexDirection: 'column',
