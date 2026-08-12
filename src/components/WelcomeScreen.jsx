@@ -40,6 +40,8 @@ const WelcomeScreen = ({ onEnter, logoUrl, audioUrl }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
+          onClick={handleEnter}
+          style={{ cursor: 'pointer' }}
         >
           <div className="welcome-background-glow"></div>
           
@@ -63,26 +65,13 @@ const WelcomeScreen = ({ onEnter, logoUrl, audioUrl }) => {
             </motion.h1>
             
             <motion.p 
-              className="welcome-subtitle"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
+              animate={{ opacity: 0.7 }}
+              transition={{ delay: 1.5, duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+              style={{ marginTop: '40px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', letterSpacing: '1px' }}
             >
-              Solusi Terbaik untuk Kebutuhan Industri Anda.
+              Klik di mana saja untuk melanjutkan
             </motion.p>
-            
-            <motion.button 
-              className="welcome-button"
-              onClick={handleEnter}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1, duration: 0.5 }}
-            >
-              Mulai Eksplorasi
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </motion.button>
           </div>
         </motion.div>
       )}
