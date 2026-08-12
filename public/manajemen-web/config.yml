@@ -46,6 +46,7 @@ collections:
               - {label: "Footer Title", name: "footerTitle", widget: "string", required: false}
               - {label: "Footer Description", name: "footerDescription", widget: "text", required: false}
               - {label: "Welcome Description", name: "welcomeDescription", widget: "text", required: false}
+              - {label: "Welcome Audio (File MP3)", name: "welcomeAudio", widget: "file", required: false}
               - {label: "SEO Title", name: "seoTitle", widget: "string", required: false}
               - {label: "SEO Description", name: "seoDescription", widget: "text", required: false}
               - {label: "SEO Keywords", name: "seoKeywords", widget: "string", required: false}

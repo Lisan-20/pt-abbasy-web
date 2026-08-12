@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './WelcomeScreen.css';
 
-const WelcomeScreen = ({ onEnter, logoUrl }) => {
+const WelcomeScreen = ({ onEnter, logoUrl, audioUrl }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   // Mencegah scroll saat welcome screen aktif
@@ -19,7 +19,8 @@ const WelcomeScreen = ({ onEnter, logoUrl }) => {
 
   const handleEnter = () => {
     // Memutar audio
-    const audio = new Audio('/assets/audio/welcome.mp3');
+    const audioSource = audioUrl || '/assets/audio/welcome.mp3';
+    const audio = new Audio(audioSource);
     audio.play().catch(e => console.error("Audio play failed:", e));
     
     // Menutup welcome screen

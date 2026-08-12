@@ -135,6 +135,7 @@ function App() {
       {showWelcome && (
         <WelcomeScreen 
           logoUrl={siteData?.siteSettings?.logoImage} 
+          audioUrl={siteData?.siteSettings?.welcomeAudio}
           onEnter={handleWelcomeEnter} 
         />
       )}
