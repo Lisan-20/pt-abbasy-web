@@ -158,6 +158,32 @@
       "showServices": true,
       "showClients": true
     },
+    "footerQuickLinksTitle": "Tautan Cepat",
+    "footerContactTitle": "Hubungi Kami",
+    "footerMapTitle": "Lokasi Kantor",
+    "footerMapIframeUrl": "https://maps.google.com/maps?q=Jatimulya%20Lestari%20Blok%20B%20no%203%20Jl.%20Kalimulya%20Raya%20no%2024%2C%20Jatimulya%20Cilodong%2C%20Depok%20Jawa%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    "footerQuickLinks": [
+      {
+        "label": "Tentang Kami",
+        "path": "/about"
+      },
+      {
+        "label": "Layanan Kami",
+        "path": "/services"
+      },
+      {
+        "label": "Portofolio Proyek",
+        "path": "/portfolio"
+      },
+      {
+        "label": "Tenaga Ahli",
+        "path": "/experts"
+      },
+      {
+        "label": "Legalitas",
+        "path": "/legal"
+      }
+    ],
     "navigation": [
       {
         "label": "Beranda",
@@ -224,33 +250,7 @@
         "path": "/contact",
         "isButton": true
       }
-    ],
-    "footerQuickLinks": [
-      {
-        "label": "Tentang Kami",
-        "path": "/about"
-      },
-      {
-        "label": "Layanan Kami",
-        "path": "/services"
-      },
-      {
-        "label": "Portofolio Proyek",
-        "path": "/portfolio"
-      },
-      {
-        "label": "Tenaga Ahli",
-        "path": "/experts"
-      },
-      {
-        "label": "Legalitas",
-        "path": "/legal"
-      }
-    ],
-    "footerQuickLinksTitle": "Tautan Cepat",
-    "footerContactTitle": "Hubungi Kami",
-    "footerMapTitle": "Lokasi Kantor",
-    "footerMapIframeUrl": "https://maps.google.com/maps?q=Jatimulya%20Lestari%20Blok%20B%20no%203%20Jl.%20Kalimulya%20Raya%20no%2024%2C%20Jatimulya%20Cilodong%2C%20Depok%20Jawa%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    ]
   },
   "services": [
     {
@@ -583,7 +583,7 @@
       "blocks": [
         {
           "type": "heroBlock",
-          "headline": "General Contractor Andal & Terpercaya",
+          "headline": "General Contractor Handal & Terpercaya",
           "subheadline": "Membangun masa depan dengan keunggulan struktural dan layanan berkualitas tinggi di seluruh Indonesia.",
           "bgImage": "/uploads/proyek_page1_img2.jpeg"
         },
