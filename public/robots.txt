@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /manajemen-web/
 
 Sitemap: https://abbasyanugerahperkasa.com/sitemap.xml
