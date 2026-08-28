@@ -386,6 +386,10 @@ Ikuti langkah-langkah berikut **secara berurutan** setiap kali ingin menambahkan
 | Jul 2026 | Perbaikan warna dropdown text di mode mobile (teks tidak terbaca) |
 | Jul 2026 | Penambahan schema `Organization` + `WebSite potentialAction` untuk SEO nama situs di Google |
 | Jul 2026 | Setup `sitemap.xml` + `robots.txt` + Google Site Verification |
+| Agu 2026 | Perbaikan tata letak (padding) pada Markdown Block agar tidak menempel ke tepi layar di HP |
+
+**Standar Tata Letak Baru (Agustus 2026):**
+> ⚠️ **Catatan Padding Container:** Semua komponen blok konten (seperti `markdownBlock`) yang dirender secara dinamis **WAJIB** menempatkan kelas `.container` pada elemen terdalam (*inner element*), bukan pada *wrapper* pembungkus jika *wrapper* tersebut menggunakan inline CSS `padding`. Hal ini untuk mencegah *override* pada `padding` kiri-kanan bawaan layar HP yang menyebabkan teks menempel di ujung layar.
 
 **File-file Kritis yang Tidak Boleh Diubah Sembarangan:**
 
