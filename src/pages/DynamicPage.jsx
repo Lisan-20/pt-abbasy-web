@@ -135,9 +135,11 @@ const DynamicPage = ({ pageData, siteData }) => {
 
           case 'markdownBlock':
             return (
-              <div key={index} className="container" style={{ padding: '60px 0', ...bgStyle }}>
-                <div style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: '1.8', whiteSpace: 'pre-line', textAlign: 'var(--global-text-alignment, justify)' }}>
-                  {block.content}
+              <div key={index} style={{ padding: '60px 0', ...bgStyle }}>
+                <div className="container">
+                  <div style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: '1.8', whiteSpace: 'pre-line', textAlign: 'var(--global-text-alignment, justify)' }}>
+                    {block.content}
+                  </div>
                 </div>
               </div>
             );
