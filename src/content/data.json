@@ -2,140 +2,80 @@
   "organization": [
     {
       "id": "1",
-      "name": "SUGENG",
-      "role": "PROJECT MANAGER",
+      "name": "EVI SILVIA",
+      "role": "KOMISARIS",
       "photo": "",
       "parentId": ""
     },
     {
       "id": "2",
       "name": "DEDEK RAHMAN",
-      "role": "PROJECT COORDINATOR",
+      "role": "DIREKTUR UTAMA",
       "photo": "",
       "parentId": "1"
     },
     {
       "id": "3",
-      "name": "ARIF SOLEAIMAN",
-      "role": "SITE ENG MANAGER",
+      "name": "SITI AKHADIYAH",
+      "role": "HRD MANAGER",
       "photo": "",
       "parentId": "2"
     },
     {
       "id": "4",
-      "name": "FIRAZ",
-      "role": "ADMIN PROYEK",
-      "photo": "",
-      "parentId": "2"
-    },
-    {
-      "id": "5",
-      "name": "RONALD",
-      "role": "MECH ENG",
+      "name": "IRSYAD FIRAZ",
+      "role": "STAFF ADMIN",
       "photo": "",
       "parentId": "3"
     },
     {
+      "id": "5",
+      "name": "ZAFIRA",
+      "role": "KEUANGAN",
+      "photo": "",
+      "parentId": "2"
+    },
+    {
       "id": "6",
-      "name": "RIKI (EFRATA )",
-      "role": "WELDING INSPECTIONS",
+      "name": "MIA RUWIZ",
+      "role": "STAFF PURCHASING",
       "photo": "",
       "parentId": "5"
     },
     {
       "id": "7",
-      "name": "DIAS",
-      "role": "FORMAN",
+      "name": "D. RIFAI",
+      "role": "ENGINEERING",
       "photo": "",
-      "parentId": "6"
+      "parentId": "2"
     },
     {
       "id": "8",
-      "name": "WANDAYANA",
-      "role": "ELEKTRIK/INST ENG",
+      "name": "FARHAN",
+      "role": "DRAFTER",
       "photo": "",
-      "parentId": "3"
+      "parentId": "7"
     },
     {
       "id": "9",
-      "name": "FARHAN",
-      "role": "DRAFTER MEP",
+      "name": "WANDAYANA",
+      "role": "SPV MEP",
       "photo": "",
-      "parentId": "8"
+      "parentId": "7"
     },
     {
       "id": "10",
-      "name": "ACEP",
-      "role": "FORMAN",
+      "name": "FATTAH",
+      "role": "General Affair",
       "photo": "",
-      "parentId": "9"
+      "parentId": "7"
     },
     {
       "id": "11",
-      "name": "SAMUEL",
-      "role": "CIVIL / SURVEYOR",
+      "name": "RONALD",
+      "role": "BISNIS DEVELOP",
       "photo": "",
-      "parentId": "3"
-    },
-    {
-      "id": "12",
-      "name": "FATRA",
-      "role": "DRAFTER",
-      "parentId": "11"
-    },
-    {
-      "id": "13",
-      "name": "SUPARDI",
-      "role": "FORMAN BAJA",
-      "parentId": "12"
-    },
-    {
-      "id": "14",
-      "name": "OKI",
-      "role": "SPV CIVIL  / STRUKTUR",
-      "parentId": "11"
-    },
-    {
-      "id": "15",
-      "name": "KASMIN",
-      "role": "FORMAN CIVIL",
-      "parentId": "14"
-    },
-    {
-      "id": "16",
-      "name": "FAZRI( EFRATA )",
-      "role": "PROJECT  CONTROL",
-      "parentId": "3"
-    },
-    {
-      "id": "17",
-      "name": "AGA",
-      "role": "DOCUMENTCONTROL",
-      "parentId": "16"
-    },
-    {
-      "id": "18",
-      "name": "ANGGI",
-      "role": "HSE K3",
-      "parentId": "3"
-    },
-    {
-      "id": "19",
-      "name": "FATAHULLAH",
-      "role": "GENERAL AFFAIR",
-      "parentId": "3"
-    },
-    {
-      "id": "20",
-      "name": "DD DJ",
-      "role": "GUDANG",
-      "parentId": "19,18"
-    },
-    {
-      "id": "21",
-      "name": "UDIN",
-      "role": "SECURITI",
-      "parentId": "19,18"
+      "parentId": "2"
     }
   ],
   "siteSettings": {
@@ -147,6 +87,7 @@
     "footerTitle": "PT. Abbasy Anugerah Perkasa",
     "footerDescription": "Menjadi perusahaan terkemuka di bidang Konstruksi dan Jasa dengan layanan berkualitas.",
     "welcomeDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi.",
+    "welcomeAudio": "",
     "seoTitle": "PT. Abbasy Anugerah Perkasa | Kontraktor Umum Terpercaya",
     "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional.",
     "seoKeywords": "PT Abbasy Anugerah Perkasa, Kontraktor Umum, General Contractor, Jasa Konstruksi Depok, Kontraktor Jakarta, Perdagangan Umum, General Trade, Konstruksi Sipil, Instalasi MEP, Pembangunan Gedung, Ahli Bangunan, Kontraktor Terbaik Indonesia",
@@ -188,10 +129,12 @@
       {
         "label": "Beranda",
         "path": "/",
-        "isButton": false
+        "isButton": false,
+        "children": []
       },
       {
         "label": "Perusahaan",
+        "path": "",
         "isButton": false,
         "children": [
           {
@@ -210,6 +153,7 @@
       },
       {
         "label": "Layanan & Proyek",
+        "path": "",
         "isButton": false,
         "children": [
           {
@@ -229,10 +173,12 @@
       {
         "label": "Keberlanjutan",
         "path": "/sustainability",
-        "isButton": false
+        "isButton": false,
+        "children": []
       },
       {
         "label": "Informasi",
+        "path": "",
         "isButton": false,
         "children": [
           {
@@ -248,7 +194,8 @@
       {
         "label": "Hubungi Kami",
         "path": "/contact",
-        "isButton": true
+        "isButton": true,
+        "children": []
       }
     ]
   },
@@ -281,9 +228,12 @@
   "projects": [
     {
       "title": "Project Beach Club Desa Kitsune, Bali",
+      "category": "",
       "client": "PT. Dwi Mukti Graha Kencana",
       "status": "Finish",
       "purpose": "Mechanical, electrical, plumbing Construction",
+      "lat": null,
+      "lng": null,
       "images": [
         {
           "image": "/uploads/picture1.jpg"
@@ -304,9 +254,12 @@
     },
     {
       "title": "Project Paving Jalan Singakarta",
+      "category": "",
       "client": "PT. PMA",
       "status": "Finish (Oktober 2024)",
       "purpose": "Plumbing, Construction",
+      "lat": null,
+      "lng": null,
       "images": [
         {
           "image": "/uploads/picture7.jpg"
@@ -330,9 +283,12 @@
     },
     {
       "title": "Project Ruang Direksi Staco",
+      "category": "",
       "client": "PT. Capitol Grup",
       "status": "Retensi (2025)",
       "purpose": "Mechanical, electrical, plumbing Construction",
+      "lat": null,
+      "lng": null,
       "images": [
         {
           "image": "/uploads/picture18.jpg"
@@ -347,9 +303,12 @@
     },
     {
       "title": "Project Rumah 4 lantai (Tebet)",
+      "category": "",
       "client": "Bpk HJ Haedar",
       "status": "ON Progres",
       "purpose": "Elektrikal, Plambing",
+      "lat": null,
+      "lng": null,
       "images": [
         {
           "image": "/uploads/picture21.jpg"
@@ -373,9 +332,12 @@
     },
     {
       "title": "Project Pembuatan Gedung Samsat Ditlantas Balikpapan Kaltim",
+      "category": "",
       "client": "PT. Bangun Konstruksi Cemerlang",
       "status": "Finish",
       "purpose": "Mekanikal, Elektrikal, Plambing",
+      "lat": null,
+      "lng": null,
       "images": [
         {
           "image": "/uploads/picture27.jpg"
@@ -411,9 +373,12 @@
     },
     {
       "title": "Project Pembuatan Mesh Pama AL Balikpapan Kaltim",
+      "category": "",
       "client": "PT. Dasa Prima Lestari Unggul",
       "status": "Finish",
       "purpose": "Mekanikal,Elektrikal,Plambing",
+      "lat": null,
+      "lng": null,
       "images": [
         {
           "image": "/uploads/picture34.jpg"
@@ -443,9 +408,12 @@
     },
     {
       "title": "PT. Lubuk Indah",
+      "category": "",
       "client": "PT. Lubuk Indah",
       "status": "On Progress",
       "purpose": "Elektrikal,Plambing",
+      "lat": null,
+      "lng": null,
       "images": [
         {
           "image": "/uploads/picture39.jpg"
@@ -480,28 +448,36 @@
       "logo": "/uploads/lambang_kopassus.svg"
     },
     {
-      "name": "PT. Arsed Indonesia"
+      "name": "PT. Arsed Indonesia",
+      "logo": ""
     },
     {
-      "name": "PT. Dwi Mukti Graha Kencana"
+      "name": "PT. Dwi Mukti Graha Kencana",
+      "logo": ""
     },
     {
-      "name": "PT. Cap Karoso Development"
+      "name": "PT. Cap Karoso Development",
+      "logo": ""
     },
     {
-      "name": "PT. Capitol Group"
+      "name": "PT. Capitol Group",
+      "logo": ""
     },
     {
-      "name": "PT. PMA"
+      "name": "PT. PMA",
+      "logo": ""
     },
     {
-      "name": "PT. Dasa Prima Lestari Unggul"
+      "name": "PT. Dasa Prima Lestari Unggul",
+      "logo": ""
     },
     {
-      "name": "PT. Bangun Konstruksi Cemerlang"
+      "name": "PT. Bangun Konstruksi Cemerlang",
+      "logo": ""
     },
     {
-      "name": "PT. Lubuk Indah"
+      "name": "PT. Lubuk Indah",
+      "logo": ""
     }
   ],
   "experts": [
@@ -585,7 +561,8 @@
           "type": "heroBlock",
           "headline": "General Contractor Handal & Terpercaya",
           "subheadline": "Membangun masa depan dengan keunggulan struktural dan konstruksi berkualitas tinggi di seluruh Indonesia.",
-          "bgImage": "/uploads/proyek_page1_img2.jpeg"
+          "bgImage": "/uploads/proyek_page1_img2.jpeg",
+          "videoFile": ""
         },
         {
           "type": "aboutBlock",
@@ -599,7 +576,8 @@
           "limit": 3
         },
         {
-          "type": "clientsMarqueeBlock"
+          "type": "clientsMarqueeBlock",
+          "active": true
         }
       ]
     },
@@ -689,7 +667,9 @@
         {
           "type": "heroBlock",
           "headline": "Komitmen Kami pada Lingkungan & K3",
-          "subheadline": "Menuju Zero Accident dalam setiap operasional kami."
+          "subheadline": "Menuju Zero Accident dalam setiap operasional kami.",
+          "bgImage": "",
+          "videoFile": ""
         },
         {
           "type": "aboutBlock",
@@ -713,20 +693,25 @@
         {
           "type": "statsBlock",
           "title": "Rekor Keselamatan Kami",
+          "subtitle": "",
           "stats": [
             {
               "value": 0,
-              "label": "Kecelakaan Fatal"
+              "suffix": "",
+              "label": "Kecelakaan Fatal",
+              "icon": ""
             },
             {
               "value": 1000000,
               "suffix": "+",
-              "label": "Jam Kerja Aman"
+              "label": "Jam Kerja Aman",
+              "icon": ""
             },
             {
               "value": 100,
               "suffix": "%",
-              "label": "Kepatuhan K3"
+              "label": "Kepatuhan K3",
+              "icon": ""
             }
           ]
         }
