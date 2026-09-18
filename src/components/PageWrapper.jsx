@@ -36,7 +36,8 @@ const PageWrapper = ({ children, title, description }) => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Abbasy Anugerah Perkasa",
+    "name": "PT Abbasy Anugerah Perkasa",
+    "alternateName": ["PT. Abbasy Anugerah Perkasa", "Abbasy Anugerah Perkasa", "Abbasy"],
     "url": "https://abbasyanugerahperkasa.com/"
   };
 
@@ -48,7 +49,7 @@ const PageWrapper = ({ children, title, description }) => {
         {siteSettings.seoKeywords && <meta name="keywords" content={siteSettings.seoKeywords} />}
         <link rel="canonical" href={currentUrl} />
         <meta property="og:url" content={currentUrl} />
-        <meta property="og:site_name" content="Abbasy Anugerah Perkasa" />
+        <meta property="og:site_name" content="PT Abbasy Anugerah Perkasa" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
