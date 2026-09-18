@@ -88,9 +88,9 @@
     "footerDescription": "Menjadi perusahaan terkemuka di bidang Konstruksi dan Jasa dengan layanan berkualitas.",
     "welcomeDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan yang bergerak di bidang konstruksi. Kami berkomitmen memberikan layanan terbaik dengan standar profesionalisme tinggi.",
     "welcomeAudio": "",
-    "seoTitle": "PT. Abbasy Anugerah Perkasa | Kontraktor Umum Terpercaya",
-    "seoDescription": "PT. Abbasy Anugerah Perkasa adalah perusahaan General Contractor & General Trade terbaik di Indonesia. Memberikan layanan konstruksi berkualitas internasional.",
-    "seoKeywords": "PT Abbasy Anugerah Perkasa, Kontraktor Umum, General Contractor, Jasa Konstruksi Depok, Kontraktor Jakarta, Perdagangan Umum, General Trade, Konstruksi Sipil, Instalasi MEP, Pembangunan Gedung, Ahli Bangunan, Kontraktor Terbaik Indonesia",
+    "seoTitle": "Kontraktor Umum & Jasa Konstruksi Depok | PT. Abbasy Anugerah Perkasa",
+    "seoDescription": "PT. Abbasy Anugerah Perkasa - Perusahaan Kontraktor Umum (General Contractor) & Konstruksi terpercaya di Depok & Jabodetabek. Melayani pembangunan gedung, pabrik, gudang, renovasi, dan instalasi MEP profesional berstandar K3.",
+    "seoKeywords": "Kontraktor Umum Depok, Kontraktor Jakarta, Jasa Konstruksi Jabodetabek, General Contractor Indonesia, Kontraktor Bangunan Depok, Kontraktor Gudang Pabrik, Jasa Renovasi Komersial, Instalasi MEP, PT Abbasy Anugerah Perkasa, Pemborong Bangunan Terpercaya",
     "theme": {
       "colorPrimary": "#0A192F",
       "colorAccent": "#FF7A00",
@@ -201,28 +201,28 @@
   },
   "services": [
     {
-      "title": "Pre-construction Design & Estimating",
-      "description": "Perencanaan desain awal dan estimasi biaya proyek secara akurat."
+      "title": "Perencanaan & Estimasi Biaya (Pre-construction)",
+      "description": "Layanan desain teknik sipil, arsitektur, dan estimasi Rencana Anggaran Biaya (RAB) proyek konstruksi secara presisi dan transparan."
     },
     {
-      "title": "Construction Management",
-      "description": "Manajemen proyek konstruksi dari awal hingga penyelesaian dengan standar K3."
+      "title": "Manajemen Konstruksi & General Contractor",
+      "description": "Jasa kontraktor pelaksana pembangunan gedung, gudang, pabrik, dan infrastruktur dengan standar K3 ketat, tepat waktu, dan bermutu tinggi."
     },
     {
-      "title": "Renovation and Expansion",
-      "description": "Layanan renovasi dan perluasan bangunan yang efisien."
+      "title": "Renovasi & Perluasan Bangunan (Renovation)",
+      "description": "Layanan renovasi bangunan komersial, peremajaan interior-eksterior, serta perluasan fasilitas industri maupun residensial di Jabodetabek."
     },
     {
-      "title": "Building Sustainability & Upgrades",
-      "description": "Peningkatan dan perbaikan struktur bangunan agar lebih berkelanjutan."
+      "title": "Perkuatan Struktur & Peningkatan Gedung",
+      "description": "Audit teknis kekuatan struktur, retrofitting, dan peningkatan efisiensi bangunan agar lebih tahan lama, aman, dan berkelanjutan."
     },
     {
-      "title": "Installations (MEP)",
-      "description": "Instalasi mekanikal, elektrikal, dan plumbing untuk segala skala proyek."
+      "title": "Instalasi Mekanikal, Elektrikal & Plumbing (MEP)",
+      "description": "Spesialis instalasi kelistrikan industri, sistem pemipaan air bersih & limbah, tata udara (HVAC), dan proteksi kebakaran gedung."
     },
     {
-      "title": "Trading Material",
-      "description": "Perdagangan material bangunan untuk skala kecil, menengah, dan besar."
+      "title": "Pengadaan Material Konstruksi (General Trade)",
+      "description": "Distribusi dan suplai material bahan bangunan berkualitas tinggi untuk proyek konstruksi skala kecil, menengah, hingga skala besar."
     }
   ],
   "projects": [
@@ -559,8 +559,8 @@
       "blocks": [
         {
           "type": "heroBlock",
-          "headline": "General Contractor Handal & Terpercaya",
-          "subheadline": "Membangun masa depan dengan keunggulan struktural dan konstruksi berkualitas tinggi di seluruh Indonesia.",
+          "headline": "Kontraktor Umum & Jasa Konstruksi Terpercaya",
+          "subheadline": "Mitra profesional pembangunan gedung, gudang, pabrik, dan infrastruktur berkualitas tinggi di Depok, Jabodetabek, dan seluruh Indonesia.",
           "bgImage": "/uploads/proyek_page1_img2.jpeg",
           "videoFile": ""
         },

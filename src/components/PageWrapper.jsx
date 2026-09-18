@@ -10,7 +10,10 @@ const PageWrapper = ({ children, title, description }) => {
   }, []);
 
   const siteSettings = siteData.siteSettings || {};
-  const pageTitle = title ? `${title} | ${siteSettings.seoTitle || 'PT. Abbasy Anugerah Perkasa'}` : (siteSettings.seoTitle || 'PT. Abbasy Anugerah Perkasa');
+  const isHome = !title || title === 'Beranda' || title === 'Home';
+  const pageTitle = isHome 
+    ? (siteSettings.seoTitle || 'Kontraktor Umum & Jasa Konstruksi Depok | PT. Abbasy Anugerah Perkasa') 
+    : `${title} | ${siteSettings.seoTitle || 'PT. Abbasy Anugerah Perkasa'}`;
   const pageDescription = description || siteSettings.seoDescription || 'General Contractor & General Trade';
   const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://abbasyanugerahperkasa.com';
 
@@ -30,6 +33,7 @@ const PageWrapper = ({ children, title, description }) => {
       "addressRegion": "Jawa Barat",
       "addressCountry": "ID"
     },
+    "areaServed": ["Depok", "Jakarta", "Bogor", "Tangerang", "Bekasi", "Jawa Barat", "Indonesia"],
     "priceRange": "$$$"
   };
 

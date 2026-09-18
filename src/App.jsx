@@ -90,21 +90,40 @@ const BackToTop = () => {
   );
 };
 
-// ── Routes ───────────────────────────────────────────────
+const SLUG_ALIASES = {
+  '/about': '/tentang',
+  '/services': '/layanan',
+  '/portfolio': '/portofolio',
+  '/organization': '/organisasi',
+  '/experts': '/tenaga-ahli',
+  '/legal': '/legalitas',
+  '/contact': '/kontak'
+};
+
 function AnimatedRoutes({ siteData }) {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        {siteData.pages && siteData.pages.map((page, idx) => {
+        {siteData.pages && siteData.pages.flatMap((page, idx) => {
           const pagePath = page.slug === '/' ? '/' : `/${page.slug.replace(/^\//, '')}`;
-          return (
+          const routes = [
             <Route
-              key={idx}
+              key={`page-${idx}`}
               path={pagePath}
               element={<DynamicPage pageData={page} siteData={siteData} />}
             />
-          );
+          ];
+          if (SLUG_ALIASES[pagePath]) {
+            routes.push(
+              <Route
+                key={`alias-${idx}`}
+                path={SLUG_ALIASES[pagePath]}
+                element={<DynamicPage pageData={page} siteData={siteData} />}
+              />
+            );
+          }
+          return routes;
         })}
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
