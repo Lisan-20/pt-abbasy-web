@@ -388,12 +388,13 @@ Ikuti langkah-langkah berikut **secara berurutan** setiap kali ingin menambahkan
 | Jul 2026 | Setup `sitemap.xml` + `robots.txt` + Google Site Verification |
 | Agu 2026 | Perbaikan tata letak (padding) pada Markdown Block agar tidak menempel ke tepi layar di HP |
 | Sep 2026 | Optimasi SEO lokal (Depok & Jabodetabek), perbaikan Site Name schema, dan penambahan alias rute bilingual di App.jsx |
+| Okt 2026 | Penambahan skema SiteNavigationElement & BreadcrumbList untuk mendukung Google Sitelinks |
 
 **Standar Tata Letak Baru (Agustus 2026):**
 > ⚠️ **Catatan Padding Container:** Semua komponen blok konten (seperti `markdownBlock`) yang dirender secara dinamis **WAJIB** menempatkan kelas `.container` pada elemen terdalam (*inner element*), bukan pada *wrapper* pembungkus jika *wrapper* tersebut menggunakan inline CSS `padding`. Hal ini untuk mencegah *override* pada `padding` kiri-kanan bawaan layar HP yang menyebabkan teks menempel di ujung layar.
 
-**Standar SEO & Rute Bilingual (September 2026):**
-> 💡 **Rute Bilingual & Sitemap:** Setiap halaman statis di `src/App.jsx` kini mendukung alias dwibahasa (contoh: `/about` dan `/tentang`, `/services` dan `/layanan`). Semua URL tersebut terdaftar rapi di `public/sitemap.xml` untuk mencegah status "Ditemukan - tidak diindeks" pada Google Search Console.
+**Standar SEO, Sitelinks & Rute Bilingual:**
+> 💡 **Sitelinks & Rute:** Struktur navigasi website dilengkapi skema `ItemList` berisi elemen `SiteNavigationElement` dan `BreadcrumbList` (Schema.org). Ini memandu algoritma pencarian Google untuk menampilkan daftar tautan situs (Sitelinks) di bawah cuplikan utama pencarian brand. Seluruh URL tercatat seragam di `public/sitemap.xml`.
 
 **File-file Kritis yang Tidak Boleh Diubah Sembarangan:**
 

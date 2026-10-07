@@ -45,6 +45,80 @@ const PageWrapper = ({ children, title, description }) => {
     "url": "https://abbasyanugerahperkasa.com/"
   };
 
+  const navigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Navigasi Utama PT Abbasy Anugerah Perkasa",
+    "itemListElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "position": 1,
+        "name": "Layanan Kami",
+        "description": "Layanan kontraktor umum, manajemen konstruksi, renovasi gedung, dan instalasi MEP profesional.",
+        "url": "https://abbasyanugerahperkasa.com/services"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 2,
+        "name": "Tentang Kami",
+        "description": "Profil perusahaan, visi, misi, dan komitmen mutu PT Abbasy Anugerah Perkasa.",
+        "url": "https://abbasyanugerahperkasa.com/about"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 3,
+        "name": "Portofolio Proyek",
+        "description": "Rekam jejak dan dokumentasi proyek konstruksi yang telah diselesaikan dengan sukses.",
+        "url": "https://abbasyanugerahperkasa.com/portfolio"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
+        "name": "Hubungi Kami",
+        "description": "Kontak kantor, nomor telepon, WhatsApp, dan alamat PT Abbasy Anugerah Perkasa di Depok.",
+        "url": "https://abbasyanugerahperkasa.com/contact"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 5,
+        "name": "Struktur Organisasi",
+        "description": "Bagan susunan tim kepemimpinan dan manajemen PT Abbasy Anugerah Perkasa.",
+        "url": "https://abbasyanugerahperkasa.com/organization"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 6,
+        "name": "Legalitas Perusahaan",
+        "description": "Kelengkapan izin usaha, NIB, NPWP, dan SK Kemenkumham resmi PT Abbasy Anugerah Perkasa.",
+        "url": "https://abbasyanugerahperkasa.com/legal"
+      }
+    ]
+  };
+
+  const breadcrumbSchema = !isHome ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Beranda",
+        "item": "https://abbasyanugerahperkasa.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": title || "Halaman",
+        "item": currentUrl
+      }
+    ]
+  } : null;
+
+  const allSchemas = [websiteSchema, structuredData, navigationSchema];
+  if (breadcrumbSchema) {
+    allSchemas.push(breadcrumbSchema);
+  }
+
   return (
     <>
       <Helmet>
@@ -64,7 +138,7 @@ const PageWrapper = ({ children, title, description }) => {
         <meta name="twitter:image" content="https://abbasyanugerahperkasa.com/uploads/logo_transparent.png" />
         {siteSettings.favicon && <link rel="icon" href={siteSettings.favicon} />}
         <script type="application/ld+json">
-          {JSON.stringify([websiteSchema, structuredData])}
+          {JSON.stringify(allSchemas)}
         </script>
       </Helmet>
       <motion.div
