@@ -43,7 +43,7 @@ const CareersIndex = () => {
   }, ['id']);
 
   return (
-    <PageWrapper title="Karir & Lowongan">
+    <PageWrapper title="Karir & Lowongan" description="Informasi lowongan kerja dan kesempatan karir di PT. Abbasy Anugerah Perkasa." canonical="https://abbasyanugerahperkasa.com/careers">
       <div className="page-header" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '140px 0 60px', textAlign: 'center' }}>
         <h1 style={{ color: 'white', margin: 0 }}>{'Careers' || 'Karir & Lowongan'}</h1>
         <p style={{ marginTop: '20px', fontSize: '1.2rem', color: 'rgba(255,255,255,0.7)' }}>

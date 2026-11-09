@@ -36,6 +36,8 @@ const BlogIndex = () => {
       <Helmet>
         <title>Blog & Berita - PT. Abbasy Anugerah Perkasa</title>
         <meta name="description" content="Kumpulan berita, artikel, dan update terbaru dari PT. Abbasy Anugerah Perkasa." />
+        <link rel="canonical" href="https://abbasyanugerahperkasa.com/blog" />
+        <meta property="og:url" content="https://abbasyanugerahperkasa.com/blog" />
       </Helmet>
 
       {/* Header Banner */}

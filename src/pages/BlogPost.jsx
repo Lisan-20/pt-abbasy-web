@@ -25,6 +25,8 @@ const BlogPost = () => {
       <Helmet>
         <title>{article.title} - PT. Abbasy Anugerah Perkasa</title>
         <meta name="description" content={article.summary} />
+        <link rel="canonical" href={`https://abbasyanugerahperkasa.com/blog/${article.slug || slug}`} />
+        <meta property="og:url" content={`https://abbasyanugerahperkasa.com/blog/${article.slug || slug}`} />
         {article.thumbnail && <meta property="og:image" content={`https://abbasyanugerahperkasa.com${article.thumbnail}`} />}
       </Helmet>
 

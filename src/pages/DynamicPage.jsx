@@ -14,6 +14,18 @@ import StatsCounter from '../components/StatsCounter';
 import Testimonials from '../components/Testimonials';
 import ProjectMap from '../components/ProjectMap';
 
+const PAGE_DESCRIPTIONS = {
+  '/': 'PT. Abbasy Anugerah Perkasa adalah perusahaan Kontraktor Umum (General Contractor) terpercaya di Depok & Jabodetabek. Melayani konstruksi gedung, pabrik, gudang, renovasi, dan instalasi MEP.',
+  'about': 'Profil PT. Abbasy Anugerah Perkasa, visi, misi, dan komitmen profesionalisme sebagai perusahaan General Contractor & Konstruksi terpercaya di Indonesia.',
+  'services': 'Layanan kontraktor umum PT. Abbasy Anugerah Perkasa: Desain perencanaan, manajemen konstruksi, renovasi gedung, instalasi MEP, dan pengadaan material.',
+  'portfolio': 'Dokumentasi portofolio proyek konstruksi dan rekayasa sipil yang telah berhasil diselesaikan oleh PT. Abbasy Anugerah Perkasa.',
+  'organization': 'Struktur organisasi dan jajaran tim manajemen profesional PT. Abbasy Anugerah Perkasa.',
+  'experts': 'Daftar sertifikasi tenaga ahli dan profesional teknik sipil dan konstruksi PT. Abbasy Anugerah Perkasa.',
+  'legal': 'Legalitas resmi PT. Abbasy Anugerah Perkasa: Akta pendirian, NIB, NPWP, dan SK Kemenkumham.',
+  'sustainability': 'Kebijakan K3, lingkungan hidup, dan komitmen Zero Accident PT. Abbasy Anugerah Perkasa dalam setiap proyek konstruksi.',
+  'contact': 'Hubungi kantor PT. Abbasy Anugerah Perkasa di Depok untuk konsultasi proyek konstruksi, penawaran harga, dan kerjasama.'
+};
+
 const DynamicPage = ({ pageData, siteData }) => {
   if (!pageData) {
     return (
@@ -27,8 +39,14 @@ const DynamicPage = ({ pageData, siteData }) => {
 
   const hasHeroFirst = pageData.blocks && pageData.blocks.length > 0 && pageData.blocks[0].type === 'heroBlock';
 
+    const cleanSlug = (pageData.slug || '').replace(/^\//, '') || '/';
+  const pageDescription = pageData.description || PAGE_DESCRIPTIONS[cleanSlug] || PAGE_DESCRIPTIONS[pageData.slug];
+  const canonicalUrl = cleanSlug === '/' 
+    ? 'https://abbasyanugerahperkasa.com/' 
+    : ('https://abbasyanugerahperkasa.com/' + cleanSlug);
+
   return (
-    <PageWrapper title={pageData.title}>
+    <PageWrapper title={pageData.title} description={pageDescription} canonical={canonicalUrl}>
       {!hasHeroFirst && (
         <div className="page-header" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '140px 0 60px', textAlign: 'center' }}>
           <h1 style={{ color: 'white', margin: 0 }}>{pageData.title}</h1>

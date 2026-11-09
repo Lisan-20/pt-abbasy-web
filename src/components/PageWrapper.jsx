@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { useData } from '../context/DataContext';
 
-const PageWrapper = ({ children, title, description }) => {
+const PageWrapper = ({ children, title, description, canonical }) => {
   const siteData = useData() || {};
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,7 +15,8 @@ const PageWrapper = ({ children, title, description }) => {
     ? (siteSettings.seoTitle || 'Kontraktor Umum & Jasa Konstruksi Depok | PT. Abbasy Anugerah Perkasa') 
     : `${title} | ${siteSettings.seoTitle || 'PT. Abbasy Anugerah Perkasa'}`;
   const pageDescription = description || siteSettings.seoDescription || 'General Contractor & General Trade';
-  const currentUrl = typeof window !== 'undefined' ? window.location.href : 'https://abbasyanugerahperkasa.com';
+  const cleanPath = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') : '';
+  const currentUrl = canonical || ('https://abbasyanugerahperkasa.com' + (cleanPath || '/'));
 
   const structuredData = {
     "@context": "https://schema.org",

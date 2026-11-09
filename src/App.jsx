@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
@@ -119,7 +119,7 @@ function AnimatedRoutes({ siteData }) {
               <Route
                 key={`alias-${idx}`}
                 path={SLUG_ALIASES[pagePath]}
-                element={<DynamicPage pageData={page} siteData={siteData} />}
+                element={<Navigate to={pagePath} replace />}
               />
             );
           }

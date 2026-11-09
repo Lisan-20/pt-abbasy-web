@@ -5,7 +5,6 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Primary Pages -->
   <url>
     <loc>https://abbasyanugerahperkasa.com/about</loc>
     <changefreq>monthly</changefreq>
@@ -50,46 +49,5 @@
     <loc>https://abbasyanugerahperkasa.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://abbasyanugerahperkasa.com/careers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Indonesian Aliases -->
-  <url>
-    <loc>https://abbasyanugerahperkasa.com/tentang</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://abbasyanugerahperkasa.com/layanan</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://abbasyanugerahperkasa.com/portofolio</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://abbasyanugerahperkasa.com/organisasi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://abbasyanugerahperkasa.com/tenaga-ahli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://abbasyanugerahperkasa.com/legalitas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://abbasyanugerahperkasa.com/kontak</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>

@@ -1,2 +1,9 @@
+/tentang /about 301
+/layanan /services 301
+/portofolio /portfolio 301
+/organisasi /organization 301
+/tenaga-ahli /experts 301
+/legalitas /legal 301
+/kontak /contact 301
 /assets/* /404.html 404
 /* /index.html 200
